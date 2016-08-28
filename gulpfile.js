@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 var gulp = require('gulp');             // Gulp.
 var connect = require('gulp-connect');  // Webserver.
-var sass = require('gulp-sass');        // SASS.
 var webpack = require('webpack-stream');// Webpack.
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -14,34 +13,36 @@ var destPath = './dist/';
 var modulesPath = './node_modules/';
 
 // JSX
-gulp.task('jsx', function() {
-  gulp.src(srcPath + 'js/index.jsx')
-    .pipe(webpack({
+gulp.task('webpack', function() {
+    webpack({
       watch: true,
+      entry: srcPath + 'js/index.jsx',
       module: {
         loaders: [
+
+          // Begin Babel loader.
           {
             test: /\.jsx$/,
             loader: 'babel',
             query: {
               presets: ['es2015', 'react']
             }
-          }
+          },
+          // End Babel Loader.
+
+          // Begin SASS loader.
+          {
+            test: /\.scss$/,
+            loaders: ['style', 'css', 'sass']
+          },
+          // End SASS loader.
         ]
       },
       output: {
         filename: 'app.js'
       }
-    }))
+    })
     .pipe(gulp.dest(destPath + 'js/'))
-    .pipe(connect.reload());
-});
-
-// Compile .scss and move.
-gulp.task('stylesheets', function() {
-  gulp.src(srcPath + 'css/**/*')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(destPath + 'css/'))
     .pipe(connect.reload());
 });
 
@@ -58,7 +59,7 @@ gulp.task('html', function() {
 gulp.task("webserver", function() {
 
   connect.server({
-    root: 'dist',
+    root: destPath,
     livereload: true,
     port: 8080
   })
@@ -69,13 +70,10 @@ gulp.task("webserver", function() {
 // Watch task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('watch', function() {
-  gulp.watch(srcPath + 'js/**/*.jsx', ['jsx']); // JSX files.
-  gulp.watch(srcPath + 'css/**/*.scss', ['stylesheets']); // SASS Main.
-  gulp.watch(srcPath + 'css/**/_*.scss', ['stylesheets']); // SASS Partials.
   gulp.watch(srcPath + '*.html', ['html']);
 });
 
 ////////////////////////////////////////////////////////////////////////////////
 // Default task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['webserver', 'watch', 'jsx', 'stylesheets', 'html']);
+gulp.task('default', ['webserver', 'watch', 'webpack', 'html']);
