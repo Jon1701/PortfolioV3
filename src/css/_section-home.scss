@@ -34,7 +34,32 @@
     background-color: $colour-white;
     height: 5px;
     width: 30%;
-  
+
     margin: 0 auto;
   }
+
+  // Icon Container.
+  .container-icons {
+
+    .icon {
+
+      // Icon size.
+      font-size: 5em;
+
+      // Icon colour.
+      color: $colour-white;
+
+      // Icon padding.
+      padding: 0 10px 0 10px;
+
+      // Icon hover effects.
+      &:hover {
+        text-shadow: 1px 1px 50px $colour-white;
+        transition: all 0.5s ease;
+      }
+      
+    }
+  }
+
+
 }
