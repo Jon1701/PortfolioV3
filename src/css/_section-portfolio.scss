@@ -1,3 +1,11 @@
 #section-portfolio {
 
+  // Reset font size.
+  font-size: 1em;
+
+  // Title font size.
+  .title {
+    font-size: $section-title-font-size;
+  }
+
 }
