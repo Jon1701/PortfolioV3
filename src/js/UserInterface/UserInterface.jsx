@@ -107,7 +107,7 @@ export default class UserInterface extends React.Component {
         },
 
         'bash': {
-          icon: 'icon-terminal',
+          icon: 'icon-bash',
           name: 'Bash'
         },
 
