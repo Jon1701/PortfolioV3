@@ -12,7 +12,7 @@ export default class AboutMe extends React.Component {
   // Component Render.
   render() {
     return (
-      <div className="section">
+      <div className="section" id="section-aboutme">
         AboutMe
       </div>
     );

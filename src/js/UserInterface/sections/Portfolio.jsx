@@ -12,7 +12,7 @@ export default class Portfolio extends React.Component {
   // Component Render.
   render() {
     return (
-      <div className="section">
+      <div className="section" id="section-portfolio">
         Portfolio
       </div>
     );
