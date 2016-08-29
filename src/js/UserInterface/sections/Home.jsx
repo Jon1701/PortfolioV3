@@ -12,8 +12,23 @@ export default class Home extends React.Component {
   // Component Render.
   render() {
     return (
-      <div className="section">
-        Home
+      <div className="section" id="section-home">
+
+        <div className="name text-center">
+          Jon Balon
+        </div>
+
+        <div className="position text-center">
+          Front-end Web Developer
+        </div>
+
+        <div className="tagline text-center">
+          I'm a web developer with a background in Computer Science, Statistics,
+          Analytics, and Data Science.
+        </div>
+
+        <div className="hr"/>
+
       </div>
     );
   } // End Component Render.

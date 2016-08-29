@@ -1,0 +1,21 @@
+#section-home {
+
+  .name {
+    font-size: 5em;
+  }
+
+  .position {
+    font-size: 3em;
+  }
+
+  .tagline {
+    font-size: 1.75em;
+  }
+
+  .hr {
+    background-color: $colour-grey20;
+    height: 5px;
+    width: 30%;
+    margin: 0 auto;
+  }
+}
