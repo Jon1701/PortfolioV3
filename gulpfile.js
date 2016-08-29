@@ -7,7 +7,6 @@ var gulp = require('gulp');             // Gulp.
 var connect = require('gulp-connect');  // Webserver.
 var sass = require('gulp-sass');        // SASS.
 var webpack = require('webpack-stream');// Webpack.
-var rename = require('gulp-rename');    // Rename files.
 
 ////////////////////////////////////////////////////////////////////////////////
 // Paths
@@ -49,12 +48,6 @@ gulp.task('media', function() {
 
 // Compile .scss and move.
 gulp.task('stylesheets', function() {
-
-  // Get flexboxgrid.
-  gulp.src(modulesPath + 'flexboxgrid/css/flexboxgrid.css')
-    .pipe(rename("_flexboxgrid.scss"))
-    .pipe(gulp.dest(srcPath + 'css/'));
-
   gulp.src(srcPath + 'css/**/*')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(destPath + 'css/'))
