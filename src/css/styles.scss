@@ -10,11 +10,19 @@ body {
   margin: 0;
 }
 
+.img-responsive {
+  max-width: 100%;
+  display: block;
+}
+
 // Align text center.
 .text-center {
   text-align: center;
 }
 
+.clearfix {
+  clear: both;
+}
 // Style for each .section.
 .section {
 

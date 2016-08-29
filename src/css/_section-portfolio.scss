@@ -1,7 +1,69 @@
 #section-portfolio {
 
+  // No hyperlink styling.
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   // Background.
   background-image: url('../media/images/backgrounds/cubes/cubes.png');
   background-repeat: repeat;
+
+  .project-panel {
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    // Project title.
+    .project-title {
+      border: solid 1px $colour-grey80;
+      background-color: $colour-white;
+      padding: 10px;
+
+      p {
+        text-overflow: ellipsis;
+        margin: 0;
+      }
+    }
+
+    // Project Image
+    .container-img {
+      border: solid 1px $colour-grey80;
+      background-color: $colour-white;
+    }
+
+    // Project buttons.
+    .container-buttons {
+      background-color: $colour-white;
+      border: solid 1px $colour-grey80;
+      width: 100%;
+
+      .button {
+        width: 33%;
+        float: left;
+        margin: 0 auto;
+
+        // Button hover effect.
+        &:hover {
+          color: $colour-crimson;
+        }
+
+        // Icon.
+        .icon {
+          font-size: 1.5em;
+          margin-bottom: -10px
+        }
+
+        // Icon name
+        .icon-name {
+          font-size: 0.9em;
+        }
+
+      }
+    }
+
+
+  }
 
 }
