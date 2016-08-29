@@ -20,7 +20,7 @@ gulp.task('webpack', function() {
       module: {
         loaders: [
 
-          // Load .jsx and convert to .js through babel loader and webpack.
+          // Begin Babel loader.
           {
             test: /\.jsx$/,
             loader: 'babel',
@@ -30,19 +30,12 @@ gulp.task('webpack', function() {
           },
           // End Babel Loader.
 
-          // Load stylesheets through webpack.
+          // Begin SASS loader.
           {
             test: /\.scss$/,
             loaders: ['style', 'css', 'sass']
           },
           // End SASS loader.
-
-          // Load fonts through webpack
-          {
-            test: /\.(ttf)$/,
-            loader: 'url-loader?limit=100000'
-          },
-          // End font loader.
         ]
       },
       output: {
