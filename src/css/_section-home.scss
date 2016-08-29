@@ -1,25 +1,40 @@
 #section-home {
 
-  // Background.
-  background-image: url('../media/images/backgrounds/W1YL4ZANPU.jpg');
-  background-size: cover; 
+  // Background image and darken filter.
+  $opacity: 0.3; // Opacity
+  background-image: linear-gradient(rgba(0,0,0,$opacity), rgba(0,0,0,$opacity)),
+                    url('../media/images/backgrounds/W1YL4ZANPU.jpg');
+  background-size: cover;
 
+  // Font colour.
+  color: $colour-white;
+
+  // Custom padding.
+  padding-top: 16vh !important;
+
+  // Name.
   .name {
     font-size: 5em;
   }
 
+  // Current position.
   .position {
     font-size: 3em;
+    margin: 15px 0 15px 0;
   }
 
+  // Tagline./
   .tagline {
     font-size: 1.75em;
+    margin: 15px 0 15px 0;
   }
 
+  // Horizontal rule.
   .hr {
-    background-color: $colour-grey20;
+    background-color: $colour-white;
     height: 5px;
     width: 30%;
+  
     margin: 0 auto;
   }
 }

@@ -5,6 +5,7 @@ body {
   font-family: 'Oswald';
   font-size: 100%;
   color: $colour-grey20;
+  margin: 0;
 }
 
 // Align text center.
@@ -16,8 +17,13 @@ body {
 .section {
 
   // Dimensions.
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
+
+  // Padding.
+  padding-top: 10vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
 
 }
 
