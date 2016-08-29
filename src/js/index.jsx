@@ -7,6 +7,3 @@ import UserInterface from './UserInterface/UserInterface.jsx';
 
 // Render <UserInterface/> to the DOM.
 ReactDOM.render(<UserInterface/>, document.getElementById('react-target'));
-
-// Styles.
-require('!style!css!sass!../css/styles.scss');
