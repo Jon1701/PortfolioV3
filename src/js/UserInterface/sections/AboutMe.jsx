@@ -1,6 +1,9 @@
 // React dependencies.
 import React from 'react';
 
+// About Me Icon Grid.
+import AboutMeIcons from './AboutMeIcons/AboutMeIcons.jsx';
+
 // Component Definition.
 export default class AboutMe extends React.Component {
 
@@ -34,6 +37,8 @@ export default class AboutMe extends React.Component {
              Certification on FreeCodeCamp.com and learning advanced libraries
              and frameworks such as React.js and AngularJS 2.0.
           </p>
+
+          <AboutMeIcons iconDB={this.props.iconDB}/>
 
         </div>
 

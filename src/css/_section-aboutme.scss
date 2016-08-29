@@ -4,4 +4,18 @@
   background-image: url('../media/images/backgrounds/cubes/cubes.png');
   background-repeat: repeat;
 
+  // Container which houses both the icon and icon name
+  .container-icon {
+
+    padding-bottom: 15px;
+
+    // Icon only.
+    .icon {
+      font-size: 2em;
+    }
+
+  }
+
+
+
 }
