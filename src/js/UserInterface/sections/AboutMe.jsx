@@ -16,7 +16,7 @@ export default class AboutMe extends React.Component {
 
         <div className="title">About Me</div>
 
-        <div className="blurb text-center">
+        <div className="content text-center">
 
           <p>
             Hi! My name is Jon and I'm a Front-end Web Developer based in

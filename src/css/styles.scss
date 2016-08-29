@@ -1,9 +1,6 @@
 @import '_fonts';
 @import '_colours';
 
-$section-title-font-size: 3em;
-$section-content-font-size: 1.75em;
-
 body {
   font-family: 'Oswald';
   font-size: 100%;
@@ -31,6 +28,11 @@ body {
   .title {
     text-transform: uppercase;
     text-align: center;
+    font-size: 3em;
+  }
+
+  .content {
+    font-size: 1.75em;
   }
 
 
