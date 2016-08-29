@@ -1,6 +1,8 @@
 @import '_fonts';
 @import '_colours';
 
+$section-title-font-size: 3em;
+
 body {
   font-family: 'Oswald';
   font-size: 100%;
@@ -25,7 +27,16 @@ body {
   padding-left: 5vw;
   padding-right: 5vw;
 
+  .title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+
 }
 
 // Import styles for individual sections.
 @import '_section-home';
+@import '_section-aboutme';
+@import '_section-portfolio';
+@import '_section-contactme';
