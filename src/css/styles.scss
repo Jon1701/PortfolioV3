@@ -1,7 +1,18 @@
+@import '_fonts';
+@import '_colours';
+
 body {
+  font-family: 'Oswald';
   font-size: 100%;
+  color: $colour-grey20;
 }
 
+// Align text center.
+.text-center {
+  text-align: center;
+}
+
+// Style for each .section.
 .section {
 
   // Dimensions.
@@ -9,3 +20,6 @@ body {
   min-height: 100vh;
 
 }
+
+// Import styles for individual sections.
+@import '_section-home';
