@@ -1,4 +1,12 @@
 {
+  "atom":{
+     "icon":"icon-atom",
+     "name":"Atom"
+  },
+  "bash":{
+     "icon":"icon-bash",
+     "name":"Bash"
+  },
   "bootstrap":{
      "icon":"icon-bootstrap",
      "name":"Bootstrap"
@@ -7,13 +15,21 @@
      "icon":"icon-css3",
      "name":"CSS3"
   },
+  "d3":{
+     "icon":"icon-codepen",
+     "name":"D3"
+  },
   "debian":{
      "icon":"icon-debian",
      "name":"Debian"
   },
-  "atom":{
-     "icon":"icon-atom",
-     "name":"Atom"
+  "expressjs":{
+     "icon":"icon-codepen",
+     "name":"Express.js"
+  },
+  "flask":{
+     "icon":"icon-codepen",
+     "name":"Flask"
   },
   "freecodecamp":{
      "icon":"icon-freecodecamp",
@@ -35,13 +51,17 @@
      "icon":"icon-html5",
      "name":"HTML5"
   },
-  "jquery":{
-     "icon":"icon-jquery",
-     "name":"jQuery"
-  },
   "javascript":{
      "icon":"icon-javascript",
      "name":"JavaScript"
+  },
+  "jsx":{
+     "icon":"icon-javascript",
+     "name":"JSX"
+  },
+  "jquery":{
+     "icon":"icon-jquery",
+     "name":"jQuery"
   },
   "linkedin":{
      "icon":"icon-linkedin",
@@ -54,6 +74,10 @@
   "mongodb":{
      "icon":"icon-mongodb",
      "name":"MongoDB"
+  },
+  "mustachejs":{
+     "icon":"icon-codepen",
+     "name":"mustache.js"
   },
   "nodejs":{
      "icon":"icon-nodejs",
@@ -71,12 +95,12 @@
      "icon":"icon-sass",
      "name":"Sass"
   },
-  "bash":{
-     "icon":"icon-bash",
-     "name":"Bash"
-  },
   "ubuntu":{
      "icon":"icon-ubuntu",
      "name":"Ubuntu"
+  },
+  "webpack":{
+     "icon":"icon-codepen",
+     "name":"Webpack"
   }
 }

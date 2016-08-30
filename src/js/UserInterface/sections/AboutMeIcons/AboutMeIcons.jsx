@@ -22,10 +22,10 @@ export default class AboutMeIcons extends React.Component {
     // Icons used within this component.
     this.state = {
       tech: [
-        'html5', 'css3', 'javascript', 'jquery', 'bootstrap',
-        'materialize', 'react', 'atom', 'git', 'github', 'gulp',
-        'sass', 'nodejs', 'debian', 'ubuntu', 'bash', 'mongodb',
-        'python']
+        'html5', 'css3', 'javascript', 'jquery', 'jsx', 'bootstrap',
+        'materialize', 'react', 'mustachejs', 'd3', 'atom', 'git', 'github', 'gulp',
+        'webpack', 'sass', 'nodejs', 'expressjs', 'debian', 'ubuntu', 'bash', 'mongodb',
+        'python', 'flask']
     }
   }
 
