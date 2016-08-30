@@ -23,7 +23,7 @@ export default class Technologies extends React.Component {
   // Component Render.
   render() {
 
-    // Array of <Icon/>.
+    // Array of <Icon/> components.
     var icons = [];
 
     // Array of technologies this project uses.
