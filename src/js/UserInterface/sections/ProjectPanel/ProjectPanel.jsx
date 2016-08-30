@@ -2,7 +2,7 @@
 import React from 'react';
 
 import ButtonContainer from './ButtonContainer/ButtonContainer.jsx';
-import Description from './Description/Description.jsx';
+import MoreInfoPopup from './MoreInfoPopup/MoreInfoPopup.jsx';
 
 // Component Definition.
 export default class ProjectPanel extends React.Component {
@@ -31,7 +31,7 @@ export default class ProjectPanel extends React.Component {
 
           <ButtonContainer demoLink={project.links.demo} githubLink={project.links.github}/>
 
-          <Description description={project.description}/>
+          <MoreInfoPopup description={project.description}/>
 
         </div>
     );

@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Component Definition.
-export default class Description extends React.Component {
+export default class MoreInfoPopup extends React.Component {
 
   // Component Constructor.
   constructor() {
