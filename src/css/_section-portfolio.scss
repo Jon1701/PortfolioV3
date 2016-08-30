@@ -64,7 +64,7 @@
       }
     }
 
-    .container-moreinfo {
+    .container-moreinfopopup {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -73,6 +73,15 @@
       background-color: $colour-white;
       border: solid 1px $colour-grey80;
       padding: 20px 10px 20px 10px;
+
+      .container-technologies {
+        display: flex;
+        justify-content: space-between;
+
+        .container-icon {
+          display: inline-block;
+        }
+      }
     }
 
 

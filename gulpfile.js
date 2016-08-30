@@ -7,6 +7,7 @@ var gulp = require('gulp');             // Gulp.
 var connect = require('gulp-connect');  // Webserver.
 var sass = require('gulp-sass');        // SASS.
 var webpack = require('webpack-stream');// Webpack.
+var path = require('path');
 
 ////////////////////////////////////////////////////////////////////////////////
 // Paths
@@ -19,6 +20,11 @@ var modulesPath = './node_modules/';
 gulp.task('jsx', function() {
   gulp.src(srcPath + 'js/index.jsx')
     .pipe(webpack({
+      resolve: {
+        root: [
+          path.resolve('./src/data')
+        ]
+      },
       watch: true,
       module: {
         loaders: [

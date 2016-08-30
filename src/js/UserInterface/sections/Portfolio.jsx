@@ -17,6 +17,7 @@ export default class Portfolio extends React.Component {
           'title': 'Timestamp Generator Microservice',
           'image': '../media/images/portfolio/cover-timestamp-generator.png',
           'description': 'Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates',
+          'technologies': ['html5', 'css3', 'react', 'nodejs'],
           'links': {
             'demo': 'https://ms-timestamp-jon1701.c9users.io/',
             'github': 'https://github.com/Jon1701/MS-Timestamp'
@@ -26,6 +27,7 @@ export default class Portfolio extends React.Component {
           'title': 'Recipe Box',
           'image': '../media/images/portfolio/cover-recipebox.png',
           'description': 'Simple web application built using React.js and Materialize to store recipes using a web browser\'s local storage',
+          'technologies': ['html5', 'css3', 'javascript', 'react', 'materialize'],
           'links': {
             'demo': 'https://www.jonbalon.io/portfolio/RecipeBox',
             'github': 'https://github.com/Jon1701/RecipeBox'

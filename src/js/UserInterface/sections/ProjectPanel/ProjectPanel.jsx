@@ -31,7 +31,7 @@ export default class ProjectPanel extends React.Component {
 
           <ButtonContainer demoLink={project.links.demo} githubLink={project.links.github}/>
 
-          <MoreInfoPopup description={project.description}/>
+          <MoreInfoPopup description={project.description} technologies={project.technologies}/>
 
         </div>
     );
