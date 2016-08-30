@@ -4,6 +4,12 @@ import React from 'react';
 // Other components.
 import ProjectPanel from './ProjectPanel/ProjectPanel.jsx';
 
+// Data containing portfolio projects.
+//
+// Returns a JSON object which is a list of objects containing
+// information about each Portfolio Project.
+var projectsData = require('json!projects.json');
+
 // Component Definition.
 export default class Portfolio extends React.Component {
 
@@ -15,31 +21,9 @@ export default class Portfolio extends React.Component {
     this.state = {
 
       // List of projects.
-      projects: [
-        {
-          'title': 'Timestamp Generator Microservice',
-          'image': '../media/images/portfolio/cover-timestamp-generator.png',
-          'description': 'Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates',
-          'technologies': ['html5', 'css3', 'react', 'nodejs'],
-          'links': {
-            'demo': 'https://ms-timestamp-jon1701.c9users.io/',
-            'github': 'https://github.com/Jon1701/MS-Timestamp'
-          }
-        },
-        {
-          'title': 'Recipe Box',
-          'image': '../media/images/portfolio/cover-recipebox.png',
-          'description': 'Simple web application built using React.js and Materialize to store recipes using a web browser\'s local storage',
-          'technologies': ['html5', 'css3', 'javascript', 'react', 'materialize'],
-          'links': {
-            'demo': 'https://www.jonbalon.io/portfolio/RecipeBox',
-            'github': 'https://github.com/Jon1701/RecipeBox'
-          }
-        },
-      ],
+      projects: projectsData,
 
       // Currently active popup.
-
       // Initially set to -1 so no More Info popups are displayed on Initially
       // render.
       activePopupId: -1
