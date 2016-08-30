@@ -1,7 +1,8 @@
 // React dependencies.
 import React from 'react';
 
-import Button from './Button.jsx';
+import ButtonContainer from './ButtonContainer/ButtonContainer.jsx';
+import Description from './Description/Description.jsx';
 
 // Component Definition.
 export default class ProjectPanel extends React.Component {
@@ -28,15 +29,9 @@ export default class ProjectPanel extends React.Component {
             <img src={project.image} className="img-responsive"/>
           </div>
 
-          <div className="container-buttons">
+          <ButtonContainer demoLink={project.links.demo} githubLink={project.links.github}/>
 
-            <Button iconClass="icon-demo" iconName="Demo" link={project.links.demo}/>
-            <Button iconClass="icon-moreinfo" iconName="More Info"/>
-            <Button iconClass="icon-github" iconName="GitHub" link={project.links.github}/>
-
-            <div className="clearfix"/>
-
-          </div>
+          <Description description={project.description}/>
 
         </div>
     );
