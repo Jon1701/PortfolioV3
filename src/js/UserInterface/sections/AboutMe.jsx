@@ -38,7 +38,7 @@ export default class AboutMe extends React.Component {
              and frameworks such as React.js and AngularJS 2.0.
           </p>
 
-          <AboutMeIcons iconDB={this.props.iconDB}/>
+          <AboutMeIcons/>
 
         </div>
 

@@ -3,6 +3,8 @@ import React from 'react';
 
 import Icon from './Icon.jsx';
 
+var iconDB = require('json!icons.json')
+
 // Component Definition.
 export default class AboutMeIcons extends React.Component {
 
@@ -24,9 +26,6 @@ export default class AboutMeIcons extends React.Component {
 
     // Array of icons.
     var arrayIcons = [];
-
-    // Get icon database.
-    var iconDB = this.props.iconDB;
 
     // Go through all icons in this.state.
     for (var i=0; i<this.state.icons.length; i++) {
