@@ -33,8 +33,17 @@ export default class Portfolio extends React.Component {
             'github': 'https://github.com/Jon1701/RecipeBox'
           }
         },
-      ]
+      ],
+      activePopup: -1
     }
+  }
+
+  // Callback function to update the activePopup attribute in the state with
+  // a given project ID number.
+  handleActivePopupChange(projId) {
+    this.setState({
+      activePopup: projId
+    })
   }
 
   // Component Render.
@@ -49,7 +58,7 @@ export default class Portfolio extends React.Component {
 
       // Store the <ProjectPanel/> component, and pass
       // current project info down as a prop.
-      panels.push(<ProjectPanel key={i} info={project}/>)
+      panels.push(<ProjectPanel key={i} projId={i} info={project} activePopup={this.state.activePopup} updateActivePopup={this.handleActivePopupChange.bind(this)}/>)
     }
 
     return (

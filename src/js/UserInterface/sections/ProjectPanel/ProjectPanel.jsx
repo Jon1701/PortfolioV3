@@ -29,9 +29,9 @@ export default class ProjectPanel extends React.Component {
             <img src={project.image} className="img-responsive"/>
           </div>
 
-          <ButtonContainer demoLink={project.links.demo} githubLink={project.links.github}/>
+          <ButtonContainer projId={this.props.projId} activePopup={this.props.activePopup} updateActivePopup={this.props.updateActivePopup} demoLink={project.links.demo} githubLink={project.links.github}/>
 
-          <MoreInfoPopup description={project.description} technologies={project.technologies}/>
+          <MoreInfoPopup projId={this.props.projId} activePopup={this.props.activePopup} description={project.description} technologies={project.technologies}/>
 
         </div>
     );
