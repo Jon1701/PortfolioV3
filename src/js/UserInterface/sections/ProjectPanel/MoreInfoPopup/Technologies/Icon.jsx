@@ -1,8 +1,6 @@
 // React dependencies.
 import React from 'react';
 
-
-
 // Component Definition.
 export default class Icon extends React.Component {
 
@@ -18,7 +16,7 @@ export default class Icon extends React.Component {
         <div className={"icon " + this.props.iconClass}></div>
         <div>{this.props.iconName}</div>
       </div>
-    );
-  } // End Component Render.
+    ); // End return().
+  }; // End render().
 
-} // End Component Definition.
+}; // End React.Component{}.

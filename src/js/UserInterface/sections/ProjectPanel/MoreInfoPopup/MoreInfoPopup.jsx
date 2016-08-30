@@ -1,9 +1,9 @@
 // React dependencies.
 import React from 'react';
-
-import Technologies from './Technologies/Technologies.jsx';
-
 import classNames from 'classnames';
+
+// Other components.
+import Technologies from './Technologies/Technologies.jsx';
 
 // Component Definition.
 export default class MoreInfoPopup extends React.Component {
@@ -16,22 +16,30 @@ export default class MoreInfoPopup extends React.Component {
   // Component Render.
   render() {
 
+    // CSS classes for the More Info popover.
+    // Hide component if project ID# does not match the active popover ID#.
     var myClasses = classNames({
       'container-moreinfopopup': true,
-      'hidden': this.props.projId != this.props.activePopup
+      'hidden': this.props.projId != this.props.activePopupId
     })
 
     return (
       <div className={myClasses}>
 
         <div className="container-description">
-          {this.props.description}
+          {this.props.info.description}
         </div>
 
-        <Technologies technologies={this.props.technologies}/>
+        {
+          // Displays the Technologies used within this project.
+          //
+          // Passes down the following props:
+          //  tech: List of technologies used within this project.
+        }
+        <Technologies tech={this.props.info.technologies}/>
 
       </div>
-    );
-  } // End Component Render.
+    ); // End return().
+  }; // End render().
 
-} // End Component Definition.
+}; // End React.Component{}.

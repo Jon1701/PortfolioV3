@@ -1,6 +1,7 @@
 // React dependencies.
 import React from 'react';
 
+// Other components.
 import ButtonContainer from './ButtonContainer/ButtonContainer.jsx';
 import MoreInfoPopup from './MoreInfoPopup/MoreInfoPopup.jsx';
 
@@ -15,7 +16,7 @@ export default class ProjectPanel extends React.Component {
   // Component Render.
   render() {
 
-    // Access the data given as a prop to this component.
+    // Access the project data given as a prop to this component.
     var project = this.props.info;
 
     return (
@@ -29,9 +30,35 @@ export default class ProjectPanel extends React.Component {
             <img src={project.image} className="img-responsive"/>
           </div>
 
-          <ButtonContainer projId={this.props.projId} activePopup={this.props.activePopup} updateActivePopup={this.props.updateActivePopup} demoLink={project.links.demo} githubLink={project.links.github}/>
+          {
+            // Displays the Demo, More Info, and GitHub buttons.
+            //
+            // Passes the following props.
+            //  projId: Unique ID# of the current project.
+            //  activePopupId: ID# of the currently active popover.
+            //  updateActivePopupId: Callback to set the ID# of the currently active popover
+            //  links: GitHub and Demo links for this project.
+          }
+          <ButtonContainer
+            projId={this.props.projId}
+            activePopupId={this.props.activePopupId}
+            updateActivePopupId={this.props.updateActivePopupId}
+            links={project.links}
+          />
 
-          <MoreInfoPopup projId={this.props.projId} activePopup={this.props.activePopup} description={project.description} technologies={project.technologies}/>
+          {
+            // Displays the Demo, More Info, and GitHub buttons.
+            //
+            // Passes the following props.
+            //  projId: Unique ID# of the current project.
+            //  activePopupId: ID# of the currently active popover.
+            //  info: Project information.
+          }
+          <MoreInfoPopup
+            projId={this.props.projId}
+            activePopupId={this.props.activePopupId}
+            info={this.props.info}
+          />
 
         </div>
     );

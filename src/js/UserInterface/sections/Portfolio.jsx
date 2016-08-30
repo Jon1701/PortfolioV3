@@ -1,6 +1,7 @@
 // React dependencies.
 import React from 'react';
 
+// Other components.
 import ProjectPanel from './ProjectPanel/ProjectPanel.jsx';
 
 // Component Definition.
@@ -10,8 +11,10 @@ export default class Portfolio extends React.Component {
   constructor() {
     super();
 
-    // Default list of projects.
+    // Initial state.
     this.state = {
+
+      // List of projects.
       projects: [
         {
           'title': 'Timestamp Generator Microservice',
@@ -34,15 +37,20 @@ export default class Portfolio extends React.Component {
           }
         },
       ],
-      activePopup: -1
+
+      // Currently active popup.
+
+      // Initially set to -1 so no More Info popups are displayed on Initially
+      // render.
+      activePopupId: -1
     }
   }
 
   // Callback function to update the activePopup attribute in the state with
   // a given project ID number.
-  handleActivePopupChange(projId) {
+  handleActivePopupIdChange(projId) {
     this.setState({
-      activePopup: projId
+      activePopupId: projId
     })
   }
 
@@ -56,9 +64,22 @@ export default class Portfolio extends React.Component {
       // Current project.
       var project = this.state.projects[i];
 
-      // Store the <ProjectPanel/> component, and pass
-      // current project info down as a prop.
-      panels.push(<ProjectPanel key={i} projId={i} info={project} activePopup={this.state.activePopup} updateActivePopup={this.handleActivePopupChange.bind(this)}/>)
+      // Store the <ProjectPanel/> component.
+      //
+      // Props sent:
+      //  projId: Unique number for this project.
+      //  activePopupId: ID# of the currently active popover.
+      //  updateActivePopupId: Callback function to update currently active popover.
+      //  info: Information about this project.
+      panels.push(
+        <ProjectPanel
+          key={i}
+          projId={i}
+          activePopupId={this.state.activePopupId}
+          updateActivePopupId={this.handleActivePopupIdChange.bind(this)}
+          info={project}
+        />
+      );
     }
 
     return (
@@ -73,7 +94,7 @@ export default class Portfolio extends React.Component {
         </div>
 
       </div>
-    );
-  } // End Component Render.
+    ); // End return().
+  }; // End render().
 
-} // End Component Definition.
+}; // End React.Component{}.

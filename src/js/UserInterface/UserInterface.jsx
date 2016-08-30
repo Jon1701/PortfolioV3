@@ -1,6 +1,7 @@
 // React dependencies.
 import React from 'react';
 
+// Other components.
 // Sections.
 import Home from './sections/Home.jsx';
 import AboutMe from './sections/AboutMe.jsx';
@@ -24,7 +25,7 @@ export default class UserInterface extends React.Component {
         <Portfolio/>
         <ContactMe/>
       </div>
-    );
-  } // End Component Render.
+    ); // End return();
+  }; // End render().
 
-} // End Component Definition.
+}; // End React.Component{}.

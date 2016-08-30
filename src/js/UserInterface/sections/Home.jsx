@@ -41,11 +41,10 @@ export default class Home extends React.Component {
           <a href="" target="_blank">
             <i className="icon icon-freecodecamp"></i>
           </a>
-
         </div>
 
       </div>
-    );
-  } // End Component Render.
+    ); // End return().
+  }; // End render().
 
-} // End Component Definition.
+}; // End React.Component{}.

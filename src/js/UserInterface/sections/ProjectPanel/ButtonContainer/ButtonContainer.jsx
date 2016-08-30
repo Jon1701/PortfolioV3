@@ -17,14 +17,14 @@ export default class ButtonContainer extends React.Component {
     return (
       <div className="container-buttons">
 
-        <Button iconClass="icon-demo" iconName="Demo" link={this.props.demoLink}/>
-        <Button iconClass="icon-moreinfo" iconName="More Info" moreinfo={true} updateActivePopup={this.props.updateActivePopup} activePopup={this.props.activePopup} projId={this.props.projId}/>
-        <Button iconClass="icon-github" iconName="GitHub" link={this.props.githubLink}/>
+        <Button iconClass="icon-demo" iconName="Demo" link={this.props.links.demo}/>
+        <Button iconClass="icon-moreinfo" iconName="More Info" moreinfo={true} updateActivePopupId={this.props.updateActivePopupId} activePopupId={this.props.activePopupId} projId={this.props.projId}/>
+        <Button iconClass="icon-github" iconName="GitHub" link={this.props.links.github}/>
 
         <div className="clearfix"/>
 
       </div>
-    );
-  } // End Component Render.
+    ); // End return().
+  }; // End render().
 
-} // End Component Definition.
+}; // End React.Component{}.
