@@ -36,7 +36,7 @@ export default class ProjectPanel extends React.Component {
             // Passes the following props.
             //  projId: Unique ID# of the current project.
             //  activePopupId: ID# of the currently active popover.
-            //  updateActivePopupId: Callback to set the ID# of the currently active popover
+            //  updateActivePopupId: Callback to set the ID# of the currently active popover.
             //  links: GitHub and Demo links for this project.
           }
           <ButtonContainer
@@ -52,11 +52,13 @@ export default class ProjectPanel extends React.Component {
             // Passes the following props.
             //  projId: Unique ID# of the current project.
             //  activePopupId: ID# of the currently active popover.
+            //  updateActivePopupId: Callback to set the ID# of the currently active popover
             //  info: Project information.
           }
           <MoreInfoPopup
             projId={this.props.projId}
             activePopupId={this.props.activePopupId}
+            updateActivePopupId={this.props.updateActivePopupId}
             info={this.props.info}
           />
 
