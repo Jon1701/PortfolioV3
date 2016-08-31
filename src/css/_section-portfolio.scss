@@ -14,24 +14,21 @@
     position: relative;
     text-align: center;
 
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 
     // Project title.
     .project-title {
       border: solid 1px $colour-grey80;
       background-color: $colour-white;
       padding: 10px;
-
-      p {
-        text-overflow: ellipsis;
-        margin: 0;
-      }
     }
 
     // Project Image
     .container-img {
       border: solid 1px $colour-grey80;
       background-color: $colour-white;
+      border-top: none;
+      border-bottom: none;
     }
 
     // Project buttons.
@@ -39,6 +36,8 @@
       background-color: $colour-white;
       border: solid 1px $colour-grey80;
       width: 100%;
+
+      padding: 5px 0 5px 0;
 
       .button {
         width: 33%;
@@ -52,13 +51,13 @@
 
         // Icon.
         .icon {
-          font-size: 1.5em;
+          font-size: 1.25em;
           margin-bottom: -10px
         }
 
         // Icon name
         .icon-name {
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
 
       }
@@ -74,12 +73,25 @@
       border: solid 1px $colour-grey80;
       padding: 20px 10px 20px 10px;
 
+      .container-description {
+        margin-bottom: 10px;
+        font-size: 0.85em;
+      }
+
       .container-technologies {
         display: flex;
         justify-content: space-between;
 
         .container-icon {
           display: inline-block;
+
+          .icon {
+            font-size: 1.75em;
+          }
+          .name {
+            margin-top: -15px;
+            font-size: 0.85em;
+          }
         }
       }
     }

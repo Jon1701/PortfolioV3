@@ -14,7 +14,7 @@ export default class Icon extends React.Component {
     return (
       <div className="container-icon">
         <div className={"icon " + this.props.iconClass}></div>
-        <div>{this.props.iconName}</div>
+        <div className="name">{this.props.iconName}</div>
       </div>
     ); // End return().
   }; // End render().
