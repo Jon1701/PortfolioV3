@@ -7,32 +7,108 @@ export default class ContactMe extends React.Component {
   // Component Constructor.
   constructor() {
     super();
+
+    this.state = {
+      name: '',
+      email: '',
+      _subject: '',
+      message: '',
+      _gotcha: '',
+    }
   }
+
+  handleChange(e) {
+
+    // Field name.
+    var fieldName = e.target.getAttribute('name');
+
+    // Field value.
+    var fieldValue = e.target.value;
+
+    // Update field values in this.state.
+    this.setState({
+      [fieldName]: fieldValue
+    });
+
+ }
+
+ componentDidUpdate() {
+   console.log(this.state)
+ }
+
+ componentDidMount() {
+
+   // Reference to this component.
+   var thisComp = this;
+
+   // Find the Submit button.
+   var btnSubmit = document.querySelector("form > button[type='submit']");
+
+
+
+   // Handle onclick events.
+   btnSubmit.addEventListener('click', function(e) {
+
+     function cb() {
+       console.log(xmlHttp.status)
+       console.log(xmlHttp.responseText);
+     };
+
+     // Prevent form submission.
+     e.preventDefault();
+
+     var xmlHttp = new XMLHttpRequest();
+     xmlHttp.onreadystatechange = cb;
+
+     xmlHttp.open("GET", "/", true);
+     xmlHttp.send(null);
+
+
+   });
+ }
 
   // Component Render.
   render() {
     return (
       <div className="section" id="section-contactme">
 
-      <div className="title">Contact Me</div>
+        <div className="title">Contact Me</div>
 
-      <div className="content">
-        <p>
-        Commodo nulla Lorem cillum occaecat deserunt consectetur proident commodo officia irure nisi adipisicing. Anim esse culpa ad excepteur deserunt ut tempor nulla quis amet officia minim occaecat sunt sit tempor. Lorem occaecat enim sit consequat pariatur veniam nostrud exercitation proident irure proident ea incididunt. Consequat ullamco ullamco adipisicing velit laborum aliquip velit ipsum ut excepteur. In est sit reprehenderit enim commodo mollit irure pariatur. Ullamco aute ex esse quis occaecat irure culpa aliquip Lorem nostrud magna dolore pariatur. Enim mollit deserunt magna nisi veniam laborum Lorem quis magna esse ea aliqua anim est ex occaecat.
-        </p>
+        <div className="content text-center">
 
-        <p>
-        Nostrud laboris fugiat consectetur cupidatat mollit excepteur incididunt ut mollit deserunt cillum nulla sunt Lorem quis dolore. Incididunt proident nulla minim nisi amet anim anim in Lorem duis. Cillum commodo nostrud aute aute cillum ex occaecat occaecat magna ad quis eu. Culpa eiusmod deserunt reprehenderit Lorem anim reprehenderit fugiat labore ex id. Nulla laboris fugiat cillum consequat deserunt voluptate ea elit sit irure. Consectetur fugiat est ullamco deserunt dolore ea est officia. Eu qui consequat sunt in ullamco elit laborum nisi eiusmod id elit aliquip do enim labore proident nisi.
-        </p>
+          <form>
+            <div className="form-field">
+              <label htmlFor="name">Name:</label>
+              <input type="text" name="name" className="border-default" onChange={this.handleChange.bind(this)} value={this.state.name}/>
+            </div>
 
-        <p>
-        Laboris in aliqua ut anim tempor labore tempor amet anim sunt duis do. Consectetur veniam elit ea qui tempor consequat est sint cupidatat laboris voluptate ipsum et excepteur. Ullamco elit aliquip nostrud aute laboris cillum dolor labore in exercitation do duis enim tempor proident incididunt commodo.
-        </p>
+            <div className="form-field">
+              <label htmlFor="email">Email:</label>
+              <input type="text" name="email" className="border-default" onChange={this.handleChange.bind(this)} value={this.state.email}/>
+            </div>
 
-        <p>
-        Aute exercitation consequat sint laboris veniam consectetur velit enim enim exercitation ea magna adipisicing. Irure consectetur sunt consectetur velit mollit quis ullamco aliqua quis excepteur incididunt voluptate labore nulla velit labore. Nulla irure ipsum sunt ipsum consequat quis excepteur eu cupidatat elit elit nostrud consequat. Sint nulla commodo incididunt duis velit tempor ullamco qui eiusmod non qui cillum consectetur commodo ut.
-        </p>
-      </div>
+            <div className="form-field">
+              <label htmlFor="subject">Subject:</label>
+              <input type="text" name="_subject" className="border-default" onChange={this.handleChange.bind(this)} value={this.state._subject}/>
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="subject">Gotcha:</label>
+              <input type="text" name="_gotcha" className="border-default" onChange={this.handleChange.bind(this)} value={this.state._gotcha}/>
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="message">Message:</label>
+              <textarea className="border-default" name="message" onChange={this.handleChange.bind(this)} value={this.state.message}></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+
+          </form>
+
+
+
+        </div>
 
       </div>
     );
