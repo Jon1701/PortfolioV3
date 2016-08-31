@@ -15,7 +15,7 @@ export default class ButtonContainer extends React.Component {
   render() {
 
     return (
-      <div className="container-buttons">
+      <div className="container-buttons noselect">
 
         <Button iconClass="icon-demo" iconName="Demo" link={this.props.links.demo}/>
         <Button iconClass="icon-moreinfo" iconName="More Info" moreinfo={true} updateActivePopupId={this.props.updateActivePopupId} activePopupId={this.props.activePopupId} projId={this.props.projId}/>

@@ -29,7 +29,7 @@ export default class Home extends React.Component {
 
         <div className="hr"/>
 
-        <div className="container-icons text-center">
+        <div className="container-icons text-center noselect">
           <a href="" target="_blank">
             <i className="icon icon-github"></i>
           </a>
