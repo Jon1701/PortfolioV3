@@ -12,7 +12,10 @@ export default class Icon extends React.Component {
   // Component Render.
   render() {
     return (
-      <div className="container-icon">
+      <div className={
+                      "container-icon " +
+                      "container-" + this.props.iconClass
+                      }>
         <div className={"icon " + this.props.iconClass}></div>
         <div className="name">{this.props.iconName}</div>
       </div>
