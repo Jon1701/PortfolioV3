@@ -1,0 +1,102 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.board .row {
+  clear: both;
+  width: 850px;
+  margin: 0 auto; }
+
+.board .cell {
+  width: 40px;
+  height: 40px;
+  float: left; }
+
+.board-grid {
+  position: relative; }
+
+.hidden {
+  visibility: hidden; }
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 500px;
+  border: solid 1px #333333;
+  background-color: #FFFFFF; }
+
+.clearfix {
+  clear: both; }
+
+.license {
+  margin: 0 auto; }
+
+.cell {
+  background-size: 40px 40px; }
+
+.cell-wall {
+  background: #333333; }
+
+.cell-free {
+  background-image: url("../media/assets/icons/tatami.png"); }
+
+.cell-player {
+  background-image: url("../media/assets/icons/tatami.png");
+  content: url("../media/assets/icons/ninja.png"); }
+
+.cell-medkit {
+  background-image: url("../media/assets/icons/tatami.png");
+  content: url("../media/assets/icons/medicine.png"); }
+
+.cell-weapon {
+  background-image: url("../media/assets/icons/tatami.png");
+  content: url("../media/assets/icons/sword.png"); }
+
+.cell-enemy {
+  background-image: url("../media/assets/icons/tatami.png");
+  content: url("../media/assets/icons/evil-1.png"); }
+
+.cell-boss {
+  background-image: url("../media/assets/icons/tatami.png");
+  content: url("../media/assets/icons/evil.png"); }
+
+.cell-teleport {
+  background-image: url("../media/assets/icons/tatami.png");
+  content: url("../media/assets/icons/layer.png"); }
+
+.cell-teleport-locked {
+  background-image: url("../media/assets/icons/tatami.png");
+  content: url("../media/assets/icons/layers.png"); }
+
+.cell-stats {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto; }
+
+.stats-playerhealth {
+  content: url("../media/assets/icons/shield.png"); }
+
+.stats-playerlevel {
+  content: url("../media/assets/icons/chevron-up.png"); }
+
+.stats-weaponlevel {
+  content: url("../media/assets/icons/sword.png"); }
+
+.stats-damagepotential {
+  content: url("../media/assets/icons/swords.png"); }
+
+.tbl {
+  display: table;
+  width: 850px;
+  margin: 0 auto; }
+  .tbl .tbl-row {
+    display: table-row; }
+  .tbl .tbl-cell {
+    display: table-cell;
+    text-align: center; }

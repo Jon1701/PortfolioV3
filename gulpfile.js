@@ -67,6 +67,13 @@ gulp.task('html', function() {
     .pipe(connect.reload());
 });
 
+// Move portfolio projects.
+gulp.task('portfolio', function() {
+  gulp.src(srcPath + 'portfolio/**/*')
+    .pipe(gulp.dest(destPath + 'portfolio/'))
+    .pipe(connect.reload());
+});
+
 ////////////////////////////////////////////////////////////////////////////////
 // Webserver
 ////////////////////////////////////////////////////////////////////////////////
@@ -93,4 +100,4 @@ gulp.task('watch', function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Default task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['webserver', 'watch', 'jsx', 'media', 'stylesheets', 'html']);
+gulp.task('default', ['webserver', 'watch', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio']);

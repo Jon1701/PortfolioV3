@@ -1,0 +1,31 @@
+body {
+  font-size: 100%; }
+
+.container {
+  width: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.title {
+  font-size: 3em; }
+
+#section-textarea {
+  font-size: 2em;
+  padding: 0;
+  margin: 0; }
+  #section-textarea .content {
+    margin: 1%; }
+    #section-textarea .content textarea {
+      width: 100%;
+      min-height: 50vh; }
+
+#section-preview {
+  font-size: 2em;
+  padding: 0;
+  margin: 0; }
+  #section-preview .content {
+    width: 100%;
+    min-height: 50vh;
+    margin: 3%;
+    overflow: auto; }

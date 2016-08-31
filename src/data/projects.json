@@ -10,6 +10,16 @@
     }
   },
   {
+    "title": "Request Header Parser Microservice",
+    "image": "../media/images/portfolio/cover-requestheaderparser.png",
+    "description": "Simple Node.js/Express.js application to parse web browser HTTP request headers",
+    "technologies": ["html5", "css3", "react", "nodejs", "expressjs"],
+    "links": {
+      "demo": "https://ms-request-header-parser-jon1701.c9users.io/",
+      "github": "https://github.com/Jon1701/MS-RequestHeaderParser"
+    }
+  },
+  {
     "title": "Recipe Box",
     "image": "../media/images/portfolio/cover-recipebox.png",
     "description": "Simple web application built using React.js and Materialize to store recipes using a web browser's local storage",
@@ -17,6 +27,96 @@
     "links": {
       "demo": "https://www.jonbalon.io/portfolio/RecipeBox",
       "github": "https://github.com/Jon1701/RecipeBox"
+    }
+  },
+  {
+    "title": "Dungeon Crawler",
+    "image": "../media/images/portfolio/cover-dungeoncrawler.png",
+    "description": "A simple dungeon crawler game",
+    "technologies": ["html5", "css3", "javascript", "react"],
+    "links": {
+      "demo": "../portfolio/DungeonCrawler",
+      "github": "https://github.com/Jon1701/DungeonCrawler"
+    }
+  },
+  {
+    "title": "The Game of Life",
+    "image": "../media/images/portfolio/cover-gameoflife.png",
+    "description": "A simulation of Conway's Game of Life",
+    "technologies": ["html5", "css3", "javascript", "react"],
+    "links": {
+      "demo": "../portfolio/GameOfLife",
+      "github": "https://github.com/Jon1701/GameOfLife"
+    }
+  },
+  {
+    "title": "FreeCodeCamp D3 Charts",
+    "image": "../media/images/portfolio/cover-d3-projects.png",
+    "description": "A collection of charts made in D3",
+    "technologies": ["html5", "css3", "javascript", "d3"],
+    "links": {
+      "demo": "../portfolio/D3Projects",
+      "github": "https://github.com/Jon1701/FCC-D3-Projects"
+    }
+  },
+  {
+    "title": "TwitchViewer",
+    "image": "../media/images/portfolio/cover-twitch-viewer.png",
+    "description": "See what some of my favourite Twitch streamers are playing",
+    "technologies": ["html5", "css3", "javascript", "jquery", "react"],
+    "links": {
+      "demo": "../portfolio/TwitchViewer",
+      "github": "https://github.com/Jon1701/TwitchViewer"
+    }
+  },
+  {
+    "title": "Markdown Previewer",
+    "image": "../media/images/portfolio/cover-markdown-previewer.png",
+    "description": "Converts markdown into HTML markup",
+    "technologies": ["html5", "css3", "javascript", "react"],
+    "links": {
+      "demo": "../portfolio/MarkdownPreviewer",
+      "github": "https://github.com/Jon1701/MarkdownPreviewer"
+    }
+  },
+  {
+    "title": "Simon Game",
+    "image": "../media/images/portfolio/cover-simongame.png",
+    "description": "A classic, rebuilt for modern times, and in 4K. (Batteries not included)",
+    "technologies": ["html5", "css3", "javascript", "jquery"],
+    "links": {
+      "demo": "../portfolio/SimonGame",
+      "github": "https://github.com/Jon1701/SimonGame"
+    }
+  },
+  {
+    "title": "Wiki Viewer",
+    "image": "../media/images/portfolio/cover-wikiviewer.png",
+    "description": "Search for Wikipedia using Wikipedia",
+    "technologies": ["html5", "css3", "javascript", "jquery", "mustachejs"],
+    "links": {
+      "demo": "../portfolio/WikiViewer",
+      "github": "https://github.com/Jon1701/WikiViewer"
+    }
+  },
+  {
+    "title": "Pumpkindoro Timer",
+    "image": "../media/images/portfolio/cover-pumpkindoro-timer.png",
+    "description": "A variation of the world famous Pomodoro Timer, now made with real pumpkins",
+    "technologies": ["html5", "css3", "javascript", "jquery"],
+    "links": {
+      "demo": "../portfolio/PumpkindoroTimer",
+      "github": "https://github.com/Jon1701/PumpkindoroTimer"
+    }
+  },
+  {
+    "title": "Life is Strange Quote Generator",
+    "image": "../media/images/portfolio/cover-quote-generator.png",
+    "description": "Relive the horror here with quotes from the game",
+    "technologies": ["html5", "css3", "javascript", "jquery"],
+    "links": {
+      "demo": "../portfolio/LifeIsStrangeQuoteGenerator",
+      "github": "https://github.com/Jon1701/LifeIsStrangeQuoteGenerator"
     }
   }
 ]
