@@ -27,7 +27,9 @@ export default class ProjectPanel extends React.Component {
           </div>
 
           <div className="container-img noselect">
-            <img src={project.image} className="img-responsive"/>
+            <a href={project.links.demo} target="_blank">
+              <img src={project.image} className="img-responsive"/>
+            </a>
           </div>
 
           {
