@@ -30,7 +30,10 @@ export default class ContactMe extends React.Component {
       emailValid: 'default',
       _subjectValid: 'default',
       messageValid: 'default',
-      _gotchaValid: 'valid'
+      _gotchaValid: 'valid',
+
+      // Form validation.
+      formValid: false
     }
   }
 
@@ -57,6 +60,18 @@ export default class ContactMe extends React.Component {
 
      // Prevent form submission.
      e.preventDefault();
+
+     // Check to see if the form is valid.
+     var formValid = thisComp.state.nameValid == 'valid' &&
+                      thisComp.state.emailValid == 'valid' &&
+                      thisComp.state._subjectValid == 'valid' &&
+                      thisComp.state._gotchaValid == 'valid' &&
+                      thisComp.state.messageValid == 'valid';
+     if (formValid) {
+       console.log(formValid);
+     } else {
+       console.log(formValid);
+     }
 
      // Data to be sent to the server.
      var data = {
