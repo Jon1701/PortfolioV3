@@ -223,7 +223,10 @@ export default class ContactForm extends React.Component {
             handleChange={this.updateFieldAndValidate.bind(this)}
           />
 
-          <button type="submit" disabled={this.state.submitDisabled}>Send Message</button>
+          <button type="submit" disabled={this.state.submitDisabled}>
+            <span className="icon icon-paperplane"/> Send Message
+          </button>
+
         </form>
 
       </div>
