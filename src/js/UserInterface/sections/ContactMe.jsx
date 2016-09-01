@@ -1,5 +1,13 @@
 // React dependencies.
 import React from 'react';
+import classNames from 'classnames';
+
+// Fields.
+import Name from './ContactMeFields/Name.jsx';
+import Email from './ContactMeFields/Email.jsx';
+import Subject from './ContactMeFields/Subject.jsx';
+import Gotcha from './ContactMeFields/Gotcha.jsx';
+import Message from './ContactMeFields/Message.jsx';
 
 // Component Definition.
 export default class ContactMe extends React.Component {
@@ -9,32 +17,32 @@ export default class ContactMe extends React.Component {
     super();
 
     this.state = {
+
+      // Form field values.
       name: '',
       email: '',
       _subject: '',
       message: '',
       _gotcha: '',
+
+      // Form field validation.
+      nameValid: 'default',
+      emailValid: 'default',
+      _subjectValid: 'default',
+      messageValid: 'default',
+      _gotchaValid: 'valid'
     }
   }
 
-  handleChange(e) {
-
-    // Field name.
-    var fieldName = e.target.getAttribute('name');
-
-    // Field value.
-    var fieldValue = e.target.value;
-
-    // Update field values in this.state.
-    this.setState({
-      [fieldName]: fieldValue
-    });
-
- }
-
+/*
  componentDidUpdate() {
    console.log(this.state)
  }
+*/
+
+  updateFieldAndValidate(newState) {
+    this.setState(newState);
+  }
 
  componentDidMount() {
 
@@ -44,16 +52,14 @@ export default class ContactMe extends React.Component {
    // Find the Submit button.
    var btnSubmit = document.querySelector("form > button[type='submit']");
 
-
-
    // Handle onclick events.
    btnSubmit.addEventListener('click', function(e) {
 
      // Prevent form submission.
      e.preventDefault();
 
-     // Data to send to the server.
-     var httpParams = {
+     // Data to be sent to the server.
+     var data = {
        name: thisComp.state.name,
        email: thisComp.state.email,
        _subject: thisComp.state._subject,
@@ -61,14 +67,17 @@ export default class ContactMe extends React.Component {
        _gotcha: thisComp.state._gotcha
      };
 
-     // AJAX Request object.
+     // Create AJAX request.
      var xhr = new XMLHttpRequest();
 
      // POST request to email server.
-     xhr.open('POST', '/', true);
+     xhr.open('POST', '/email', true);
+
+     // Send request data as type application/json.
+     xhr.setRequestHeader('Content-Type', 'application/json');
 
      // Send data to server.
-     xhr.send(httpParams);
+     xhr.send(JSON.stringify(data));
 
      // Handle response from the server.
      xhr.onreadystatechange = function() {
@@ -84,23 +93,27 @@ export default class ContactMe extends React.Component {
          if (xhr.status === OK) {
 
            // No errors.
-           console.log(xhr.responseText);
+           console.log('response: ' + xhr.responseText);
 
          } else {
 
            // Error occurred.
            console.log('error: ' + xhr.status);
 
-         }
-       }
+         }; // End xhr status check.
 
-     };
+       }; // End xhr ready state check.
 
-   });
- }
+     }; // End xhr onreadystatechange.
+
+   }); // End button onclick.
+
+ } // End componentDidMount().
 
   // Component Render.
   render() {
+
+
     return (
       <div className="section" id="section-contactme">
 
@@ -109,36 +122,38 @@ export default class ContactMe extends React.Component {
         <div className="content text-center">
 
           <form>
-            <div className="form-field">
-              <label htmlFor="name">Name:</label>
-              <input type="text" name="name" className="border-default" onChange={this.handleChange.bind(this)} value={this.state.name}/>
-            </div>
+            <Name
+              value={this.state.name}
+              validFlag={this.state.nameValid}
+              handleChange={this.updateFieldAndValidate.bind(this)}
+            />
 
-            <div className="form-field">
-              <label htmlFor="email">Email:</label>
-              <input type="text" name="email" className="border-default" onChange={this.handleChange.bind(this)} value={this.state.email}/>
-            </div>
+            <Email
+              value={this.state.email}
+              validFlag={this.state.emailValid}
+              handleChange={this.updateFieldAndValidate.bind(this)}
+            />
 
-            <div className="form-field">
-              <label htmlFor="subject">Subject:</label>
-              <input type="text" name="_subject" className="border-default" onChange={this.handleChange.bind(this)} value={this.state._subject}/>
-            </div>
+            <Subject
+              value={this.state._subject}
+              validFlag={this.state._subjectValid}
+              handleChange={this.updateFieldAndValidate.bind(this)}
+            />
 
-            <div className="form-field">
-              <label htmlFor="subject">Gotcha:</label>
-              <input type="text" name="_gotcha" className="border-default" onChange={this.handleChange.bind(this)} value={this.state._gotcha}/>
-            </div>
+            <Gotcha
+              value={this.state._gotcha}
+              validFlag={this.state._gotchaValid}
+              handleChange={this.updateFieldAndValidate.bind(this)}
+            />
 
-            <div className="form-field">
-              <label htmlFor="message">Message:</label>
-              <textarea className="border-default" name="message" onChange={this.handleChange.bind(this)} value={this.state.message}></textarea>
-            </div>
+            <Message
+              value={this.state.message}
+              validFlag={this.state.messageValid}
+              handleChange={this.updateFieldAndValidate.bind(this)}
+            />
 
             <button type="submit">Send Message</button>
-
           </form>
-
-
 
         </div>
 
