@@ -2,6 +2,10 @@
 import React from 'react';
 
 // Other components.
+
+// Navigation Bar.
+import Navbar from './Navbar/Navbar.jsx';
+
 // Sections.
 import Home from './sections/Home.jsx';
 import AboutMe from './sections/AboutMe.jsx';
@@ -20,6 +24,7 @@ export default class UserInterface extends React.Component {
   render() {
     return (
       <div>
+        <Navbar/>
         <Home/>
         <AboutMe/>
         <Portfolio/>

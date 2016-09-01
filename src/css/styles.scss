@@ -64,6 +64,7 @@ body {
 }
 
 // Import styles for individual sections.
+@import '_navbar';
 @import '_section-home';
 @import '_section-aboutme';
 @import '_section-portfolio';
