@@ -7,6 +7,7 @@ var gulp = require('gulp');             // Gulp.
 var connect = require('gulp-connect');  // Webserver.
 var sass = require('gulp-sass');        // SASS.
 var webpack = require('webpack-stream');// Webpack.
+var nodemon = require('gulp-nodemon');  // Nodemon.
 var path = require('path');
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -42,14 +43,14 @@ gulp.task('jsx', function() {
       }
     }))
     .pipe(gulp.dest(destPath + 'js/'))
-    .pipe(connect.reload());
+    //.pipe(connect.reload());
 });
 
 // Move media.
 gulp.task('media', function() {
   gulp.src(srcPath + 'media/**/*')
     .pipe(gulp.dest(destPath + 'media/'))
-    .pipe(connect.reload());
+    //.pipe(connect.reload());
 });
 
 // Compile .scss and move.
@@ -57,21 +58,21 @@ gulp.task('stylesheets', function() {
   gulp.src(srcPath + 'css/**/*')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(destPath + 'css/'))
-    .pipe(connect.reload());
+    //.pipe(connect.reload());
 });
 
 // Move .html.
 gulp.task('html', function() {
   gulp.src(srcPath + '*.html')
     .pipe(gulp.dest(destPath))
-    .pipe(connect.reload());
+    //.pipe(connect.reload());
 });
 
 // Move portfolio projects.
 gulp.task('portfolio', function() {
   gulp.src(srcPath + 'portfolio/**/*')
     .pipe(gulp.dest(destPath + 'portfolio/'))
-    .pipe(connect.reload());
+    //.pipe(connect.reload());
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -87,6 +88,12 @@ gulp.task("webserver", function() {
 
 });
 
+gulp.task("nodeserver", function() {
+  nodemon({
+    script: './server.js'
+  })
+});
+
 ////////////////////////////////////////////////////////////////////////////////
 // Watch task
 ////////////////////////////////////////////////////////////////////////////////
@@ -100,4 +107,4 @@ gulp.task('watch', function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Default task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['webserver', 'watch', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio']);
+gulp.task('default', ['watch', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio', 'nodeserver']);
