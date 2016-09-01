@@ -47,6 +47,7 @@ body {
 
   // Padding.
   padding-top: 10vh;
+  padding-bottom: 10vh;
   padding-left: 5vw;
   padding-right: 5vw;
 
@@ -67,3 +68,6 @@ body {
 @import '_section-aboutme';
 @import '_section-portfolio';
 @import '_section-contactme';
+
+// Custom font sizes based on screen size.
+@import '_font-size';
