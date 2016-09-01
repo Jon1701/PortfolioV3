@@ -49,20 +49,52 @@ export default class ContactMe extends React.Component {
    // Handle onclick events.
    btnSubmit.addEventListener('click', function(e) {
 
-     function cb() {
-       console.log(xmlHttp.status)
-       console.log(xmlHttp.responseText);
-     };
-
      // Prevent form submission.
      e.preventDefault();
 
-     var xmlHttp = new XMLHttpRequest();
-     xmlHttp.onreadystatechange = cb;
+     // Data to send to the server.
+     var httpParams = {
+       name: thisComp.state.name,
+       email: thisComp.state.email,
+       _subject: thisComp.state._subject,
+       message: thisComp.state.message,
+       _gotcha: thisComp.state._gotcha
+     };
 
-     xmlHttp.open("GET", "/", true);
-     xmlHttp.send(null);
+     // AJAX Request object.
+     var xhr = new XMLHttpRequest();
 
+     // POST request to email server.
+     xhr.open('POST', '/', true);
+
+     // Send data to server.
+     xhr.send(httpParams);
+
+     // Handle response from the server.
+     xhr.onreadystatechange = function() {
+
+       // Status codes.
+       var DONE = 4;  // Request done.
+       var OK = 200;  // Success.
+
+       // Check if the POST request is done.
+       if (xhr.readyState === DONE) {
+
+         // Check if the request was a success.
+         if (xhr.status === OK) {
+
+           // No errors.
+           console.log(xhr.responseText);
+
+         } else {
+
+           // Error occurred.
+           console.log('error: ' + xhr.status);
+
+         }
+       }
+
+     };
 
    });
  }
