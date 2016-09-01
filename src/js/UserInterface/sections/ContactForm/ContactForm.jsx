@@ -132,7 +132,7 @@ export default class ContactForm extends React.Component {
     return (
       <div>
 
-        <form>
+        <form id="form-contact">
           <Name
             value={this.state.name}
             validFlag={this.state.nameValid}
