@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Fields.
+import Status from './Status.jsx';
 import Name from './Name.jsx';
 import Email from './Email.jsx';
 import Subject from './Subject.jsx';
@@ -33,7 +34,7 @@ export default class ContactForm extends React.Component {
       _gotchaValid: 'valid',
 
       // Form validation.
-      formValid: false
+      formValid: 'default'
     }
   }
 
@@ -49,44 +50,19 @@ export default class ContactForm extends React.Component {
 
  componentDidMount() {
 
-   // Reference to this component.
-   var thisComp = this;
-
-   // Find the Submit button.
-   var btnSubmit = document.querySelector("form > button[type='submit']");
-
-   // Handle onclick events.
-   btnSubmit.addEventListener('click', function(e) {
-
-     // Prevent form submission.
-     e.preventDefault();
-
-     // Check to see if the form is valid.
-     var formValid = thisComp.state.nameValid == 'valid' &&
-                      thisComp.state.emailValid == 'valid' &&
-                      thisComp.state._subjectValid == 'valid' &&
-                      thisComp.state._gotchaValid == 'valid' &&
-                      thisComp.state.messageValid == 'valid';
-     if (formValid) {
-       console.log(formValid);
-     } else {
-       console.log(formValid);
-     }
-
-     // Data to be sent to the server.
-     var data = {
-       name: thisComp.state.name,
-       email: thisComp.state.email,
-       _subject: thisComp.state._subject,
-       message: thisComp.state.message,
-       _gotcha: thisComp.state._gotcha
-     };
+   // Helper function.
+   // Sends an AJAX request.
+   var sendAjax = function(data, thisComp) {
 
      // Create AJAX request.
      var xhr = new XMLHttpRequest();
 
+     // Server URL.
+     var url = atob('aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vam9uLmouYmFsb25AZ21haWwuY29t');
+     var debugUrl = '/email'; // Debug URL to prevent spam. Make sure node server.js is running.
+
      // POST request to email server.
-     xhr.open('POST', '/email', true);
+     xhr.open('POST', url, true);
 
      // Send request data as type application/json.
      xhr.setRequestHeader('Content-Type', 'application/json');
@@ -110,6 +86,30 @@ export default class ContactForm extends React.Component {
            // No errors.
            console.log('response: ' + xhr.responseText);
 
+           var cb = function() {
+
+             // Reset all fields, and validity states by setting this.state
+             // back to default.
+             thisComp.setState({
+               // Form field values.
+               name: '',
+               email: '',
+               _subject: '',
+               message: '',
+               _gotcha: '',
+               nameValid: 'default',
+               emailValid: 'default',
+               _subjectValid: 'default',
+               messageValid: 'default',
+               _gotchaValid: 'valid',
+               formValid: 'default'
+             })
+
+           }
+
+           // After 3 seconds, hide the status window.
+           setTimeout(cb, 3000);
+
          } else {
 
            // Error occurred.
@@ -120,6 +120,57 @@ export default class ContactForm extends React.Component {
        }; // End xhr ready state check.
 
      }; // End xhr onreadystatechange.
+
+   }
+
+   // Reference to this component.
+   var thisComp = this;
+
+   // Find the Submit button.
+   var btnSubmit = document.querySelector("form > button[type='submit']");
+
+   // Handle onclick events.
+   btnSubmit.addEventListener('click', function(e) {
+
+     // Prevent form submission.
+     e.preventDefault();
+
+     // Check to see if the form is valid.
+     var formValid = thisComp.state.nameValid == 'valid' &&
+                      thisComp.state.emailValid == 'valid' &&
+                      thisComp.state._subjectValid == 'valid' &&
+                      thisComp.state._gotchaValid == 'valid' &&
+                      thisComp.state.messageValid == 'valid';
+
+    // Check to see if all fields in the form are valid.
+     if (formValid) {
+
+        // Set the form validity state to 'valid'.
+        thisComp.setState({
+         formValid: 'valid'
+        });
+
+        // Data to be sent to the server.
+        var data = {
+          name: thisComp.state.name,
+          email: thisComp.state.email,
+          _subject: thisComp.state._subject,
+          message: thisComp.state.message,
+          _gotcha: thisComp.state._gotcha
+        };
+
+        // Send AJAX request.
+        sendAjax(data, thisComp);
+
+     } else {
+
+       // Set form validity to 'invalid'.
+       thisComp.setState({
+         formValid: 'invalid'
+       });
+
+     }
+
 
    }); // End button onclick.
 
@@ -133,6 +184,9 @@ export default class ContactForm extends React.Component {
       <div>
 
         <form id="form-contact">
+
+          <Status validFlag={this.state.formValid}/>
+
           <Name
             value={this.state.name}
             validFlag={this.state.nameValid}
