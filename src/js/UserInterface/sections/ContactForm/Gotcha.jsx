@@ -38,7 +38,7 @@ export default class Gotcha extends React.Component {
     });
 
     return (
-      <div className="form-field">
+      <div className="hidden form-field">
         <label htmlFor="_gotcha">Gotcha:</label>
         <input type="text" name="_gotcha" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}/>
       </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Component Definition.
-export default class Message extends React.Component {
+export default class Email extends React.Component {
 
   // Component Constructor.
   constructor() {
@@ -14,7 +14,7 @@ export default class Message extends React.Component {
   updateValidate(e) {
 
     // Field name.
-    var fieldName = e.target.getAttribute('message');
+    var fieldName = e.target.getAttribute('email');
 
     // Field value.
     var fieldValue = e.target.value;
@@ -22,28 +22,31 @@ export default class Message extends React.Component {
     // Get current validation flag. Either 'invalid', 'valid', or 'default'.
     var currentValidFlag = this.props.validFlag;
 
+    // Regular expression to test if email address is valid.
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     // Check fields for validity.
     if (fieldValue.length == 0) {
 
       // Default if field is empty.
       currentValidFlag = 'default';
 
-    } else if ((fieldValue.length > 0) && (fieldValue.length < 15) || (fieldValue.length > 300)) {
+    } else if (!re.test(fieldValue) && fieldValue.length > 0) {
 
-      // Invalid if length is greater than 0 and less than 15, or greater than 300.
+      // Invalid if field does not contain an email, and if length is more than 0.
       currentValidFlag = 'invalid';
 
-    } else if ((fieldValue.length >= 15) && (fieldValue.length <= 300)) {
+    } else if (re.test(fieldValue)) {
 
-      // Valid if length between 15 and 300.
+      // Valid if field contains an email.
       currentValidFlag = 'valid';
 
     }; // End check for validity.
 
     // Update state.
     this.props.handleChange({
-      'message': fieldValue,
-      'messageValid': currentValidFlag
+      'email': fieldValue,
+      'emailValid': currentValidFlag
     });
 
   }; // End updateValidate().
@@ -60,8 +63,7 @@ export default class Message extends React.Component {
 
     return (
       <div className="form-field">
-        <label htmlFor="message">Message:</label>
-        <textarea name="message" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}></textarea>
+        <input type="text" placeholder="Email" name="email" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}/>
       </div>
     );
   }; // End Component Render.

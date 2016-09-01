@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Component Definition.
-export default class Name extends React.Component {
+export default class Message extends React.Component {
 
   // Component Constructor.
   constructor() {
@@ -14,7 +14,7 @@ export default class Name extends React.Component {
   updateValidate(e) {
 
     // Field name.
-    var fieldName = e.target.getAttribute('name');
+    var fieldName = e.target.getAttribute('message');
 
     // Field value.
     var fieldValue = e.target.value;
@@ -28,22 +28,22 @@ export default class Name extends React.Component {
       // Default if field is empty.
       currentValidFlag = 'default';
 
-    } else if ((fieldValue.length > 0) && (fieldValue.length < 3) || (fieldValue.length > 20)) {
+    } else if ((fieldValue.length > 0) && (fieldValue.length < 15) || (fieldValue.length > 300)) {
 
-      // Invalid if length is greater than 0 and less than 3, or greater than 20.
+      // Invalid if length is greater than 0 and less than 15, or greater than 300.
       currentValidFlag = 'invalid';
 
-    } else if ((fieldValue.length >= 3) && (fieldValue.length <= 20)) {
+    } else if ((fieldValue.length >= 15) && (fieldValue.length <= 300)) {
 
-      // Valid if length between 3 and 20.
+      // Valid if length between 15 and 300.
       currentValidFlag = 'valid';
 
     }; // End check for validity.
 
     // Update state.
     this.props.handleChange({
-      'name': fieldValue,
-      'nameValid': currentValidFlag
+      'message': fieldValue,
+      'messageValid': currentValidFlag
     });
 
   }; // End updateValidate().
@@ -60,8 +60,7 @@ export default class Name extends React.Component {
 
     return (
       <div className="form-field">
-        <label htmlFor="name">Name:</label>
-        <input type="text" name="name" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}/>
+        <textarea name="message" placeholder="Message" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}></textarea>
       </div>
     );
   }; // End Component Render.

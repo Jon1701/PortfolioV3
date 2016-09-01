@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Component Definition.
-export default class Email extends React.Component {
+export default class Subject extends React.Component {
 
   // Component Constructor.
   constructor() {
@@ -14,7 +14,7 @@ export default class Email extends React.Component {
   updateValidate(e) {
 
     // Field name.
-    var fieldName = e.target.getAttribute('email');
+    var fieldName = e.target.getAttribute('subject');
 
     // Field value.
     var fieldValue = e.target.value;
@@ -22,31 +22,28 @@ export default class Email extends React.Component {
     // Get current validation flag. Either 'invalid', 'valid', or 'default'.
     var currentValidFlag = this.props.validFlag;
 
-    // Regular expression to test if email address is valid.
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
     // Check fields for validity.
     if (fieldValue.length == 0) {
 
       // Default if field is empty.
       currentValidFlag = 'default';
 
-    } else if (!re.test(fieldValue) && fieldValue.length > 0) {
+    } else if ((fieldValue.length > 0) && (fieldValue.length < 3) || (fieldValue.length > 20)) {
 
-      // Invalid if field does not contain an email, and if length is more than 0.
+      // Invalid if length is greater than 0 and less than 3, or greater than 20.
       currentValidFlag = 'invalid';
 
-    } else if (re.test(fieldValue)) {
+    } else if ((fieldValue.length >= 3) && (fieldValue.length <= 20)) {
 
-      // Valid if field contains an email.
+      // Valid if length between 3 and 20.
       currentValidFlag = 'valid';
 
     }; // End check for validity.
 
     // Update state.
     this.props.handleChange({
-      'email': fieldValue,
-      'emailValid': currentValidFlag
+      '_subject': fieldValue,
+      '_subjectValid': currentValidFlag
     });
 
   }; // End updateValidate().
@@ -63,8 +60,7 @@ export default class Email extends React.Component {
 
     return (
       <div className="form-field">
-        <label htmlFor="email">Email:</label>
-        <input type="text" name="email" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}/>
+        <input type="text" placeholder="Subject" name="_subject" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}/>
       </div>
     );
   }; // End Component Render.

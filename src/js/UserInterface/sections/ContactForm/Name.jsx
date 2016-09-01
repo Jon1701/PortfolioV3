@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Component Definition.
-export default class Subject extends React.Component {
+export default class Name extends React.Component {
 
   // Component Constructor.
   constructor() {
@@ -14,7 +14,7 @@ export default class Subject extends React.Component {
   updateValidate(e) {
 
     // Field name.
-    var fieldName = e.target.getAttribute('subject');
+    var fieldName = e.target.getAttribute('name');
 
     // Field value.
     var fieldValue = e.target.value;
@@ -42,8 +42,8 @@ export default class Subject extends React.Component {
 
     // Update state.
     this.props.handleChange({
-      '_subject': fieldValue,
-      '_subjectValid': currentValidFlag
+      'name': fieldValue,
+      'nameValid': currentValidFlag
     });
 
   }; // End updateValidate().
@@ -60,8 +60,7 @@ export default class Subject extends React.Component {
 
     return (
       <div className="form-field">
-        <label htmlFor="name">Subject:</label>
-        <input type="text" name="_subject" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}/>
+        <input type="text" placeholder="Name" name="name" className={myClasses} onChange={this.updateValidate.bind(this)} value={this.props.value}/>
       </div>
     );
   }; // End Component Render.
