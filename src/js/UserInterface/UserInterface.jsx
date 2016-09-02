@@ -11,6 +11,7 @@ import Home from './sections/Home.jsx';
 import AboutMe from './sections/AboutMe.jsx';
 import Portfolio from './sections/Portfolio.jsx';
 import ContactMe from './sections/ContactMe.jsx';
+import Footer from './sections/Footer.jsx';
 
 // Component Definition.
 export default class UserInterface extends React.Component {
@@ -29,6 +30,7 @@ export default class UserInterface extends React.Component {
         <AboutMe/>
         <Portfolio/>
         <ContactMe/>
+        <Footer/>
       </div>
     ); // End return();
   }; // End render().

@@ -4,6 +4,8 @@
   background-image: url('../media/images/backgrounds/footer_lodyas/footer_lodyas.png');
   background-repeat: repeat;
 
+  padding-bottom: 25px;
+
   color: $colour-white;
 
   #form-contact {
@@ -105,40 +107,51 @@
         background-color: $colour-white;
         color: $colour-grey20;
         transition: all 0.5s ease;
-      }
+      };
 
       &:disabled {
         opacity: 0.5;
         transition: all 0.5s ease;
-      }
-    }
-
+      };
+    };
 
   };
 
-  // Icon Container.
+  .notice {
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+
+  // Contains all icons.
   .container-icons {
 
-    //margin-top: 
+    width: 100%;
+    margin: 0 auto;
 
+    // Container for one single icon.
+    .container-single-icon {
+      width: 33%;
+      float: left;
+
+      // Align icons closer to the centre.
+      &:nth-child(1) { text-align: right; };
+      &:nth-child(2) { text-align: center; };
+      &:nth-child(3) { text-align: left; };
+    };
+
+    // Styles one icon.
     .icon {
-
-      // Icon size.
-      font-size: 3em;
-
-      // Icon colour.
-      color: $colour-white;
-
-      // Icon padding.
-      padding: 0 10px 0 10px;
+      font-size: 3em;      // Icon size.
+      color: $colour-white;// Icon colour.
+      padding: 0 10px 0 10px; // Icon padding.
 
       // Icon hover effects.
       &:hover {
         text-shadow: 1px 1px 50px $colour-white;
         transition: all 0.5s ease;
-      }
+      };
 
-    }
-  }
+    };
+  };
 
-}
+};

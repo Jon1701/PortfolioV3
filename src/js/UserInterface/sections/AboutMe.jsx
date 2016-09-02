@@ -29,7 +29,7 @@ export default class AboutMe extends React.Component {
           </p>
 
           <AboutMeIcons/>
-
+          
         </div>
 
       </div>
