@@ -114,6 +114,31 @@
     }
 
 
+  };
+
+  // Icon Container.
+  .container-icons {
+
+    //margin-top: 
+
+    .icon {
+
+      // Icon size.
+      font-size: 3em;
+
+      // Icon colour.
+      color: $colour-white;
+
+      // Icon padding.
+      padding: 0 10px 0 10px;
+
+      // Icon hover effects.
+      &:hover {
+        text-shadow: 1px 1px 50px $colour-white;
+        transition: all 0.5s ease;
+      }
+
+    }
   }
 
 }
