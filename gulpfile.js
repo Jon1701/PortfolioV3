@@ -49,6 +49,13 @@ gulp.task('jsx', function() {
     .pipe(connect.reload());
 });
 
+// Move CNAME.
+gulp.task('cname', function() {
+  gulp.src(srcPath + 'CNAME')
+    .pipe(gulp.dest(destPath))
+    .pipe(connect.reload());
+});
+
 // Move media.
 gulp.task('media', function() {
   gulp.src(srcPath + 'media/**/*')
@@ -111,4 +118,4 @@ gulp.task('watch', function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Default task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['webserver', 'watch', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio']);
+gulp.task('default', ['webserver', 'watch', 'cname', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio']);
