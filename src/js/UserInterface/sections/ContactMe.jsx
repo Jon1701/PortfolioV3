@@ -28,7 +28,7 @@ export default class ContactMe extends React.Component {
         <div className="content text-center">
 
           <div className="notice">
-            If you have any inquires or questions please feel free to contact me!
+            Feel free to contact me if you have any inquiries or questions!
           </div>
 
           { /* Responsive grid. */ }
