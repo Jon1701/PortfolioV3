@@ -1,10 +1,8 @@
 // React dependencies.
 import React from 'react';
 
-// Other components.
-
 // Navigation Bar.
-import Navbar from './Navbar/Navbar.jsx';
+import Navbar from './navbar/Navbar.jsx';
 
 // Sections.
 import Home from './sections/Home.jsx';

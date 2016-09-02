@@ -8,7 +8,7 @@ export default class Button extends React.Component {
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Component Render.
   render() {

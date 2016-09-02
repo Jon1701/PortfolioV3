@@ -11,7 +11,7 @@ export default class Navbar extends React.Component {
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Component Render.
   render() {
