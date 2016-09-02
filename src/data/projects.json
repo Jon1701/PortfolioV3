@@ -5,7 +5,7 @@
     "description": "Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates",
     "technologies": ["html5", "css3", "react", "nodejs"],
     "links": {
-      "demo": "https://ms-timestamp-jon1701.c9users.io/",
+      "demo": "https://ms-timestamp-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MS-Timestamp"
     }
   },
@@ -15,7 +15,7 @@
     "description": "Simple Node.js/Express.js application to parse web browser HTTP request headers",
     "technologies": ["html5", "css3", "react", "nodejs", "expressjs"],
     "links": {
-      "demo": "https://ms-request-header-parser-jon1701.c9users.io/",
+      "demo": "https://ms-requestheaderparser-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MS-RequestHeaderParser"
     }
   },
