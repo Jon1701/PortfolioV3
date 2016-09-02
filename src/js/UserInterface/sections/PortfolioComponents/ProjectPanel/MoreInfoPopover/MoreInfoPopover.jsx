@@ -11,12 +11,12 @@ export default class MoreInfoPopup extends React.Component {
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Hide the popover window when the More Info window is clicked.
   hidePopover() {
     this.props.updateActivePopupId(-1);
-  }
+  };
 
   // Component Render.
   render() {
@@ -26,7 +26,7 @@ export default class MoreInfoPopup extends React.Component {
     var myClasses = classNames({
       'container-moreinfopopup': true,
       'hidden': this.props.projId != this.props.activePopupId
-    })
+    });
 
     return (
       <div className={myClasses} onClick={this.hidePopover.bind(this)}>

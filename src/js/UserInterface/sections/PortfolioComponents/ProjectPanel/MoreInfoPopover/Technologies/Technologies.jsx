@@ -18,7 +18,7 @@ export default class Technologies extends React.Component {
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Component Render.
   render() {

@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Other components.
-import ProjectPanel from './ProjectPanel/ProjectPanel.jsx';
+import ProjectPanel from './PortfolioComponents/ProjectPanel/ProjectPanel.jsx';
 
 // Data containing portfolio projects.
 //

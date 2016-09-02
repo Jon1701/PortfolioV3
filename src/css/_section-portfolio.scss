@@ -31,7 +31,7 @@
       border-bottom: none;
     };
 
-    // Project buttons.
+    // Project Panel buttons.
     .container-buttons {
       background-color: $colour-white;
       border: solid 1px $colour-grey80;
@@ -40,6 +40,7 @@
 
       padding: 5px 0 5px 0;
 
+      // Individual button stylings.
       .button {
         width: 33%;
         float: left;
@@ -61,25 +62,32 @@
           font-size: 0.8em;
         };
 
-      };
-    };
+      }; // End button stylings.
+    }; // End Project Panel buttons.
 
+    // More info popover.
     .container-moreinfopopup {
+
+      // Center it vertically and horizonally within the project panel.
       position: absolute;
       top: 50%;
       left: 50%;
       width: 100%;
       transform: translate(-50%, -50%);
+
       background-color: $colour-white;
       border: solid 1px $colour-grey80;
+
       padding: 20px 10px 20px 10px;
       opacity: 0.90;
 
+      // Popover description.
       .container-description {
         margin-bottom: 10px;
         font-size: 0.85em;
       };
 
+      // Popover technologies (icons).
       .container-technologies {
         display: flex;
         justify-content: space-between;
@@ -97,11 +105,10 @@
           };
 
         };
+      }; // End popover technologies.
 
-      };
+    }; // End popover.
 
-    };
+  }; // End project panel.
 
-  };
-
-};
+}; // End section.

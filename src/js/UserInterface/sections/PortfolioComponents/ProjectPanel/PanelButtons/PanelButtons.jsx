@@ -4,12 +4,12 @@ import React from 'react';
 import Button from './Button.jsx';
 
 // Component Definition.
-export default class ButtonContainer extends React.Component {
+export default class PanelButtons extends React.Component {
 
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Component Render.
   render() {

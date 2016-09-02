@@ -1,9 +1,7 @@
 // React dependencies.
 import React from 'react';
-
-// Other components.
-import ButtonContainer from './ButtonContainer/ButtonContainer.jsx';
-import MoreInfoPopup from './MoreInfoPopup/MoreInfoPopup.jsx';
+import PanelButtons from './PanelButtons/PanelButtons.jsx';
+import MoreInfoPopover from './MoreInfoPopover/MoreInfoPopover.jsx';
 
 // Component Definition.
 export default class ProjectPanel extends React.Component {
@@ -11,7 +9,7 @@ export default class ProjectPanel extends React.Component {
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Component Render.
   render() {
@@ -41,7 +39,7 @@ export default class ProjectPanel extends React.Component {
             //  updateActivePopupId: Callback to set the ID# of the currently active popover.
             //  links: GitHub and Demo links for this project.
           }
-          <ButtonContainer
+          <PanelButtons
             projId={this.props.projId}
             activePopupId={this.props.activePopupId}
             updateActivePopupId={this.props.updateActivePopupId}
@@ -57,7 +55,7 @@ export default class ProjectPanel extends React.Component {
             //  updateActivePopupId: Callback to set the ID# of the currently active popover
             //  info: Project information.
           }
-          <MoreInfoPopup
+          <MoreInfoPopover
             projId={this.props.projId}
             activePopupId={this.props.activePopupId}
             updateActivePopupId={this.props.updateActivePopupId}
@@ -66,6 +64,6 @@ export default class ProjectPanel extends React.Component {
 
         </div>
     );
-  } // End Component Render.
+  }; // End Component Render.
 
-} // End Component Definition.
+}; // End Component Definition.
