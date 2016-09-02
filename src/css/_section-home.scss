@@ -14,9 +14,7 @@
   padding-bottom: 16vh !important;
 
   // Name.
-  .name {
-    font-size: 5em;
-  }
+  .name { font-size: 5em; };
 
   // Current position.
   .position {
@@ -24,43 +22,50 @@
     margin: 15px 0 15px 0;
   }
 
-  // Tagline./
+  // Tagline.
   .tagline {
     font-size: 1.75em;
     margin: 15px 0 15px 0;
-  }
+  };
 
   // Horizontal rule.
   .hr {
     background-color: $colour-white;
     height: 5px;
-    width: 30%;
-
+    width: 50%;
     margin: 0 auto;
-  }
+  };
 
-  // Icon Container.
+  // Contains all icons.
   .container-icons {
 
+    width: 100%;
+    margin: 0 auto;
+
+    // Container for one single icon.
+    .container-single-icon {
+      width: 33%;
+      float: left;
+
+      // Align icons closer to the centre.
+      &:nth-child(1) { text-align: right; };
+      &:nth-child(2) { text-align: center; };
+      &:nth-child(3) { text-align: left; };
+    };
+
+    // Styles one icon.
     .icon {
-
-      // Icon size.
-      font-size: 5em;
-
-      // Icon colour.
-      color: $colour-white;
-
-      // Icon padding.
-      padding: 0 10px 0 10px;
+      font-size: 5em;      // Icon size.
+      color: $colour-white;// Icon colour.
+      padding: 0 10px 0 10px; // Icon padding.
 
       // Icon hover effects.
       &:hover {
         text-shadow: 1px 1px 50px $colour-white;
         transition: all 0.5s ease;
-      }
+      };
 
-    }
-  }
+    };
+  };
 
-
-}
+};

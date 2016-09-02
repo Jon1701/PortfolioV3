@@ -1,7 +1,5 @@
 // React dependencies.
 import React from 'react';
-
-// Home Icons.
 import HomeIcons from './HomeIcons/HomeIcons.jsx';
 
 // Component Definition.
@@ -10,7 +8,7 @@ export default class Home extends React.Component {
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Component Render.
   render() {
