@@ -4,10 +4,12 @@
 // Modules
 ////////////////////////////////////////////////////////////////////////////////
 var gulp = require('gulp');             // Gulp.
+var uglify = require('gulp-uglify');    // Gulp uglify.
 var connect = require('gulp-connect');  // Webserver.
 var sass = require('gulp-sass');        // SASS.
 var webpack = require('webpack-stream');// Webpack.
 var nodemon = require('gulp-nodemon');  // Nodemon.
+var minifycss = require('gulp-clean-css');  // Minify css.
 var path = require('path');
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -42,6 +44,7 @@ gulp.task('jsx', function() {
         filename: 'app.js'
       }
     }))
+    .pipe(uglify())
     .pipe(gulp.dest(destPath + 'js/'))
     .pipe(connect.reload());
 });
@@ -57,6 +60,7 @@ gulp.task('media', function() {
 gulp.task('stylesheets', function() {
   gulp.src(srcPath + 'css/**/*')
     .pipe(sass().on('error', sass.logError))
+    .pipe(minifycss())
     .pipe(gulp.dest(destPath + 'css/'))
     .pipe(connect.reload());
 });
