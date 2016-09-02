@@ -3,10 +3,10 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Fields.
-import ContactForm from './ContactForm/ContactForm.jsx';
+import ContactForm from './ContactMeComponents/ContactForm/ContactForm.jsx';
 
 // Home Icons
-import HomeIcons from './HomeComponents/IconContainer.jsx';
+import IconContainer from './HomeComponents/IconContainer.jsx';
 
 // Component Definition.
 export default class ContactMe extends React.Component {
@@ -31,16 +31,20 @@ export default class ContactMe extends React.Component {
             If you have any inquires or questions please feel free to contact me!
           </div>
 
+          { /* Responsive grid. */ }
           <div className="row">
+
+            { /* Display Contact Form on left column */ }
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <ContactForm/>
             </div>
 
+            { /* Display GitHub, LinkedIn, FCC icons on right column */ }
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="invisible status status-fail">Test</div>
-
               <IconContainer/>
             </div>
+
           </div>
 
         </div>

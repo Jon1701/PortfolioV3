@@ -2,13 +2,15 @@
 import React from 'react';
 import classNames from 'classnames';
 
+// Form status.
+import FormStatus from './FormStatus.jsx';
+
 // Fields.
-import Status from './Status.jsx';
-import Name from './Name.jsx';
-import Email from './Email.jsx';
-import Subject from './Subject.jsx';
-import Gotcha from './Gotcha.jsx';
-import Message from './Message.jsx';
+import Name from './Fields/Name.jsx';
+import Email from './Fields/Email.jsx';
+import Subject from './Fields/Subject.jsx';
+import Gotcha from './Fields/Gotcha.jsx';
+import Message from './Fields/Message.jsx';
 
 // Component Definition.
 export default class ContactForm extends React.Component {
@@ -40,12 +42,6 @@ export default class ContactForm extends React.Component {
       submitDisabled: false
     }
   }
-
-/*
- componentDidUpdate() {
-   console.log(this.state)
- }
-*/
 
   updateFieldAndValidate(newState) {
     this.setState(newState);
@@ -191,7 +187,7 @@ export default class ContactForm extends React.Component {
 
         <form id="form-contact">
 
-          <Status validFlag={this.state.formValid}/>
+          <FormStatus validFlag={this.state.formValid}/>
 
           <Name
             value={this.state.name}

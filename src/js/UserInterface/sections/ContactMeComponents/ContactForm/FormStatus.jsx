@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Component Definition.
-export default class Status extends React.Component {
+export default class FormStatus extends React.Component {
 
   // Component Constructor.
   constructor() {

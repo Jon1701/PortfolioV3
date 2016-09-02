@@ -8,48 +8,52 @@
 
   color: $colour-white;
 
+  // Contact Form.
   #form-contact {
 
     width: 100%;
 
+    // Status message.
     .status {
       visibility: hidden;
       border: solid 2px $colour-grey20;
+      .message::after { content: "Status Message"; };
+    }; // End status message.
 
-      .message::after {
-        content: "Test"
-      }
-    }
-
+    // Styles and status message for Success.
     .status-success {
 
-      visibility: visible;
-      transition: all 0.5s ease;
+      visibility: visible;        // Show message.
+      transition: all 0.5s ease;  // Fade in.
 
       border-color: $colour-fern;
       background-color: $colour-fern;
 
-      .message::after {
-        content: "Message sent!"
-      }
-    }
+      // Set message.
+      .message::after { content: "Message sent!"; };
+    }; // End styles and status message for Success.
 
+    // Styles and status message for Success.
     .status-fail {
 
-      visibility: visible;
-      transition: all 0.5s ease;
+
+      visibility: visible;        // Show message.
+      transition: all 0.5s ease;  // Fade in.
 
       border-color: $colour-crimson;
       background-color: $colour-crimson;
 
-      .message::after {
-        content: "Message not sent!"
-      }
-    }
+      // Set message.
+      .message::after { content: "Message not sent!"; };
+    }; // End styles and status message for Success.
 
+    // Form fields.
     .form-field {
+
+      // Spacing around a gield.
       margin: 5px 0 5px 0;
 
+      // Input control.
       input {
         width: 100%;
         height: 45px;
@@ -61,9 +65,10 @@
         font-size: 0.8em;
 
         padding: 10px;
-      }
-    }
+      }; // End input control.
+    }; // End form field.
 
+    // Form message box.
     textarea {
       min-width: 100%;
       max-width: 100%;
@@ -78,18 +83,18 @@
 
       margin-top: 5px;
       padding: 10px;
-    }
+    }; // End form message box.
 
-    .field-default {
-      border: solid 2px $colour-white;
-    }
-    .field-invalid {
-      border: solid 2px $colour-crimson;
-    }
-    .field-valid {
-      border: solid 2px $colour-fern;
-    }
+    // Default styling for a form field.
+    .field-default { border: solid 2px $colour-white; };
 
+    // Styling for a form field which does not pass validation.
+    .field-invalid { border: solid 2px $colour-crimson; };
+
+    // Styling for a form field which does pass validation.
+    .field-valid { border: solid 2px $colour-fern; };
+
+    // Submit button styling.
     button[type="submit"] {
 
       width: 100%;
@@ -103,22 +108,26 @@
       font-family: Oswald;
       font-size: 1em;
 
+      // Hover effect.
       &:hover {
         background-color: $colour-white;
         color: $colour-grey20;
         transition: all 0.5s ease;
-      };
+      }; // End hover effect.
 
+      // Disabled styling.
       &:disabled {
         opacity: 0.5;
         transition: all 0.5s ease;
-      };
-    };
+      }; // End Disabled styling.
 
-  };
+    }; // End Submit button styling.
+
+  }; // End Contact Form.
 
   .notice {
     margin-top: 5px;
+    margin-bottom: 15px;
     font-size: 0.9em;
   }
 
@@ -149,9 +158,10 @@
       &:hover {
         text-shadow: 1px 1px 50px $colour-white;
         transition: all 0.5s ease;
-      };
+      }; // End icon hover effects.
 
-    };
-  };
+    }; // End single icon styling.
 
-};
+  }; // End icon container.
+
+}; // End section.
