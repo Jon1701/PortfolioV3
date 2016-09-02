@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from './Icon.jsx';
 
 // Component Definition.
-export default class HomeIcons extends React.Component {
+export default class IconContainer extends React.Component {
 
   // Component Constructor.
   constructor() {
