@@ -1,7 +1,5 @@
 // React dependencies.
 import React from 'react';
-
-// About Me Icon Grid.
 import AboutMeIcons from './AboutMeIcons/AboutMeIcons.jsx';
 
 // Component Definition.
@@ -10,7 +8,7 @@ export default class AboutMe extends React.Component {
   // Component Constructor.
   constructor() {
     super();
-  }
+  };
 
   // Component Render.
   render() {
@@ -27,15 +25,7 @@ export default class AboutMe extends React.Component {
           </p>
 
           <p>
-            For the past year I have been focusing on building responsive
-            websites to complement various back-end technologies such as Debian
-             Linux, Python, Flask, and MongoDB.
-          </p>
-
-          <p>
-            I am currently in the process of completing the Full Stack Developer
-             Certification on FreeCodeCamp.com and learning advanced libraries
-             and frameworks such as React.js and AngularJS 2.0.
+            Here are some of the technologies I have used:
           </p>
 
           <AboutMeIcons/>
@@ -44,6 +34,6 @@ export default class AboutMe extends React.Component {
 
       </div>
     );
-  } // End Component Render.
+  }; // End Component Render.
 
-} // End Component Definition.
+}; // End Component Definition.
