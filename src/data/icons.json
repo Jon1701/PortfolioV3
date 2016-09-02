@@ -11,6 +11,10 @@
      "icon":"icon-bootstrap",
      "name":"Bootstrap"
   },
+  "cloud9":{
+     "icon":"icon-cloud9",
+     "name":"Cloud9 IDE"
+  },
   "css3":{
      "icon":"icon-css3",
      "name":"CSS3"
@@ -46,6 +50,10 @@
   "gulp":{
      "icon":"icon-gulp",
      "name":"Gulp"
+  },
+  "heroku":{
+     "icon":"icon-heroku",
+     "name":"Heroku"
   },
   "html5":{
      "icon":"icon-html5",

@@ -25,7 +25,7 @@ export default class IconMatrix extends React.Component {
         'html5', 'css3', 'javascript', 'jquery', 'jsx', 'bootstrap',
         'materialize', 'react', 'mustachejs', 'd3', 'atom', 'git', 'github', 'gulp',
         'webpack', 'sass', 'nodejs', 'expressjs', 'debian', 'ubuntu', 'bash', 'mongodb',
-        'python', 'flask']
+        'python', 'flask', 'cloud9', 'heroku']
     };
   };
 

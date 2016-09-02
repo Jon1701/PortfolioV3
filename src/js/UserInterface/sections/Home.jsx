@@ -20,11 +20,11 @@ export default class Home extends React.Component {
         </div>
 
         <div className="position text-center">
-          Front-end Web Developer
+          Full Stack Developer
         </div>
 
         <div className="tagline text-center">
-          I'm a web developer with a background in Computer Science, Statistics,
+          I'm a Full Stack Developer with a background in Computer Science, Statistics,
           Analytics, and Data Science.
         </div>
 

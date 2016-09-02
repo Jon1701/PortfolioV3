@@ -56,14 +56,16 @@
 
 // Icon hover.
 .container-icon-atom { @include icon-hover(#40A977); };
-.container-icon-bash { @include icon-hover(#333333); };
+.container-icon-bash { @include icon-hover(#C0C0C0); };
 .container-icon-bootstrap { @include icon-hover(#563D7C); };
+.container-icon-cloud9 { @include icon-hover(#2784C7); };
 .container-icon-codepen { @include icon-hover(#333333); };
 .container-icon-css3 { @include icon-hover(#369CD6); };
 .container-icon-default { @include icon-hover(#333333); };
 .container-icon-debian { @include icon-hover(#D70A53); };
 .container-icon-git { @include icon-hover(#F14E32); };
 .container-icon-gulp { @include icon-hover(#CF4646); };
+.container-icon-heroku { @include icon-hover(#69619A); };
 .container-icon-html5 { @include icon-hover(#F1662B); };
 .container-icon-javascript { @include icon-hover(#F2BF22); };
 .container-icon-jquery { @include icon-hover(#0769AD); };

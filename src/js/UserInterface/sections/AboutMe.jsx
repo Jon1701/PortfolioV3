@@ -20,7 +20,7 @@ export default class AboutMe extends React.Component {
         <div className="content text-center">
 
           <p>
-            Hi! My name is Jon and I'm a Front-end Web Developer based in
+            Hi! My name is Jon and I'm a Full Stack Developer based in
             Toronto.
           </p>
 
