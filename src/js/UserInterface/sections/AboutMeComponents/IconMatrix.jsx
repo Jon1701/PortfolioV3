@@ -13,7 +13,7 @@ import Icon from './Icon.jsx';
 var iconDB = require('json!icons.json');
 
 // Component Definition.
-export default class AboutMeIcons extends React.Component {
+export default class IconMatrix extends React.Component {
 
   // Component Constructor.
   constructor() {
@@ -26,8 +26,8 @@ export default class AboutMeIcons extends React.Component {
         'materialize', 'react', 'mustachejs', 'd3', 'atom', 'git', 'github', 'gulp',
         'webpack', 'sass', 'nodejs', 'expressjs', 'debian', 'ubuntu', 'bash', 'mongodb',
         'python', 'flask']
-    }
-  }
+    };
+  };
 
   // Component Render.
   render() {
@@ -68,6 +68,6 @@ export default class AboutMeIcons extends React.Component {
         {icons}
       </div>
     ); // End return().
-  } // End render().
+  }; // End render().
 
-} // End React.Component{}.
+}; // End React.Component{}.

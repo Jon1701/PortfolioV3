@@ -1,6 +1,6 @@
 // React dependencies.
 import React from 'react';
-import AboutMeIcons from './AboutMeIcons/AboutMeIcons.jsx';
+import IconMatrix from './AboutMeComponents/IconMatrix.jsx';
 
 // Component Definition.
 export default class AboutMe extends React.Component {
@@ -28,8 +28,8 @@ export default class AboutMe extends React.Component {
             Here are some of the technologies I have used:
           </p>
 
-          <AboutMeIcons/>
-          
+          <IconMatrix/>
+
         </div>
 
       </div>

@@ -7,18 +7,11 @@
   // Container which houses both the icon and icon name
   .container-icon {
 
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 
-    // Icon only.
-    .icon {
-      font-size: 2em;
-    }
-    .name {
-      margin-top: -15px;
-    }
+    .icon { font-size: 2em; } // Icon size.
+    .name { margin-top: -15px; }  // Icon name spacing.
 
-  }
+  }; // End icon container.
 
-
-
-}
+}; // End section.
