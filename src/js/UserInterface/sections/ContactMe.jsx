@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import ContactForm from './ContactForm/ContactForm.jsx';
 
 // Home Icons
-import HomeIcons from './HomeIcons/HomeIcons.jsx';
+import HomeIcons from './HomeComponents/IconContainer.jsx';
 
 // Component Definition.
 export default class ContactMe extends React.Component {
@@ -39,7 +39,7 @@ export default class ContactMe extends React.Component {
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="invisible status status-fail">Test</div>
 
-              <HomeIcons/>
+              <IconContainer/>
             </div>
           </div>
 

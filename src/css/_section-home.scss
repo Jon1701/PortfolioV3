@@ -9,7 +9,7 @@
   // Font colour.
   color: $colour-white;
 
-  // Custom padding.
+  // Custom padding for this section.
   padding-top: 16vh !important;
   padding-bottom: 16vh !important;
 
@@ -36,36 +36,39 @@
     margin: 0 auto;
   };
 
-  // Contains all icons.
+  // Contains the GitHub, LinkedIn, FreeCodeCamp icons..
   .container-icons {
 
     width: 100%;
-    margin: 0 auto;
 
-    // Container for one single icon.
+    // Contains one single icon.
     .container-single-icon {
+
+      // Split container into 3 equally spaced containers.
       width: 33%;
       float: left;
 
-      // Align icons closer to the centre.
+      // Re-align icons closer to the centre.
       &:nth-child(1) { text-align: right; };
       &:nth-child(2) { text-align: center; };
       &:nth-child(3) { text-align: left; };
-    };
 
-    // Styles one icon.
-    .icon {
-      font-size: 5em;      // Icon size.
-      color: $colour-white;// Icon colour.
-      padding: 0 10px 0 10px; // Icon padding.
+      // Styling one icon.
+      .icon {
+        font-size: 5em;         // Icon size.
+        color: $colour-white;   // Icon colour.
+        padding: 0 10px 0 10px; // Icon padding.
 
-      // Icon hover effects.
-      &:hover {
-        text-shadow: 1px 1px 50px $colour-white;
-        transition: all 0.5s ease;
-      };
+        // Icon hover effects.
+        &:hover {
+          text-shadow: 1px 1px 50px $colour-white;
+          transition: all 0.5s ease;
+        }; // End icon hover effects.
 
-    };
-  };
+      }; // End styling one icon.
 
-};
+    };  // Ent container one single icon.
+
+  }; // End Icon container for all 3 icons.
+
+}; // End Section.
