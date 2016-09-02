@@ -4,7 +4,7 @@
   a {
     color: inherit;
     text-decoration: none;
-  }
+  };
 
   // Background.
   background-image: url('../media/images/backgrounds/cubes/cubes.png');
@@ -21,7 +21,7 @@
       border: solid 1px $colour-grey80;
       background-color: $colour-white;
       padding: 10px;
-    }
+    };
 
     // Project Image
     .container-img {
@@ -29,7 +29,7 @@
       background-color: $colour-white;
       border-top: none;
       border-bottom: none;
-    }
+    };
 
     // Project buttons.
     .container-buttons {
@@ -48,21 +48,21 @@
         // Button hover effect.
         &:hover {
           color: $colour-crimson;
-        }
+        };
 
         // Icon.
         .icon {
           font-size: 1.25em;
           margin-bottom: -10px
-        }
+        };
 
         // Icon name
         .icon-name {
           font-size: 0.8em;
-        }
+        };
 
-      }
-    }
+      };
+    };
 
     .container-moreinfopopup {
       position: absolute;
@@ -73,11 +73,12 @@
       background-color: $colour-white;
       border: solid 1px $colour-grey80;
       padding: 20px 10px 20px 10px;
+      opacity: 0.90;
 
       .container-description {
         margin-bottom: 10px;
         font-size: 0.85em;
-      }
+      };
 
       .container-technologies {
         display: flex;
@@ -88,16 +89,19 @@
 
           .icon {
             font-size: 1.75em;
-          }
+          };
+
           .name {
             margin-top: -15px;
             font-size: 0.85em;
-          }
-        }
-      }
-    }
+          };
 
+        };
 
-  }
+      };
 
-}
+    };
+
+  };
+
+};

@@ -27,16 +27,16 @@ export default class Portfolio extends React.Component {
       // Initially set to -1 so no More Info popups are displayed on Initially
       // render.
       activePopupId: -1
-    }
-  }
+    };
+  };
 
   // Callback function to update the activePopup attribute in the state with
   // a given project ID number.
   handleActivePopupIdChange(projId) {
     this.setState({
       activePopupId: projId
-    })
-  }
+    });
+  };
 
   // Component Render.
   render() {
@@ -64,12 +64,12 @@ export default class Portfolio extends React.Component {
           info={project}
         />
       );
-    }
+    };
 
     return (
       <div className="section" id="section-portfolio">
 
-        <div className="title">Portfolio Projects</div>
+        <div className="title">Portfolio</div>
 
         <div className="content">
           <div className="row">
