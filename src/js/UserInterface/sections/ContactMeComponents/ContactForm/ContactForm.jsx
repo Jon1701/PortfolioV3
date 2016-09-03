@@ -45,7 +45,7 @@ export default class ContactForm extends React.Component {
 
   updateFieldAndValidate(newState) {
     this.setState(newState);
-  }
+  };
 
  componentDidMount() {
 
@@ -172,11 +172,22 @@ export default class ContactForm extends React.Component {
          formValid: 'invalid'
        });
 
+       // Callback to set form validity to 'default'.
+       // This hides the error message.
+       var hideErrorMsg = function() {
+         thisComp.setState({
+           formValid: 'default'
+         });
+       };
+
+       // Hide error message after 3 seconds.
+       setTimeout(hideErrorMsg, 3000);
+
      };
 
    }); // End button onclick.
 
- } // End componentDidMount().
+ }; // End componentDidMount().
 
   // Component Render.
   render() {
@@ -227,6 +238,6 @@ export default class ContactForm extends React.Component {
 
       </div>
     );
-  } // End Component Render.
+  }; // End Component Render.
 
-} // End Component Definition.
+}; // End Component Definition.
