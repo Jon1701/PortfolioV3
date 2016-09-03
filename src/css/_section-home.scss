@@ -32,27 +32,19 @@
   .hr {
     background-color: $colour-white;
     height: 5px;
-    width: 50%;
+    width: 35%;
     margin: 0 auto;
   };
 
   // Contains the GitHub, LinkedIn, FreeCodeCamp icons..
   .container-icons {
 
-    margin: 0 auto;
-    width: 75%;
+    display: inline-block;
 
     // Contains one single icon.
     .container-single-icon {
 
-      // Split container into 3 equally spaced containers.
-      width: 33%;
       float: left;
-
-      // Re-align icons closer to the centre.
-      &:nth-child(1) { text-align: right; };
-      &:nth-child(2) { text-align: center; };
-      &:nth-child(3) { text-align: left; };
 
       // Styling one icon.
       .icon {

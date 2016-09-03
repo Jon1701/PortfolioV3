@@ -30,7 +30,9 @@ export default class Home extends React.Component {
 
         <div className="hr"/>
 
-        <IconContainer/>
+        <div className="text-center">
+          <IconContainer/>
+        </div>
 
       </div>
     ); // End return().
