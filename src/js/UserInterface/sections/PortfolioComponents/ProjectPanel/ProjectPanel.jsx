@@ -28,6 +28,23 @@ export default class ProjectPanel extends React.Component {
             <a href={project.links.demo} target="_blank">
               <img src={project.image} className="img-responsive"/>
             </a>
+
+            {
+              // Displays the Demo, More Info, and GitHub buttons.
+              //
+              // Passes the following props.
+              //  projId: Unique ID# of the current project.
+              //  activePopupId: ID# of the currently active popover.
+              //  updateActivePopupId: Callback to set the ID# of the currently active popover
+              //  info: Project information.
+            }
+            <MoreInfoPopover
+              projId={this.props.projId}
+              activePopupId={this.props.activePopupId}
+              updateActivePopupId={this.props.updateActivePopupId}
+              info={this.props.info}
+            />
+
           </div>
 
           {
@@ -46,21 +63,7 @@ export default class ProjectPanel extends React.Component {
             links={project.links}
           />
 
-          {
-            // Displays the Demo, More Info, and GitHub buttons.
-            //
-            // Passes the following props.
-            //  projId: Unique ID# of the current project.
-            //  activePopupId: ID# of the currently active popover.
-            //  updateActivePopupId: Callback to set the ID# of the currently active popover
-            //  info: Project information.
-          }
-          <MoreInfoPopover
-            projId={this.props.projId}
-            activePopupId={this.props.activePopupId}
-            updateActivePopupId={this.props.updateActivePopupId}
-            info={this.props.info}
-          />
+
 
         </div>
     );

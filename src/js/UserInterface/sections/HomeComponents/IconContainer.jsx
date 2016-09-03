@@ -17,6 +17,8 @@ export default class IconContainer extends React.Component {
         <Icon iconClass="icon-github" link="https://github.com/Jon1701"/>
         <Icon iconClass="icon-linkedin" link="https://ca.linkedin.com/in/jonbalon"/>
         <Icon iconClass="icon-freecodecamp" link="https://www.freecodecamp.com/jon1701"/>
+
+        <div className="clearfix"/>
       </div>
     ); // End return().
   }; // End render().
