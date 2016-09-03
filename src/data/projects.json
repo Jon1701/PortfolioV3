@@ -1,6 +1,6 @@
 [
   {
-    "title": "Timestamp Generator Microservice",
+    "title": "Timestamp Generator",
     "image": "../media/images/portfolio/cover-timestamp-generator.png",
     "description": "Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates",
     "technologies": ["html5", "css3", "react", "nodejs"],
@@ -10,7 +10,7 @@
     }
   },
   {
-    "title": "Request Header Parser Microservice",
+    "title": "Request Header Parser",
     "image": "../media/images/portfolio/cover-requestheaderparser.png",
     "description": "Simple Node.js/Express.js application to parse web browser HTTP request headers",
     "technologies": ["html5", "css3", "react", "nodejs", "expressjs"],
