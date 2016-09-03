@@ -8,7 +8,6 @@ var uglify = require('gulp-uglify');    // Gulp uglify.
 var connect = require('gulp-connect');  // Webserver.
 var sass = require('gulp-sass');        // SASS.
 var webpack = require('webpack-stream');// Webpack.
-var nodemon = require('gulp-nodemon');  // Nodemon.
 var minifycss = require('gulp-clean-css');  // Minify css.
 var path = require('path');
 
@@ -99,17 +98,11 @@ gulp.task("webserver", function() {
 
 });
 
-gulp.task("nodeserver", function() {
-  nodemon({
-    script: './server.js'
-  })
-});
-
 ////////////////////////////////////////////////////////////////////////////////
 // Watch task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('watch', function() {
-  gulp.watch(srcPath + 'js/**/*.jsx', ['jsx']); // JSX files.
+  //gulp.watch(srcPath + 'js/**/*.jsx', ['jsx']); // JSX files.
   gulp.watch(srcPath + 'css/**/*.scss', ['stylesheets']); // SASS Main.
   gulp.watch(srcPath + 'css/**/_*.scss', ['stylesheets']); // SASS Partials.
   gulp.watch(srcPath + '*.html', ['html']);
