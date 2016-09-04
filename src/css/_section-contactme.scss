@@ -18,6 +18,7 @@
       visibility: hidden;
       border: solid 2px $colour-grey20;
       .message::after { content: "Status Message"; };
+      margin: 5px 0 5px 0;
     }; // End status message.
 
     // Styles and status message for Success.
@@ -135,8 +136,8 @@
   }; // End Contact Form.
 
   .notice {
-    margin-top: 5px;
-    margin-bottom: 15px;
+    //margin-top: 5px;
+    //margin-bottom: 15px;
     font-size: 0.9em;
   }
 
