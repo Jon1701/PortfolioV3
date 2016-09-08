@@ -10,6 +10,25 @@
   background-image: url('../media/images/backgrounds/cubes/cubes.png');
   background-repeat: repeat;
 
+  .btn-toggle-projects {
+    border: solid 1px $colour-grey80;
+    background-color: $colour-white;
+
+    padding: 10px 0 10px 0;
+
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    cursor: pointer;
+
+    font-size: 0.75em;
+
+    &:hover {
+      color: $colour-crimson;
+    };
+  }
+
   .project-panel {
 
     text-align: center;
