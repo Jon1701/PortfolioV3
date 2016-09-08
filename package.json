@@ -1,6 +1,6 @@
 {
-  "name": "website-v2-react",
-  "version": "1.0.0",
+  "name": "website-v3",
+  "version": "3.0.0",
   "description": "",
   "main": "gulpfile.js",
   "bin": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jon1701/WebsiteV2-React.git"
+    "url": "git+https://github.com/Jon1701/WebsiteV3.git"
   },
   "author": "Jon1701",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Jon1701/WebsiteV2-React/issues"
+    "url": "https://github.com/Jon1701/WebsiteV3/issues"
   },
-  "homepage": "https://github.com/Jon1701/WebsiteV2-React#readme",
+  "homepage": "https://github.com/Jon1701/WebsiteV3#readme",
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
