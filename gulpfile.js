@@ -4,6 +4,7 @@
 // Modules
 ////////////////////////////////////////////////////////////////////////////////
 var gulp = require('gulp');             // Gulp.
+var gutil = require('gulp-util');       // Gulp utilities.
 var uglify = require('gulp-uglify');    // Gulp uglify.
 var connect = require('gulp-connect');  // Webserver.
 var sass = require('gulp-sass');        // SASS.
@@ -27,7 +28,6 @@ gulp.task('jsx', function() {
           path.resolve('./src/data')
         ]
       },
-      watch: true,
       module: {
         loaders: [
           {
@@ -43,7 +43,7 @@ gulp.task('jsx', function() {
         filename: 'app.js'
       }
     }))
-//    .pipe(uglify())
+    .pipe(gutil.env.env == 'production' ? uglify() : gutil.noop()) // Uglify in production only.
     .pipe(gulp.dest(destPath + 'js/'))
     .pipe(connect.reload());
 });
@@ -66,7 +66,7 @@ gulp.task('media', function() {
 gulp.task('stylesheets', function() {
   gulp.src(srcPath + 'css/**/*')
     .pipe(sass().on('error', sass.logError))
-//    .pipe(minifycss())
+    .pipe(gutil.env.env == 'production' ? minifycss() : gutil.noop()) // Minify css in production only.
     .pipe(gulp.dest(destPath + 'css/'))
     .pipe(connect.reload());
 });
@@ -112,3 +112,8 @@ gulp.task('watch', function() {
 // Default task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('default', ['watch', 'cname', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio', 'webserver']);
+
+////////////////////////////////////////////////////////////////////////////////
+// Build only task, no webserver or watch tasks.
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('build', ['cname', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio']);
