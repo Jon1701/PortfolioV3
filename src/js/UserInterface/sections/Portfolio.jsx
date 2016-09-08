@@ -2,6 +2,7 @@
 import React from 'react';
 
 // Other components.
+import ProjectToggle from './PortfolioComponents/ProjectToggle.jsx';
 import ProjectPanel from './PortfolioComponents/ProjectPanel/ProjectPanel.jsx';
 
 // Data containing portfolio projects.
@@ -62,39 +63,6 @@ export default class Portfolio extends React.Component {
 
   };
 
-  // Function to toggle Featured and All Projects.
-  toggleFeatured() {
-
-    // Flip the value of showOnlyFeatured only within the context of
-    // this function.
-    var showOnlyFeatured = !this.state.showOnlyFeatured;
-
-    // Temporary variable to hold all or only featured projects.
-    var data = null;
-
-    // Check whether or not we should only show featured projects.
-    if (showOnlyFeatured) {
-
-      // Only keep featured projects.
-      data = projectsData.filter(function(element, idx, arr) {
-        return element.featured == true;
-      });
-
-    } else {
-
-      // Keep all projects.
-      data = projectsData;
-
-    };
-
-    // Update state with modified showOnlyFeatured and project data.
-    this.setState({
-      showOnlyFeatured: !this.state.showOnlyFeatured,
-      projects: data
-    });
-
-  };
-
   // Callback function to update the activePopup attribute in the state with
   // a given project ID number.
   handleActivePopupIdChange(projId) {
@@ -103,15 +71,15 @@ export default class Portfolio extends React.Component {
     });
   };
 
+  handleRefreshFeaturedProjects(showOnlyFeatured, projects) {
+    this.setState({
+      showOnlyFeatured: showOnlyFeatured,
+      projects: projects
+    });
+  };
+
   // Component Render.
   render() {
-
-    // Button text.
-    if (this.state.showOnlyFeatured) {
-      var buttonLabel = "Show All Projects";
-    } else {
-      var buttonLabel = "Show Only Featured Projects";
-    };
 
     // Create an array of <ProjectPanel/>s.
     var panels = [];
@@ -151,7 +119,11 @@ export default class Portfolio extends React.Component {
               Here's some of my work:
             </p>
 
-            <div className="btn-toggle-projects noselect" onClick={this.toggleFeatured.bind(this)}>{buttonLabel}</div>
+            <ProjectToggle
+              showOnlyFeatured={this.state.showOnlyFeatured}
+              allProjectsData={projectsData}
+              refreshFeaturedProjects={this.handleRefreshFeaturedProjects.bind(this)}
+            />
 
           </div>
 
