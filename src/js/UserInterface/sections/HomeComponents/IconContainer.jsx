@@ -16,8 +16,7 @@ export default class IconContainer extends React.Component {
       <div className="container-icons text-center noselect">
         <Icon iconClass="icon-github" link="https://github.com/Jon1701"/>
         <Icon iconClass="icon-linkedin" link="https://ca.linkedin.com/in/jonbalon"/>
-        <Icon iconClass="icon-freecodecamp" link="https://www.freecodecamp.com/jon1701"/>
-
+        <Icon iconClass="icon-twitter" link="https://twitter.com/Jon1764"/>
         <div className="clearfix"/>
       </div>
     ); // End return().
