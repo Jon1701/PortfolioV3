@@ -48,25 +48,22 @@ export default class Portfolio extends React.Component {
       // Current project.
       var project = this.state.projects[i];
 
-      // Display only featured projects.
-      if (project.featured == true) {
-        // Store the <ProjectPanel/> component.
-        //
-        // Props sent:
-        //  projId: Unique number for this project.
-        //  activePopupId: ID# of the currently active popover.
-        //  updateActivePopupId: Callback function to update currently active popover.
-        //  info: Information about this project.
-        panels.push(
-          <ProjectPanel
-            key={i}
-            projId={i}
-            activePopupId={this.state.activePopupId}
-            updateActivePopupId={this.handleActivePopupIdChange.bind(this)}
-            info={project}
-          />
-        );
-      };
+      // Store the <ProjectPanel/> component.
+      //
+      // Props sent:
+      //  projId: Unique number for this project.
+      //  activePopupId: ID# of the currently active popover.
+      //  updateActivePopupId: Callback function to update currently active popover.
+      //  info: Information about this project.
+      panels.push(
+        <ProjectPanel
+          key={i}
+          projId={i}
+          activePopupId={this.state.activePopupId}
+          updateActivePopupId={this.handleActivePopupIdChange.bind(this)}
+          info={project}
+        />
+      );
 
     };
 
