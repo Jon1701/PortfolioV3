@@ -36,32 +36,29 @@
     margin: 0 auto;
   };
 
-  // Contains the GitHub, LinkedIn, FreeCodeCamp icons..
-  .container-icons {
+  // Container for all 3 icons.
+  .array-icons {
 
-    display: inline-block;
+    // Single icon styling.
+    .single-icon {
+      display: inline-block;
+      padding: 10px;
 
-    // Contains one single icon.
-    .container-single-icon {
+      font-size: 5em;
 
-      float: left;
+      // Icon hover effects.
+      &:hover {
+        text-shadow: 1px 1px 50px $colour-white;
+        transition: all 0.5s ease;
+      }; // End icon hover effects.
 
-      // Styling one icon.
-      .icon {
-        font-size: 5em;         // Icon size.
-        color: $colour-white;   // Icon colour.
-        padding: 0 10px 0 10px; // Icon padding.
+      // Hide icon label.
+      .icon-label {
+        display: none;
+      }; // ENd hide icon label.
 
-        // Icon hover effects.
-        &:hover {
-          text-shadow: 1px 1px 50px $colour-white;
-          transition: all 0.5s ease;
-        }; // End icon hover effects.
+    };// End single icon styling.
 
-      }; // End styling one icon.
-
-    };  // Ent container one single icon.
-
-  }; // End Icon container for all 3 icons.
+  };// End container for all 3 icons.
 
 }; // End Section.

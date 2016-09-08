@@ -136,33 +136,20 @@
   }; // End Contact Form.
 
   .notice {
-    //margin-top: 5px;
-    //margin-bottom: 15px;
     font-size: 0.9em;
   }
 
-  // Contains all icons.
-  .container-icons {
+  // Container for all 3 icons.
+  .array-icons {
 
-    width: 100%;
-    margin: 0 auto;
+    margin-top: 20px;
 
-    // Container for one single icon.
-    .container-single-icon {
-      width: 33%;
-      float: left;
+    // Single icon styling.
+    .single-icon {
+      display: inline-block;
+      padding: 10px;
 
-      // Align icons closer to the centre.
-      &:nth-child(1) { text-align: right; };
-      &:nth-child(2) { text-align: center; };
-      &:nth-child(3) { text-align: left; };
-    };
-
-    // Styles one icon.
-    .icon {
-      font-size: 3em;      // Icon size.
-      color: $colour-white;// Icon colour.
-      padding: 0 10px 0 10px; // Icon padding.
+      font-size: 2.5em;
 
       // Icon hover effects.
       &:hover {
@@ -170,8 +157,13 @@
         transition: all 0.5s ease;
       }; // End icon hover effects.
 
-    }; // End single icon styling.
+      // Hide icon label.
+      .icon-label {
+        display: none;
+      }; // End hide icon label.
 
-  }; // End icon container.
+    };// End single icon styling.
+
+  };// End container for all 3 icons.
 
 }; // End section.

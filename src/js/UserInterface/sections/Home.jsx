@@ -1,6 +1,6 @@
 // React dependencies.
 import React from 'react';
-import IconContainer from './HomeComponents/IconContainer.jsx';
+import IconArray from './HomeComponents/IconArray.jsx';
 
 // Component Definition.
 export default class Home extends React.Component {
@@ -31,7 +31,7 @@ export default class Home extends React.Component {
         <div className="hr"/>
 
         <div className="text-center">
-          <IconContainer/>
+          <IconArray/>
         </div>
 
       </div>

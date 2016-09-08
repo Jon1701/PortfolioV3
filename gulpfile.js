@@ -43,7 +43,7 @@ gulp.task('jsx', function() {
         filename: 'app.js'
       }
     }))
-    .pipe(uglify())
+//    .pipe(uglify())
     .pipe(gulp.dest(destPath + 'js/'))
     .pipe(connect.reload());
 });
@@ -66,7 +66,7 @@ gulp.task('media', function() {
 gulp.task('stylesheets', function() {
   gulp.src(srcPath + 'css/**/*')
     .pipe(sass().on('error', sass.logError))
-    .pipe(minifycss())
+//    .pipe(minifycss())
     .pipe(gulp.dest(destPath + 'css/'))
     .pipe(connect.reload());
 });
@@ -102,7 +102,7 @@ gulp.task("webserver", function() {
 // Watch task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('watch', function() {
-  //gulp.watch(srcPath + 'js/**/*.jsx', ['jsx']); // JSX files.
+  gulp.watch(srcPath + 'js/**/*.jsx', ['jsx']); // JSX files.
   gulp.watch(srcPath + 'css/**/*.scss', ['stylesheets']); // SASS Main.
   gulp.watch(srcPath + 'css/**/_*.scss', ['stylesheets']); // SASS Partials.
   gulp.watch(srcPath + '*.html', ['html']);
@@ -111,4 +111,4 @@ gulp.task('watch', function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Default task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['webserver', 'watch', 'cname', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio']);
+gulp.task('default', ['watch', 'cname', 'jsx', 'media', 'stylesheets', 'html' ,'portfolio', 'webserver']);

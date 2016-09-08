@@ -5,8 +5,8 @@ import classNames from 'classnames';
 // Fields.
 import ContactForm from './ContactMeComponents/ContactForm/ContactForm.jsx';
 
-// Home Icons
-import IconContainer from './HomeComponents/IconContainer.jsx';
+// GitHub, LinkedIn, Twitter icons array.
+import IconArray from '../sections/HomeComponents/IconArray.jsx'
 
 // Component Definition.
 export default class ContactMe extends React.Component {
@@ -31,20 +31,16 @@ export default class ContactMe extends React.Component {
             Feel free to contact me if you have any inquiries or questions!
           </div>
 
-          { /* Responsive grid. */ }
           <div className="row">
-
-            { /* Display Contact Form on left column */ }
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div className="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
               <ContactForm/>
             </div>
+          </div>
 
-            { /* Display GitHub, LinkedIn, FCC icons on right column */ }
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div className="invisible status status-fail">Test</div>
-              <IconContainer/>
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
+              <IconArray/>
             </div>
-
           </div>
 
         </div>
