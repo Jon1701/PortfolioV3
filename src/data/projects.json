@@ -7,7 +7,8 @@
     "links": {
       "demo": "https://ms-urlshortener-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MS-URLShortener"
-    }
+    },
+    "featured": true
   },
   {
     "title": "Timestamp Generator",
@@ -17,7 +18,8 @@
     "links": {
       "demo": "https://ms-timestamp-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MS-Timestamp"
-    }
+    },
+    "featured": true
   },
   {
     "title": "Request Header Parser",
@@ -27,7 +29,8 @@
     "links": {
       "demo": "https://ms-requestheaderparser-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MS-RequestHeaderParser"
-    }
+    },
+    "featured": false
   },
   {
     "title": "Recipe Box",
@@ -37,7 +40,8 @@
     "links": {
       "demo": "https://www.jonbalon.io/portfolio/RecipeBox",
       "github": "https://github.com/Jon1701/RecipeBox"
-    }
+    },
+    "featured": true
   },
   {
     "title": "Dungeon Crawler",
@@ -47,7 +51,8 @@
     "links": {
       "demo": "../portfolio/DungeonCrawler",
       "github": "https://github.com/Jon1701/DungeonCrawler"
-    }
+    },
+    "featured": false
   },
   {
     "title": "The Game of Life",
@@ -57,7 +62,8 @@
     "links": {
       "demo": "../portfolio/GameOfLife",
       "github": "https://github.com/Jon1701/GameOfLife"
-    }
+    },
+    "featured": false
   },
   {
     "title": "FreeCodeCamp D3 Charts",
@@ -67,7 +73,8 @@
     "links": {
       "demo": "../portfolio/D3Projects",
       "github": "https://github.com/Jon1701/FCC-D3-Projects"
-    }
+    },
+    "featured": false
   },
   {
     "title": "TwitchViewer",
@@ -77,7 +84,8 @@
     "links": {
       "demo": "../portfolio/TwitchViewer",
       "github": "https://github.com/Jon1701/TwitchViewer"
-    }
+    },
+    "featured": true
   },
   {
     "title": "Markdown Previewer",
@@ -87,7 +95,8 @@
     "links": {
       "demo": "../portfolio/MarkdownPreviewer",
       "github": "https://github.com/Jon1701/MarkdownPreviewer"
-    }
+    },
+    "featured": false
   },
   {
     "title": "Simon Game",
@@ -97,7 +106,8 @@
     "links": {
       "demo": "../portfolio/SimonGame",
       "github": "https://github.com/Jon1701/SimonGame"
-    }
+    },
+    "featured": false
   },
   {
     "title": "Wiki Viewer",
@@ -107,7 +117,8 @@
     "links": {
       "demo": "../portfolio/WikiViewer",
       "github": "https://github.com/Jon1701/WikiViewer"
-    }
+    },
+    "featured": false
   },
   {
     "title": "Pumpkindoro Timer",
@@ -117,7 +128,8 @@
     "links": {
       "demo": "../portfolio/PumpkindoroTimer",
       "github": "https://github.com/Jon1701/PumpkindoroTimer"
-    }
+    },
+    "featured": true
   },
   {
     "title": "Life is Strange Quote Generator",
@@ -127,6 +139,7 @@
     "links": {
       "demo": "../portfolio/LifeIsStrangeQuoteGenerator",
       "github": "https://github.com/Jon1701/LifeIsStrangeQuoteGenerator"
-    }
+    },
+    "featured": true
   }
 ]
