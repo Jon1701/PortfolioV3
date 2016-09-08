@@ -18,7 +18,7 @@ export default class ProjectPanel extends React.Component {
     var project = this.props.info;
 
     return (
-        <div className="project-panel container-fluid col-xs-12 col-md-6 col-lg-4">
+        <div className="project-panel container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-4">
 
           <div className="project-title">
             {project.title}
