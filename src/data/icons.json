@@ -20,8 +20,8 @@
      "name":"CSS3"
   },
   "d3":{
-     "icon":"icon-codepen",
-     "name":"D3"
+     "icon":"icon-d3",
+     "name":"D3.js"
   },
   "debian":{
      "icon":"icon-debian",
@@ -32,7 +32,7 @@
      "name":"Express.js"
   },
   "flask":{
-     "icon":"icon-codepen",
+     "icon":"icon-flask",
      "name":"Flask"
   },
   "freecodecamp":{
@@ -79,17 +79,25 @@
      "icon":"icon-materialize",
      "name":"Materialize"
   },
+  "material-ui":{
+     "icon":"icon-material-ui",
+     "name":"Material-UI"
+  },
   "mongodb":{
      "icon":"icon-mongodb",
      "name":"MongoDB"
   },
   "mustachejs":{
-     "icon":"icon-codepen",
+     "icon":"icon-mustachejs",
      "name":"mustache.js"
   },
   "nodejs":{
      "icon":"icon-nodejs",
      "name":"NodeJS"
+  },
+  "npm":{
+     "icon":"icon-npm",
+     "name":"npm"
   },
   "python":{
      "icon":"icon-python",
@@ -108,7 +116,7 @@
      "name":"Ubuntu"
   },
   "webpack":{
-     "icon":"icon-codepen",
+     "icon":"icon-webpack",
      "name":"Webpack"
   }
 }
