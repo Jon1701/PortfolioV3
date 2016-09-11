@@ -1,7 +1,7 @@
 [
   {
-    "title": "URL Shortening Service",
-    "image": "../media/images/portfolio/cover-msurlshortener.png",
+    "title": "URL Shortener Service",
+    "image": "../media/images/portfolio/cover-ms-url-shortener.png",
     "description": "A URL shortening microservice which does the exact opposite! Not my fault, I blame Heroku.",
     "technologies": ["html5", "css3", "jquery", "nodejs", "mongodb", "materialize"],
     "links": {
@@ -11,7 +11,7 @@
     "featured": true
   },
   {
-    "title": "Timestamp Generator",
+    "title": "UNIX Timestamp Generator",
     "image": "../media/images/portfolio/cover-timestamp-generator.png",
     "description": "Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates",
     "technologies": ["html5", "css3", "react", "nodejs"],
@@ -23,9 +23,9 @@
   },
   {
     "title": "Request Header Parser",
-    "image": "../media/images/portfolio/cover-requestheaderparser.png",
+    "image": "../media/images/portfolio/cover-request-header-parser.png",
     "description": "Simple Node.js/Express.js application to parse web browser HTTP request headers",
-    "technologies": ["html5", "css3", "react", "nodejs", "expressjs"],
+    "technologies": ["html5", "css3", "react", "nodejs"],
     "links": {
       "demo": "https://ms-requestheaderparser-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MS-RequestHeaderParser"
@@ -34,7 +34,7 @@
   },
   {
     "title": "Recipe Box",
-    "image": "../media/images/portfolio/cover-recipebox.png",
+    "image": "../media/images/portfolio/cover-recipe-box.png",
     "description": "Simple web application built using React.js and Materialize to store recipes using a web browser's local storage",
     "technologies": ["html5", "css3", "javascript", "react", "materialize"],
     "links": {
@@ -45,7 +45,7 @@
   },
   {
     "title": "Dungeon Crawler",
-    "image": "../media/images/portfolio/cover-dungeoncrawler.png",
+    "image": "../media/images/portfolio/cover-dungeon-crawler.png",
     "description": "A simple dungeon crawler game",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
@@ -56,7 +56,7 @@
   },
   {
     "title": "The Game of Life",
-    "image": "../media/images/portfolio/cover-gameoflife.png",
+    "image": "../media/images/portfolio/cover-game-of-life.png",
     "description": "A simulation of Conway's Game of Life",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
@@ -77,12 +77,12 @@
     "featured": false
   },
   {
-    "title": "TwitchViewer",
-    "image": "../media/images/portfolio/cover-twitch-viewer.png",
+    "title": "Twitch Stream Viewer",
+    "image": "../media/images/portfolio/cover-twitch-stream-viewer.png",
     "description": "See what some of my favourite Twitch streamers are playing",
-    "technologies": ["html5", "css3", "javascript", "jquery", "react"],
+    "technologies": ["html5", "css3", "react", "materialize"],
     "links": {
-      "demo": "../portfolio/TwitchViewer",
+      "demo": "../portfolio/TwitchStreamViewer",
       "github": "https://github.com/Jon1701/TwitchViewer"
     },
     "featured": true
@@ -100,7 +100,7 @@
   },
   {
     "title": "Simon Game",
-    "image": "../media/images/portfolio/cover-simongame.png",
+    "image": "../media/images/portfolio/cover-simon-game.png",
     "description": "A classic, rebuilt for modern times, and in 4K. (Batteries not included)",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
@@ -111,7 +111,7 @@
   },
   {
     "title": "Wiki Viewer",
-    "image": "../media/images/portfolio/cover-wikiviewer.png",
+    "image": "../media/images/portfolio/cover-wikipedia-viewer.png",
     "description": "Search for Wikipedia using Wikipedia",
     "technologies": ["html5", "css3", "javascript", "jquery", "mustachejs"],
     "links": {
@@ -133,7 +133,7 @@
   },
   {
     "title": "Life is Strange Quote Generator",
-    "image": "../media/images/portfolio/cover-quote-generator.png",
+    "image": "../media/images/portfolio/cover-lis-quote-generator.png",
     "description": "Relive the horror here with quotes from the game",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
