@@ -80,7 +80,7 @@
     "title": "Twitch Stream Viewer",
     "image": "../media/images/portfolio/cover-twitch-stream-viewer.png",
     "description": "See what some of my favourite Twitch streamers are playing",
-    "technologies": ["html5", "css3", "react", "materialize"],
+    "technologies": ["html5", "css3", "react"],
     "links": {
       "demo": "../portfolio/TwitchStreamViewer",
       "github": "https://github.com/Jon1701/TwitchViewer"
