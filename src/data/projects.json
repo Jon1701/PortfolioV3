@@ -1,5 +1,16 @@
 [
   {
+    "title": "EXIF Data Viewer",
+    "image": "../media/images/portfolio/cover-exif-viewer.png",
+    "description": "Application which reads and displays EXIF data from .jpg files.",
+    "technologies": ["html5", "css3", "javascript", "react", "nodejs", "heroku"],
+    "links": {
+      "demo": "https://ms-exifviewer-jon1701.herokuapp.com/",
+      "github": "https://github.com/Jon1701/MS-ExifViewer"
+    },
+    "featured": true
+  },
+  {
     "title": "URL Shortener Service",
     "image": "../media/images/portfolio/cover-ms-url-shortener.png",
     "description": "A URL shortening microservice which does the exact opposite! Not my fault, I blame Heroku.",
@@ -85,7 +96,7 @@
       "demo": "../portfolio/TwitchStreamViewer",
       "github": "https://github.com/Jon1701/TwitchViewer"
     },
-    "featured": true
+    "featured": false
   },
   {
     "title": "Markdown Previewer",
