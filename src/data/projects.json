@@ -14,7 +14,7 @@
     "title": "Image Search Abstraction",
     "image": "../media/images/portfolio/cover-ms-search-abstraction.png",
     "description": "Abstraction Layer Microservice which takes advantage of the Imgur REST API to search image galleries.",
-    "technologies": ["html5", "css3", "javascript", "react", "nodejs", "heroku"],
+    "technologies": ["html5", "css3", "react", "mongodb", "nodejs", "heroku"],
     "links": {
       "demo": "https://ms-imgursearch-jon1701.herokuapp.com",
       "github": "https://github.com/Jon1701/MS-ImageSearchAbstractionV2"
