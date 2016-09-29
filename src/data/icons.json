@@ -28,7 +28,7 @@
      "name":"Debian"
   },
   "expressjs":{
-     "icon":"icon-codepen",
+     "icon":"icon-nodejs",
      "name":"Express.js"
   },
   "flask":{
