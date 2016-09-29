@@ -11,6 +11,17 @@
     "featured": true
   },
   {
+    "title": "Image Search Abstraction",
+    "image": "../media/images/portfolio/cover-ms-search-abstraction.png",
+    "description": "Abstraction Layer Microservice which takes advantage of the Imgur REST API to search image galleries.",
+    "technologies": ["html5", "css3", "javascript", "react", "nodejs", "heroku"],
+    "links": {
+      "demo": "https://ms-imgursearch-jon1701.herokuapp.com",
+      "github": "https://github.com/Jon1701/MS-ImageSearchAbstractionV2"
+    },
+    "featured": true
+  },
+  {
     "title": "URL Shortener Service",
     "image": "../media/images/portfolio/cover-ms-url-shortener.png",
     "description": "A URL shortening microservice which does the exact opposite! Not my fault, I blame Heroku.",
@@ -151,6 +162,6 @@
       "demo": "../portfolio/LifeIsStrangeQuoteGenerator",
       "github": "https://github.com/Jon1701/LifeIsStrangeQuoteGenerator"
     },
-    "featured": true
+    "featured": false
   }
 ]
