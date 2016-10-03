@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "gulp --env development",
     "prod": "gulp --env production",
-    "build": "gulp --env production build"
+    "build": "gulp --env production build",
+    "delete": "gulp delete"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "classnames": "^2.2.5",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.13",
     "gulp-connect": "^5.0.0",
