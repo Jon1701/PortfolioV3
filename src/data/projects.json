@@ -88,17 +88,6 @@
     "featured": false
   },
   {
-    "title": "FreeCodeCamp D3 Charts",
-    "image": "../media/images/portfolio/cover-d3-projects.png",
-    "description": "A collection of charts made in D3",
-    "technologies": ["html5", "css3", "javascript", "d3"],
-    "links": {
-      "demo": "../portfolio/D3Projects",
-      "github": "https://github.com/Jon1701/FCC-D3-Projects"
-    },
-    "featured": false
-  },
-  {
     "title": "Twitch Stream Viewer",
     "image": "../media/images/portfolio/cover-twitch-stream-viewer.png",
     "description": "See what some of my favourite Twitch streamers are playing",
