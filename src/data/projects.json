@@ -60,7 +60,7 @@
     "description": "Simple web application built using React.js and Materialize to store recipes using a web browser's local storage",
     "technologies": ["html5", "css3", "javascript", "react", "materialize"],
     "links": {
-      "demo": "https://www.jonbalon.io/portfolio/RecipeBox",
+      "demo": "http://www.jonbalon.io/RecipeBox/",
       "github": "https://github.com/Jon1701/RecipeBox"
     },
     "featured": true
@@ -71,7 +71,7 @@
     "description": "A simple dungeon crawler game",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
-      "demo": "../portfolio/DungeonCrawler",
+      "demo": "http://www.jonbalon.io/DungeonCrawler/",
       "github": "https://github.com/Jon1701/DungeonCrawler"
     },
     "featured": false
@@ -82,7 +82,7 @@
     "description": "A simulation of Conway's Game of Life",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
-      "demo": "../portfolio/GameOfLife",
+      "demo": "http://www.jonbalon.io/GameOfLife/",
       "github": "https://github.com/Jon1701/GameOfLife"
     },
     "featured": false
@@ -93,7 +93,7 @@
     "description": "See what some of my favourite Twitch streamers are playing",
     "technologies": ["html5", "css3", "react"],
     "links": {
-      "demo": "../portfolio/TwitchStreamViewer",
+      "demo": "http://www.jonbalon.io/TwitchViewer/",
       "github": "https://github.com/Jon1701/TwitchViewer"
     },
     "featured": false
@@ -104,7 +104,7 @@
     "description": "Converts markdown into HTML markup",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
-      "demo": "../portfolio/MarkdownPreviewer",
+      "demo": "http://www.jonbalon.io/MarkdownPreviewer/",
       "github": "https://github.com/Jon1701/MarkdownPreviewer"
     },
     "featured": false
@@ -115,7 +115,7 @@
     "description": "A classic, rebuilt for modern times, and in 4K. (Batteries not included)",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
-      "demo": "../portfolio/SimonGame",
+      "demo": "http://www.jonbalon.io/SimonGame/",
       "github": "https://github.com/Jon1701/SimonGame"
     },
     "featured": false
@@ -126,7 +126,7 @@
     "description": "Search for Wikipedia using Wikipedia",
     "technologies": ["html5", "css3", "javascript", "jquery", "mustachejs"],
     "links": {
-      "demo": "../portfolio/WikiViewer",
+      "demo": "http://www.jonbalon.io/WikiViewer/",
       "github": "https://github.com/Jon1701/WikiViewer"
     },
     "featured": false
@@ -137,7 +137,7 @@
     "description": "A variation of the world famous Pomodoro Timer, now made with real pumpkins",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
-      "demo": "../portfolio/PumpkindoroTimer",
+      "demo": "http://www.jonbalon.io/PumpkindoroTimer/",
       "github": "https://github.com/Jon1701/PumpkindoroTimer"
     },
     "featured": true
@@ -148,7 +148,7 @@
     "description": "Relive the horror here with quotes from the game",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
-      "demo": "../portfolio/LifeIsStrangeQuoteGenerator",
+      "demo": "http://www.jonbalon.io/LifeIsStrangeQuoteGenerator/",
       "github": "https://github.com/Jon1701/LifeIsStrangeQuoteGenerator"
     },
     "featured": false
