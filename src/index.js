@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<div>Hello World</div>, document.getElementById('react-target'));
+import WebsiteUI from 'containers/WebsiteUI'
+
+ReactDOM.render(<div><WebsiteUI/></div>, document.getElementById('react-target'));
