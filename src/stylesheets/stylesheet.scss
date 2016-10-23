@@ -14,6 +14,17 @@ body {
 // Centres text horizontally.
 .text-center { text-align: center; }
 
+// Prevent hyperlinks from using browser defaults.
+a { color: inherit; }
+
+// Adds a heavenly glow when hovering.
+.icon-hover-heavenlyglow {
+  &:hover {
+    text-shadow: 1px 1px 50px #FFFFFF;
+    transition: all 0.5s ease;
+  }
+}
+
 // Icon fonts.
 @import '_GlyphterIcons';
 
