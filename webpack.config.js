@@ -34,6 +34,10 @@ var config = {
     // (Where to find modules).
     root: [PATHS.SRC, PATHS.MODULES],
 
+    // Automatically resolve module extensions for JavScript files.
+    // Can assume imported files are JS or JSX.
+    extensions: ['', '.js', '.jsx'],
+
     // Renames module paths.
     alias: {
 
