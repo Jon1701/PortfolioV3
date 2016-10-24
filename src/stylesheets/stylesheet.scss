@@ -21,7 +21,7 @@ body {
 .text-center { text-align: center; }
 
 // Prevent hyperlinks from using browser defaults.
-a { color: inherit; }
+a { color: inherit; text-decoration: none;}
 
 // Adds a heavenly glow when hovering.
 .icon-hover-heavenlyglow {
