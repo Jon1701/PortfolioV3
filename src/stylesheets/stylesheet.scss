@@ -14,7 +14,7 @@ body {
 .section { border: solid 1px black; }
 
 // Set minimum and maximum viewport heights.
-.height-100vmin { height: 100vmin; }
+//.height-100vmin { height: 100vmin; }
 .height-100vmax { height: 100vmax; }
 
 // Centres text horizontally.
@@ -31,6 +31,13 @@ a { color: inherit; }
   }
 }
 
+// Responsive images.
+.img-responsive {
+  max-width: 100%;
+  display: block;
+}
+
+
 // Icon fonts.
 @import '_GlyphterIcons';
 
@@ -40,3 +47,4 @@ a { color: inherit; }
 // Partials.
 @import '_SectionHome';
 @import '_SectionAboutMe';
+@import '_SectionProjects';
