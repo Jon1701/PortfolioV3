@@ -29,7 +29,7 @@ export default class SectionAboutMe extends React.Component {
         <Icon
           iconClass={"icon " + iconData[val]['icon']}
           iconName={iconData[val]['name']}
-          containerClasses={col-xs-4 col-sm-3 col-lg-2}
+          containerClasses={"col-xs-4 col-sm-3 col-lg-2"}
           />
       )
 
