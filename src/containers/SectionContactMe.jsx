@@ -7,7 +7,7 @@ export default class SectionContactMe extends React.Component {
   // Component render.
   render() {
     return (
-      <div id="section-contactme" className="text-center">
+      <div id="section-contactme" className="height-min-100vh text-center">
 
         <h1 className="text-center text-uppercase">Contact Me</h1>
 

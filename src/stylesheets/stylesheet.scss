@@ -11,12 +11,9 @@ body {
   margin: 0;
 }
 
-// For debugging purposes only.
-.section { border: solid 1px black; }
-
 // Set minimum and maximum viewport heights.
-//.height-100vmin { height: 100vmin; }
-//.height-100vmax { height: 100vmax; }
+.height-minmax-100vh { min-height: 100vh; max-height: 100vh; }
+.height-min-100vh { min-height: 100vh; }
 
 // Centres text horizontally.
 .text-center { text-align: center; }

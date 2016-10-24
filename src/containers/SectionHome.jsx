@@ -7,14 +7,14 @@ export default class SectionHome extends React.Component {
   // Component render.
   render() {
     return (
-      <div className="force-table">
+      <div className="force-table height-minmax-100vh">
         <div className="force-table-row">
 
 
 
 
 
-          <div id="section-home" className="height-100vmin height-100vmax text-center">
+          <div id="section-home" className=" text-center">
 
             <h1 className="text-center">Jon Balon</h1>
 
