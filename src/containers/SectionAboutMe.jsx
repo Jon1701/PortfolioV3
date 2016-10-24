@@ -4,6 +4,8 @@ import React from 'react';
 // Load icon data from JSON file.
 const iconData = require('json/icons.json');
 
+import Icon from 'components/Icon';
+
 // Component definition.
 export default class SectionAboutMe extends React.Component {
 
@@ -23,16 +25,12 @@ export default class SectionAboutMe extends React.Component {
     // and icon name, generate an array of <div> containing the icon and name.
     return iconsUsed.map((val, idx, arr) => {
 
-      // Using the current name of the icon from the iconsUsed array,
-      // extract the icon class name and icon name.
-      const iconClass = iconData[val]['icon'];
-      const iconName = iconData[val]['name'];
-
       return (
-        <div className="col-xs-4 col-sm-3 col-lg-2" key={"aboutmeicon-"+iconName}>
-          <div className={"icon " + iconClass}></div>
-          <div className="icon-name">{iconName}</div>
-        </div>
+        <Icon
+          iconClass={"icon " + iconData[val]['icon']}
+          iconName={iconData[val]['name']}
+          containerClasses={col-xs-4 col-sm-3 col-lg-2}
+          />
       )
 
     });
