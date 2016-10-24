@@ -24,7 +24,7 @@ export default class SectionProjects extends React.Component {
   // Component render.
   render() {
     return (
-      <div id="section-projects" className="height-min-100vh text-center">
+      <div id="section-projects" className="section height-min-100vh text-center">
 
         <h1 className="text-uppercase">Portfolio</h1>
 
