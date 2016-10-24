@@ -25,12 +25,15 @@ export default class SectionAboutMe extends React.Component {
     // and icon name, generate an array of <div> containing the icon and name.
     return iconsUsed.map((val, idx, arr) => {
 
+      const iconClass = iconData[val]['icon'];
+      const iconName = iconData[val]['name'];
+
       return (
         <Icon
-          key={"icon-aboutme-"+idx}
-          iconClass={"icon " + iconData[val]['icon']}
-          iconName={iconData[val]['name']}
-          containerClasses={"col-xs-4 col-sm-3 col-lg-2"}
+          key={ "icon-aboutme-" + idx }
+          iconClass={ iconClass }
+          iconName={ iconName }
+          containerClasses={ "col-xs-4 col-sm-3 col-lg-2 " + iconClass + "-hover"}
           />
       )
 
@@ -49,7 +52,7 @@ export default class SectionAboutMe extends React.Component {
 
         <p>Here are some of the technologies I have used:</p>
 
-        <div className="row">
+        <div className="row cursor-arrow">
           {this.generateIcons()}
         </div>
 
