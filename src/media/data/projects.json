@@ -1,7 +1,7 @@
 [
   {
     "title": "EXIF Data Viewer",
-    "image": "../media/images/portfolio/cover-exif-viewer.png",
+    "image": "ExifViewer.png",
     "description": "Application which reads and displays EXIF data from .jpg files.",
     "technologies": ["html5", "css3", "javascript", "react", "nodejs", "heroku"],
     "links": {
@@ -12,7 +12,7 @@
   },
   {
     "title": "Image Search Abstraction",
-    "image": "../media/images/portfolio/cover-ms-search-abstraction.png",
+    "image": "ImageSearchAbstraction.png",
     "description": "Abstraction Layer Microservice which takes advantage of the Imgur REST API to search image galleries.",
     "technologies": ["html5", "css3", "react", "mongodb", "nodejs", "heroku"],
     "links": {
@@ -23,7 +23,7 @@
   },
   {
     "title": "URL Shortener Service",
-    "image": "../media/images/portfolio/cover-ms-url-shortener.png",
+    "image": "UrlShortener.png",
     "description": "A URL shortening microservice which does the exact opposite! Not my fault, I blame Heroku.",
     "technologies": ["html5", "css3", "jquery", "nodejs", "mongodb", "materialize"],
     "links": {
@@ -34,7 +34,7 @@
   },
   {
     "title": "UNIX Timestamp Generator",
-    "image": "../media/images/portfolio/cover-timestamp-generator.png",
+    "image": "TimestampGenerator.png",
     "description": "Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates",
     "technologies": ["html5", "css3", "react", "nodejs"],
     "links": {
@@ -45,7 +45,7 @@
   },
   {
     "title": "Request Header Parser",
-    "image": "../media/images/portfolio/cover-request-header-parser.png",
+    "image": "RequestHeaderParser.png",
     "description": "Simple Node.js/Express.js application to parse web browser HTTP request headers",
     "technologies": ["html5", "css3", "react", "nodejs"],
     "links": {
@@ -56,7 +56,7 @@
   },
   {
     "title": "Recipe Box",
-    "image": "../media/images/portfolio/cover-recipe-box.png",
+    "image": "RecipeBox.png",
     "description": "Simple web application built using React.js and Materialize to store recipes using a web browser's local storage",
     "technologies": ["html5", "css3", "javascript", "react", "materialize"],
     "links": {
@@ -67,7 +67,7 @@
   },
   {
     "title": "Dungeon Crawler",
-    "image": "../media/images/portfolio/cover-dungeon-crawler.png",
+    "image": "DungeonCrawler.png",
     "description": "A simple dungeon crawler game",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
@@ -78,7 +78,7 @@
   },
   {
     "title": "The Game of Life",
-    "image": "../media/images/portfolio/cover-game-of-life.png",
+    "image": "GameOfLife.png",
     "description": "A simulation of Conway's Game of Life",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
@@ -89,7 +89,7 @@
   },
   {
     "title": "Twitch Stream Viewer",
-    "image": "../media/images/portfolio/cover-twitch-stream-viewer.png",
+    "image": "TwitchStreamViewer.png",
     "description": "See what some of my favourite Twitch streamers are playing",
     "technologies": ["html5", "css3", "react"],
     "links": {
@@ -100,7 +100,7 @@
   },
   {
     "title": "Markdown Previewer",
-    "image": "../media/images/portfolio/cover-markdown-previewer.png",
+    "image": "MarkdownPreviewer.png",
     "description": "Converts markdown into HTML markup",
     "technologies": ["html5", "css3", "javascript", "react"],
     "links": {
@@ -111,7 +111,7 @@
   },
   {
     "title": "Simon Game",
-    "image": "../media/images/portfolio/cover-simon-game.png",
+    "image": "SimonGame.png",
     "description": "A classic, rebuilt for modern times, and in 4K. (Batteries not included)",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
@@ -122,7 +122,7 @@
   },
   {
     "title": "Wiki Viewer",
-    "image": "../media/images/portfolio/cover-wikipedia-viewer.png",
+    "image": "WikipediaViewer.png",
     "description": "Search for Wikipedia using Wikipedia",
     "technologies": ["html5", "css3", "javascript", "jquery", "mustachejs"],
     "links": {
@@ -133,7 +133,7 @@
   },
   {
     "title": "Pumpkindoro Timer",
-    "image": "../media/images/portfolio/cover-pumpkindoro-timer.png",
+    "image": "PomodoroTimer.png",
     "description": "A variation of the world famous Pomodoro Timer, now made with real pumpkins",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
@@ -144,7 +144,7 @@
   },
   {
     "title": "Life is Strange Quote Generator",
-    "image": "../media/images/portfolio/cover-lis-quote-generator.png",
+    "image": "QuoteGenerator.png",
     "description": "Relive the horror here with quotes from the game",
     "technologies": ["html5", "css3", "javascript", "jquery"],
     "links": {
