@@ -12,9 +12,9 @@ export default class WebsiteUI extends React.Component {
   render() {
     return (
       <div>
-        <SectionProjects/>
-        <SectionAboutMe/>
         <SectionHome/>
+        <SectionAboutMe/>
+        <SectionProjects/>
         <SectionContactMe/>
       </div>
     )
