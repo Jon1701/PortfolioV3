@@ -12,8 +12,8 @@ export default class WebsiteUI extends React.Component {
   render() {
     return (
       <div>
-        <SectionHome/>
         <SectionAboutMe/>
+        <SectionHome/>        
         <SectionProjects/>
         <SectionContactMe/>
       </div>
