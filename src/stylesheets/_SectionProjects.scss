@@ -5,6 +5,13 @@
   background-repeat: repeat;
   background-attachment: fixed;
 
+
+  // Main section heading.
+  .section-main-heading { font-size: 3em; }
+
+  // Section content sizing.
+  p { font-size: 1.75em; }
+
   // Debug
   .project-panel {
     background-color: #FFFFFF;
@@ -15,6 +22,7 @@
   .project-title {
     border: solid 1px #CCCCCC;
     padding: 10px 0 10px 0;
+    font-size: 1.5em;
   }
 
   .project-image-container {
@@ -25,6 +33,9 @@
 
   .project-buttons {
     border: solid 1px #CCCCCC;
+
+    .icon {font-size: 2em}
+    .icon-label {font-size: 1.5em; margin-top: -15px;}
   }
 
 

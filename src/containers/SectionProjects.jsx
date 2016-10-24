@@ -17,8 +17,6 @@ export default class SectionProjects extends React.Component {
       )
     })
 
-
-
   }
 
   // Component render.
@@ -26,7 +24,7 @@ export default class SectionProjects extends React.Component {
     return (
       <div id="section-projects" className="section height-min-100vh text-center">
 
-        <h1 className="text-uppercase">Portfolio</h1>
+        <div className="text-uppercase section-main-heading">Portfolio</div>
 
         <p>Here's some of my work:</p>
 
