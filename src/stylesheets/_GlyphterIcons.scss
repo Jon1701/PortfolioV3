@@ -55,3 +55,41 @@
 .icon-ubuntu:before{content:'\006c';}
 .icon-webpack:before{content:'\006d';}
 .icon-xcircle:before{content:'\006e';}
+
+@mixin icon-hover($colour) {
+  &:hover {
+    color: $colour;
+    transition: all 0.5s ease;
+  };
+};
+
+// Icon hover.
+.icon-default-hover-hover { @include icon-hover(#333333); };
+.icon-atom-hover { @include icon-hover(#40A977); };
+.icon-bash-hover { @include icon-hover(#C0C0C0); };
+.icon-bootstrap-hover { @include icon-hover(#563D7C); };
+.icon-cloud9-hover { @include icon-hover(#2784C7); };
+.icon-codepen-hover { @include icon-hover(#C0C0C0); };
+.icon-css3-hover { @include icon-hover(#369CD6); };
+.icon-d3-hover { @include icon-hover(#F5874A); };
+.icon-debian-hover { @include icon-hover(#D70A53); };
+.icon-flask-hover { @include icon-hover(#C0C0C0); };
+.icon-git-hover { @include icon-hover(#F14E32); };
+.icon-github-hover { @include icon-hover(#C0C0C0); };
+.icon-gulp-hover { @include icon-hover(#CF4646); };
+.icon-heroku-hover { @include icon-hover(#69619A); };
+.icon-html5-hover { @include icon-hover(#F1662B); };
+.icon-javascript-hover { @include icon-hover(#F2BF22); };
+.icon-jquery-hover { @include icon-hover(#0769AD); };
+.icon-materialize-hover { @include icon-hover(#EE6E73); };
+.icon-material-ui-hover { @include icon-hover(#C0C0C0); };
+.icon-mongodb-hover { @include icon-hover(#7FC857); };
+.icon-mustachejs-hover { @include icon-hover(#C0C0C0); };
+.icon-nodejs-hover { @include icon-hover(#75BB59); };
+.icon-npm-hover { @include icon-hover(#CC3838); };
+.icon-python-hover { @include icon-hover(#3D83BE); };
+.icon-react-hover { @include icon-hover(#61DAFB); };
+.icon-sass-hover { @include icon-hover(#C6538C); };
+.icon-twitter-hover { @include icon-hover(#55ACEE); };
+.icon-ubuntu-hover { @include icon-hover(#E95420); };
+.icon-webpack-hover { @include icon-hover(#799EE4); };
