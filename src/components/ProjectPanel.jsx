@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Icon from 'components/Icon'
+import MoreInfoPopover from 'components/MoreInfoPopover'
 
 export default class ProjectPanel extends React.Component {
   render() {
@@ -36,6 +37,8 @@ export default class ProjectPanel extends React.Component {
             <Icon iconClass={"icon icon-moreinfo"} iconName={"More Info"} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"}/>
             <Icon iconClass={"icon icon-github"} iconName={"GitHub"} link={linkGithub} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"}/>
           </div>
+
+          <MoreInfoPopover description={description} tech={technologies}/>
 
         </div>
 
