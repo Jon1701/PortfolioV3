@@ -1,6 +1,17 @@
 #section-aboutme {
+
   // Background styling.
   background-image: url("../media/images/backgrounds/cubes.png");
   background-repeat: repeat;
   background-attachment: fixed;
+
+  // Main section heading.
+  .section-main-heading { font-size: 3em; }
+
+  // Section content sizing.
+  p { font-size: 1.75em; }
+
+  // Icon and Icon label sizing.
+  .icon { font-size: 3.75em; }
+  .icon-label {font-size: 1.5em;margin-top: -20px; margin-bottom: 10px}
 }

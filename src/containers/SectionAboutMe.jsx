@@ -43,7 +43,7 @@ export default class SectionAboutMe extends React.Component {
     return (
       <div id="section-aboutme" className="section height-min-100vh text-center">
 
-        <h1 className="text-uppercase">About Me</h1>
+        <div className="text-uppercase section-main-heading">About Me</div>
 
         <p>Hi! My name is Jon and I'm a Full Stack Developer based in Toronto.</p>
 
