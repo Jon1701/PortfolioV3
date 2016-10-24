@@ -1,5 +1,11 @@
+// Load Oswald font.
+@font-face {
+  font-family: "Oswald";
+  src: url("../media/fonts/Oswald-Regular.ttf");
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Oswald";
   font-size: 100%;
   margin: 0;
 }
