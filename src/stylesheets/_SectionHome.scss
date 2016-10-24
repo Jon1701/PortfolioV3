@@ -1,6 +1,14 @@
 $opacity: 0.3;
 
+// Force a table layout just for <SectionHome/>.
+// Want to keep contents vertically and horizontally aligned, and
+// maintain flow of the page.
+.force-table { display: table; width: 100%;}
+.force-table-row { display: table-row; width: 100%;}
+
 #section-home {
+
+  width: 100%;
 
   // Text colour.
   color: #FFFFFF;
