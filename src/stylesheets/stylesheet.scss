@@ -48,6 +48,10 @@ a { color: inherit; text-decoration: none;}
   display: none;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 // Icon fonts.
 @import '_GlyphterIcons';
 
