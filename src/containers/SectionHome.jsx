@@ -16,11 +16,13 @@ export default class SectionHome extends React.Component {
 
           <div id="section-home" className=" text-center">
 
-            <h1 className="text-center">Jon Balon</h1>
+            <div className="text-center name">Jon Balon</div>
 
-            <h2 className="text-center">Full Stack Developer</h2>
+            <div className="text-center position">Full Stack Developer</div>
 
-            <h4 className="text-center">I'm a Full Stack Developer with a background in Computer Science, Statistics, Analytics, and Data Science.</h4>
+            <div className="text-center tagline">I'm a Full Stack Developer with a background in Computer Science, Statistics, Analytics, and Data Science.</div>
+
+            <div className="hr"></div>
 
             <div className="text-center iconarray">
               <a href="https://github.com/Jon1701" target="_blank"><span className="icon icon-github icon-hover-heavenlyglow"/></a>

@@ -8,7 +8,19 @@ $opacity: 0.3;
 
 #section-home {
 
-  width: 100%;
+  // Font sizing.
+  .name { font-size: 5em; }
+  .position { font-size: 2.5em; }
+  .tagline { font-size: 1.5em; margin: 15px;}
+  .iconarray { font-size: 5em; }
+
+  // Horizontal rule.
+  .hr {
+    background-color: #FFFFFF;
+    height: 5px;
+    width: 35%;
+    margin: 0 auto;
+  }
 
   // Text colour.
   color: #FFFFFF;
