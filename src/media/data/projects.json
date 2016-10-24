@@ -1,0 +1,156 @@
+[
+  {
+    "title": "EXIF Data Viewer",
+    "image": "../media/images/portfolio/cover-exif-viewer.png",
+    "description": "Application which reads and displays EXIF data from .jpg files.",
+    "technologies": ["html5", "css3", "javascript", "react", "nodejs", "heroku"],
+    "links": {
+      "demo": "https://ms-exifviewer-jon1701.herokuapp.com/",
+      "github": "https://github.com/Jon1701/MS-ExifViewer"
+    },
+    "featured": true
+  },
+  {
+    "title": "Image Search Abstraction",
+    "image": "../media/images/portfolio/cover-ms-search-abstraction.png",
+    "description": "Abstraction Layer Microservice which takes advantage of the Imgur REST API to search image galleries.",
+    "technologies": ["html5", "css3", "react", "mongodb", "nodejs", "heroku"],
+    "links": {
+      "demo": "https://ms-imgursearch-jon1701.herokuapp.com",
+      "github": "https://github.com/Jon1701/MS-ImageSearchAbstractionV2"
+    },
+    "featured": true
+  },
+  {
+    "title": "URL Shortener Service",
+    "image": "../media/images/portfolio/cover-ms-url-shortener.png",
+    "description": "A URL shortening microservice which does the exact opposite! Not my fault, I blame Heroku.",
+    "technologies": ["html5", "css3", "jquery", "nodejs", "mongodb", "materialize"],
+    "links": {
+      "demo": "https://ms-urlshortener-jon1701.herokuapp.com/",
+      "github": "https://github.com/Jon1701/MS-URLShortener"
+    },
+    "featured": true
+  },
+  {
+    "title": "UNIX Timestamp Generator",
+    "image": "../media/images/portfolio/cover-timestamp-generator.png",
+    "description": "Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates",
+    "technologies": ["html5", "css3", "react", "nodejs"],
+    "links": {
+      "demo": "https://ms-timestamp-jon1701.herokuapp.com/",
+      "github": "https://github.com/Jon1701/MS-Timestamp"
+    },
+    "featured": true
+  },
+  {
+    "title": "Request Header Parser",
+    "image": "../media/images/portfolio/cover-request-header-parser.png",
+    "description": "Simple Node.js/Express.js application to parse web browser HTTP request headers",
+    "technologies": ["html5", "css3", "react", "nodejs"],
+    "links": {
+      "demo": "https://ms-requestheaderparser-jon1701.herokuapp.com/",
+      "github": "https://github.com/Jon1701/MS-RequestHeaderParser"
+    },
+    "featured": false
+  },
+  {
+    "title": "Recipe Box",
+    "image": "../media/images/portfolio/cover-recipe-box.png",
+    "description": "Simple web application built using React.js and Materialize to store recipes using a web browser's local storage",
+    "technologies": ["html5", "css3", "javascript", "react", "materialize"],
+    "links": {
+      "demo": "http://www.jonbalon.io/RecipeBox/",
+      "github": "https://github.com/Jon1701/RecipeBox"
+    },
+    "featured": true
+  },
+  {
+    "title": "Dungeon Crawler",
+    "image": "../media/images/portfolio/cover-dungeon-crawler.png",
+    "description": "A simple dungeon crawler game",
+    "technologies": ["html5", "css3", "javascript", "react"],
+    "links": {
+      "demo": "http://www.jonbalon.io/DungeonCrawler/",
+      "github": "https://github.com/Jon1701/DungeonCrawler"
+    },
+    "featured": false
+  },
+  {
+    "title": "The Game of Life",
+    "image": "../media/images/portfolio/cover-game-of-life.png",
+    "description": "A simulation of Conway's Game of Life",
+    "technologies": ["html5", "css3", "javascript", "react"],
+    "links": {
+      "demo": "http://www.jonbalon.io/GameOfLife/",
+      "github": "https://github.com/Jon1701/GameOfLife"
+    },
+    "featured": false
+  },
+  {
+    "title": "Twitch Stream Viewer",
+    "image": "../media/images/portfolio/cover-twitch-stream-viewer.png",
+    "description": "See what some of my favourite Twitch streamers are playing",
+    "technologies": ["html5", "css3", "react"],
+    "links": {
+      "demo": "http://www.jonbalon.io/TwitchViewer/",
+      "github": "https://github.com/Jon1701/TwitchViewer"
+    },
+    "featured": false
+  },
+  {
+    "title": "Markdown Previewer",
+    "image": "../media/images/portfolio/cover-markdown-previewer.png",
+    "description": "Converts markdown into HTML markup",
+    "technologies": ["html5", "css3", "javascript", "react"],
+    "links": {
+      "demo": "http://www.jonbalon.io/MarkdownPreviewer/",
+      "github": "https://github.com/Jon1701/MarkdownPreviewer"
+    },
+    "featured": false
+  },
+  {
+    "title": "Simon Game",
+    "image": "../media/images/portfolio/cover-simon-game.png",
+    "description": "A classic, rebuilt for modern times, and in 4K. (Batteries not included)",
+    "technologies": ["html5", "css3", "javascript", "jquery"],
+    "links": {
+      "demo": "http://www.jonbalon.io/SimonGame/",
+      "github": "https://github.com/Jon1701/SimonGame"
+    },
+    "featured": false
+  },
+  {
+    "title": "Wiki Viewer",
+    "image": "../media/images/portfolio/cover-wikipedia-viewer.png",
+    "description": "Search for Wikipedia using Wikipedia",
+    "technologies": ["html5", "css3", "javascript", "jquery", "mustachejs"],
+    "links": {
+      "demo": "http://www.jonbalon.io/WikiViewer/",
+      "github": "https://github.com/Jon1701/WikiViewer"
+    },
+    "featured": false
+  },
+  {
+    "title": "Pumpkindoro Timer",
+    "image": "../media/images/portfolio/cover-pumpkindoro-timer.png",
+    "description": "A variation of the world famous Pomodoro Timer, now made with real pumpkins",
+    "technologies": ["html5", "css3", "javascript", "jquery"],
+    "links": {
+      "demo": "http://www.jonbalon.io/PumpkindoroTimer/",
+      "github": "https://github.com/Jon1701/PumpkindoroTimer"
+    },
+    "featured": true
+  },
+  {
+    "title": "Life is Strange Quote Generator",
+    "image": "../media/images/portfolio/cover-lis-quote-generator.png",
+    "description": "Relive the horror here with quotes from the game",
+    "technologies": ["html5", "css3", "javascript", "jquery"],
+    "links": {
+      "demo": "http://www.jonbalon.io/LifeIsStrangeQuoteGenerator/",
+      "github": "https://github.com/Jon1701/LifeIsStrangeQuoteGenerator"
+    },
+    "featured": false
+  }
+]
