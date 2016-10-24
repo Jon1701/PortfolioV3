@@ -1,3 +1,31 @@
 #section-projects {
-  
+
+  // Background styling.
+  background-image: url("../media/images/backgrounds/cubes.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+  // Debug
+  .project-panel {
+    background-color: #FFFFFF;
+    margin-top: 1.25%;
+    margin-bottom: 1.25%;
+  }
+
+  .project-title {
+    border: solid 1px #CCCCCC;
+    padding: 10px 0 10px 0;
+  }
+
+  .project-image-container {
+    border: solid 1px #CCCCCC;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .project-buttons {
+    border: solid 1px #CCCCCC;
+  }
+
+
 }
