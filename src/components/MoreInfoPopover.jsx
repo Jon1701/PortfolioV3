@@ -1,5 +1,7 @@
 import React from 'react';
 
+import classNames from 'classnames';
+
 import Icon from 'components/Icon'
 
 export default class MoreInfoPopover extends React.Component {
@@ -21,7 +23,7 @@ export default class MoreInfoPopover extends React.Component {
           key={ idx }
           iconClass={ iconClass }
           iconName={ iconName }
-          containerClasses={ "col-xs-2 col-sm-2 col-lg-2 " + iconClass + "-hover"}
+          containerClasses={ iconClass + "-hover"}
           />
       )
 
@@ -30,12 +32,19 @@ export default class MoreInfoPopover extends React.Component {
   }
 
   render() {
+
+    const myClasses = classNames({
+      'project-popover': true,
+      'bg-white': true,
+      'hidden': true
+    })
+
     return (
-      <div className="project-popover bg-white">
+      <div className={myClasses}>
 
         <div className="project-description">{this.props.description}</div>
 
-        <div className="project-tech row">
+        <div className="project-tech">
           { this.buildIcons() }
         </div>
 
