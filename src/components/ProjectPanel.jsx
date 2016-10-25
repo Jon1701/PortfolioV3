@@ -26,13 +26,13 @@ export default class ProjectPanel extends React.Component {
             {title}
           </div>
 
-          <div className="project-image-container">
+          <div className="project-image-container noselect">
             <a href={linkDemo} target="_blank">
               <img src={imageUrl} className="project-image img-responsive"/>
             </a>
           </div>
 
-          <div className="project-buttons custom-row">
+          <div className="project-buttons custom-row cursor-hand noselect">
             <Icon iconClass={"icon icon-demo"} iconName={"Demo"} link={linkDemo} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"}/>
             <Icon iconClass={"icon icon-moreinfo"} iconName={"More Info"} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"}/>
             <Icon iconClass={"icon icon-github"} iconName={"GitHub"} link={linkGithub} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"}/>
