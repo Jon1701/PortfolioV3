@@ -88,7 +88,7 @@ var config = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         exclude: /node_modules/,
-        loader: 'file-loader?name=/media/images/[name].[ext]'
+        loader: 'file-loader?name=/media/images/[hash].[ext]'
       },
       //////////////////////////////////////////////////////////////////////////
 
