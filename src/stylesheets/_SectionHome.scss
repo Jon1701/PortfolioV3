@@ -29,13 +29,19 @@ $opacity: 0.3;
   display: table-cell;
   vertical-align: middle;
 
-  // Add margin around the GitHub, LinkedIn, Twitter icons.
-  .iconarray span { margin: 5px; }
-
   // Background styling.
   background-image: linear-gradient(rgba(0,0,0,$opacity), rgba(0,0,0,$opacity)),
                     url("../media/images/backgrounds/W1YL4ZANPU.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+
+  .iconArray {
+
+    display: flex;
+    justify-content: center;
+
+    .container-button { margin: 5px; font-size: 5em;}
+  }
 }

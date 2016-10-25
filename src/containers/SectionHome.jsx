@@ -1,6 +1,8 @@
 // React.
 import React from 'react';
 
+import Icon from 'components/Icon'
+
 // Component definition.
 export default class SectionHome extends React.Component {
 
@@ -24,10 +26,24 @@ export default class SectionHome extends React.Component {
 
             <div className="hr"></div>
 
-            <div className="text-center iconarray">
-              <a href="https://github.com/Jon1701" target="_blank"><span className="icon icon-github icon-hover-heavenlyglow"/></a>
-              <a href="https://ca.linkedin.com/in/jonbalon" target="_blank"><span className="icon icon-linkedin icon-hover-heavenlyglow"/></a>
-              <a href="https://twitter.com/Jon1764" target="_blank"><span className="icon icon-twitter icon-hover-heavenlyglow"/></a>
+            <div className="text-center iconArray">
+
+              <Icon
+                iconClass={"icon-github"}
+                link={"https://github.com/Jon1701"}
+                containerClasses={"icon-hover-heavenlyglow"}
+              />
+              <Icon
+                iconClass={"icon-linkedin"}
+                link={"https://ca.linkedin.com/in/jonbalon"}
+                containerClasses={"icon-hover-heavenlyglow"}
+              />
+              <Icon
+                iconClass={"icon-twitter"}
+                link={"https://twitter.com/Jon1764"}
+                containerClasses={"icon-hover-heavenlyglow"}
+              />
+
             </div>
 
           </div>
