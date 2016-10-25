@@ -98,7 +98,8 @@ var config = {
       {
         test: /\.json$/i,
         exclude: /node_modules/,
-        loader: 'json-loader?name=/media/data/[name].[ext]'
+        loader: 'json-loader'
+        //loader: 'json-loader?name=/media/data/[name].[ext]'
       },
       //////////////////////////////////////////////////////////////////////////
 
@@ -107,7 +108,7 @@ var config = {
       //////////////////////////////////////////////////////////////////////////
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'url-loader?limit=50000'
+        loader: 'url-loader?limit=100000'
       },
       //////////////////////////////////////////////////////////////////////////
 
