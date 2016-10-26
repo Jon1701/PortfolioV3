@@ -50,6 +50,8 @@ var config = {
       'json': path.join(PATHS.SRC, 'media/data/'),
       'images': path.join(PATHS.SRC, 'media/images/'),
 
+      'reducers': path.join(PATHS.SRC, 'reducers/'),
+
     }
   },
 
