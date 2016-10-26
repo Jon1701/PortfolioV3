@@ -1,20 +1,25 @@
 // React.
 import React from 'react';
 
+// React-Redux connector.
+import { connect } from 'react-redux';
+
+// Presentational components.
 import ProjectPanel from 'components/ProjectPanel'
 
 // Component definition.
-export default class SectionProjects extends React.Component {
+class SectionProjects extends React.Component {
 
+  // Function to generate project panels for each project in the array.
   generateProjectPanels() {
 
     // Load array of project data.
-    const projectData = require('json/projects.json');
+    const projectData = this.props.projectData;
 
+    // Build a <ProjectPanel/> component for each project in the
+    // array of projects.
     return projectData.map((project, idx, arr) => {
-      return (
-        <ProjectPanel key={idx} data={project}/>
-      )
+      return <ProjectPanel key={idx} data={project}/>
     })
 
   }
@@ -37,3 +42,15 @@ export default class SectionProjects extends React.Component {
   } // End Component render.
 
 }
+
+// Function which maps state to props.
+//
+// this.state.projectData --> this.props.projectData
+const mapStateToProps = (state) => {
+  return {
+    projectData: state.projectData
+  }
+}
+
+// Allows this container to access the Redux store.
+export default connect(mapStateToProps)(SectionProjects)
