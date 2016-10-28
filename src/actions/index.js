@@ -5,3 +5,11 @@ export const togglePopover = (projectId) => {
     payload: projectId
   }
 }
+
+// Action to toggle visibility between displaying only featured projects,
+// or all projects.
+export const toggleFeaturedProjects = () => {
+  return {
+    type: 'TOGGLE_FEATURED_PROJECTS'
+  }
+}
