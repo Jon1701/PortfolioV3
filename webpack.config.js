@@ -51,6 +51,7 @@ var config = {
       'images': path.join(PATHS.SRC, 'media/images/'),
 
       'reducers': path.join(PATHS.SRC, 'reducers/'),
+      'actions': path.join(PATHS.SRC, 'actions/')
 
     }
   },
