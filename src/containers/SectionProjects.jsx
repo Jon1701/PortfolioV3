@@ -1,7 +1,7 @@
 // React.
 import React from 'react';
 
-// React-Redux connector.
+// Redux dependencies.
 import { connect } from 'react-redux';
 
 // Presentational components.
@@ -19,7 +19,7 @@ class SectionProjects extends React.Component {
     // Build a <ProjectPanel/> component for each project in the
     // array of projects.
     return projectData.map((project, idx, arr) => {
-      return <ProjectPanel key={idx} data={project}/>
+      return <ProjectPanel key={idx} data={project} projectId={idx}/>
     })
 
   }
