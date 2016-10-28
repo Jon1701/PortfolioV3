@@ -5,14 +5,19 @@
   background-repeat: repeat;
   background-attachment: fixed;
 
-
   // Main section heading.
   .section-main-heading { font-size: 3em; }
 
   // Section content sizing.
   p { font-size: 1.75em; }
 
-  // Debug
+  .btn-toggle-featured-projects {
+    background-color: #FFFFFF;
+    border: solid 1px #CCCCCC;
+    padding: 10px 0 10px 0;
+    font-size: 1.25em;
+  }
+
   .project-panel {
     position: relative;
     background-color: #FFFFFF;
