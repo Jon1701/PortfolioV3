@@ -1,10 +1,15 @@
+// React dependencies.
 import React from 'react';
-
 import classNames from 'classnames';
 
+// Redux dependencies.
+import { connect } from 'react-redux';
+
+// React components.
 import Icon from 'components/Icon'
 
-export default class MoreInfoPopover extends React.Component {
+// Component definition.
+class MoreInfoPopover extends React.Component {
 
   buildIcons() {
 
@@ -36,7 +41,7 @@ export default class MoreInfoPopover extends React.Component {
     const myClasses = classNames({
       'project-popover': true,
       'bg-white': true,
-      'hidden': true
+      'hidden': this.props.activePopoverId != this.props.projectId
     })
 
     return (
@@ -52,3 +57,15 @@ export default class MoreInfoPopover extends React.Component {
     )
   }
 }
+
+// Function to map state to props.
+//
+// this.state.activePopoverId -> this.props.activePopoverId.
+const mapStateToProps = (state) => {
+  return {
+    activePopoverId: state.activePopoverId
+  }
+}
+
+// Allows this component to access the Redux store.
+export default connect(mapStateToProps)(MoreInfoPopover);
