@@ -109,7 +109,6 @@ class ContactForm extends React.Component {
 
       sendAjaxRequest(formData)
 
-
     }
 
   }
