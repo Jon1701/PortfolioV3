@@ -6,11 +6,35 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+// Components.
+import ContactFormAlertBox from 'components/ContactFormAlertBox'
+
 // Actions.
-import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField } from 'actions/index.js';
+import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateAllFieldsValidFlag } from 'actions/index.js';
 
 // Component definition.
 class ContactForm extends React.Component {
+
+  // Handles form submission.
+  handleSubmit(e) {
+
+    // Prevent any default actions.
+    e.preventDefault();
+
+    // Check if all fields are valid.
+    const allFieldsValid = this.props.nameIsValid && this.props.emailIsValid && this.props.subjectIsValid && this.props.gotchaIsValid && this.props.messageIsValid;
+
+    // Update allFieldsValid in state.
+    this.props.updateAllFieldsValidFlag(allFieldsValid);
+
+    // Send AJAX request if all fields are valid.
+    if (allFieldsValid) {
+
+      
+
+    }
+
+  }
 
   // Component render.
   render() {
@@ -39,7 +63,7 @@ class ContactForm extends React.Component {
       'field-validation-success': this.props.subjectIsValid == true
     });
 
-    // CSS classes to indicate to the user if the Message field 
+    // CSS classes to indicate to the user if the Message field
     // is valid or not.
     const messageFieldClasses = classNames({
       'field-validation-default': true,
@@ -49,7 +73,10 @@ class ContactForm extends React.Component {
 
     return (
       <div>
-        <form>
+
+        <ContactFormAlertBox flag={this.props.allFieldsValid}/>
+
+        <form onSubmit={this.handleSubmit.bind(this)}>
 
           <div className="form-field">
             <input
@@ -86,6 +113,7 @@ class ContactForm extends React.Component {
 
           <div className="form-field hidden">
             <input
+              value={this.props.gotcha}
               name="_gotcha"
               type="text"
               placeholder="Gotcha"
@@ -129,12 +157,16 @@ const mapStateToProps = (state) => {
     name: state.contactForm.name,
     email: state.contactForm.email,
     subject: state.contactForm._subject,
+    gotcha: state.contactForm._gotcha,
     message: state.contactForm.message,
 
     nameIsValid: state.contactForm.nameIsValid,
     emailIsValid: state.contactForm.emailIsValid,
     subjectIsValid: state.contactForm.subjectIsValid,
+    gotchaIsValid: state.contactForm.gotchaIsValid,
     messageIsValid: state.contactForm.messageIsValid,
+
+    allFieldsValid: state.contactForm.allFieldsValid
   }
 }
 
@@ -147,7 +179,8 @@ const mapDispatchToProps = (dispatch) => {
     updateEmailField: updateEmailField,
     updateSubjectField: updateSubjectField,
     updateGotchaField: updateGotchaField,
-    updateMessageField: updateMessageField
+    updateMessageField: updateMessageField,
+    updateAllFieldsValidFlag: updateAllFieldsValidFlag
   }, dispatch)
 }
 
