@@ -107,6 +107,10 @@
      "icon":"icon-react",
      "name":"React"
   },
+  "redux":{
+    "icon":"icon-redux",
+    "name":"Redux"
+  },
   "sass":{
      "icon":"icon-sass",
      "name":"Sass"
