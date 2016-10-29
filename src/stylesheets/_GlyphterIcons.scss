@@ -40,8 +40,8 @@
 .icon-jquery:before{content:'\0057';}
 .icon-linkedin:before{content:'\0058';}
 .icon-mail:before{content:'\0059';}
-.icon-materialize:before{content:'\005a';}
-.icon-material-ui:before{content:'\0061';}
+.icon-material-ui:before{content:'\005a';}
+.icon-materialize:before{content:'\0061';}
 .icon-mongodb:before{content:'\0062';}
 .icon-moreinfo:before{content:'\0063';}
 .icon-mustachejs:before{content:'\0064';}
@@ -50,11 +50,12 @@
 .icon-paperplane:before{content:'\0067';}
 .icon-python:before{content:'\0068';}
 .icon-react:before{content:'\0069';}
-.icon-sass:before{content:'\006a';}
-.icon-twitter:before{content:'\006b';}
-.icon-ubuntu:before{content:'\006c';}
-.icon-webpack:before{content:'\006d';}
-.icon-xcircle:before{content:'\006e';}
+.icon-redux:before{content:'\006a';}
+.icon-sass:before{content:'\006b';}
+.icon-twitter:before{content:'\006c';}
+.icon-ubuntu:before{content:'\006d';}
+.icon-webpack:before{content:'\006e';}
+.icon-xcircle:before{content:'\006f';}
 
 @mixin icon-hover($colour) {
   &:hover {
@@ -89,6 +90,7 @@
 .icon-npm-hover { @include icon-hover(#CC3838); };
 .icon-python-hover { @include icon-hover(#3D83BE); };
 .icon-react-hover { @include icon-hover(#61DAFB); };
+.icon-redux-hover { @include icon-hover(#7349b9); };
 .icon-sass-hover { @include icon-hover(#C6538C); };
 .icon-twitter-hover { @include icon-hover(#55ACEE); };
 .icon-ubuntu-hover { @include icon-hover(#E95420); };
