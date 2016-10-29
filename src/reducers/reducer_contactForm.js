@@ -9,7 +9,7 @@ const defaultForm = {
   nameIsValid: null,    // Name field validity.
   emailIsValid: null,   // Email field validity.
   subjectIsValid: null, // Subject field validity.
-  gotchaIsValid: null,  // Gotcha field validity.
+  gotchaIsValid: true,  // Gotcha field validity.
   messageIsValid: null, // Message field validity.
 }
 
