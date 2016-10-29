@@ -53,3 +53,10 @@ export const updateMessageField = (text) => {
     payload: text
   }
 }
+
+export const updateAllFieldsValidFlag = (value) => {
+  return {
+    type: 'UPDATE_ALL_FIELDS_VALID_FLAG',
+    payload: value
+  }
+}
