@@ -1,6 +1,7 @@
 // React dependencies.
 import React from 'react';
 import classNames from 'classnames';
+import axios from 'axios';
 
 // Redux dependencies.
 import { connect } from 'react-redux';
@@ -30,7 +31,19 @@ class ContactForm extends React.Component {
     // Send AJAX request if all fields are valid.
     if (allFieldsValid) {
 
-
+      axios.post('https://formspree.io/testyouremail@mailinator.com', {
+        name: this.props.name,
+        email: this.props.email,
+        _subject: this.props.subject,
+        _gotcha: this.props.gotcha,
+        message: this.props.message
+      })
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
 
     }
 
