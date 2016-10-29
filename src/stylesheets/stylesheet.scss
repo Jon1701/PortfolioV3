@@ -85,6 +85,10 @@ a { color: inherit; text-decoration: none;}
   padding-right: 20px;
 }
 
+.field-validation-default { border-color: #FFFFFF; }
+.field-validation-fail { border-color: #DC143C; }
+.field-validation-success { border-color: #5CB85C; }
+
 // Icon fonts.
 @import '_GlyphterIcons';
 
