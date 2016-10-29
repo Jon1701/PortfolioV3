@@ -71,5 +71,22 @@
 
   }
 
+  .alertbox {
+    padding: 5px 0 5px 0;
+    font-size: 1.25em;
+  }
+
+  .alertbox-success {
+    background-color: #5CB85C;
+    color: #FFFFFF;
+    &:after { content: "Message sent!"; };
+  }
+
+  .alertbox-failure {
+    background-color: #DC143C;
+    color: #FFFFFF;
+    &:after { content: "Message not sent!"; };
+  }
+
 
 }
