@@ -1,7 +1,6 @@
 // React dependencies.
 import React from 'react';
 import classNames from 'classnames';
-import axios from 'axios';
 
 // Redux dependencies.
 import { connect } from 'react-redux';
@@ -12,6 +11,75 @@ import ContactFormAlertBox from 'components/ContactFormAlertBox'
 
 // Actions.
 import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateAllFieldsValidFlag } from 'actions/index.js';
+
+
+
+
+
+const sendAjaxRequest = (formData) => {
+
+  // Create AJAX request.
+  var xhr = new XMLHttpRequest();
+
+  // Server URLs.
+  //
+  // Base64 decode of formspree.
+  var url = 'https://formspree.io/testyouremail@mailinator.com';
+
+  // POST request to email server.
+  xhr.open('POST', url, true);
+
+  // Send request data as type application/json.
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  // Send data to server.
+  xhr.send(JSON.stringify(formData));
+
+  // Handle response from the server.
+  xhr.onreadystatechange = function() {
+
+    // Status codes.
+    var DONE = 4;  // Request done.
+    var OK = 200;  // Success.
+
+    // Check if the POST request is done.
+    if (xhr.readyState === DONE) {
+
+      // Check if the request was a success, and no errors occurred.
+      if (xhr.status === OK) {
+
+        console.log(xhr.status)
+
+        // Reset all fields, and validity states by setting this.state
+        // back to default.
+
+        // After 3 seconds, hide the status window.
+        //setTimeout(resetState, 3000);
+
+      } else {
+
+        // Error occurred.
+        console.log('error: ' + xhr.status);
+
+      }; // End xhr status check.
+
+    }; // End xhr ready state check.
+
+  }; // End xhr onreadystatechange.
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Component definition.
 class ContactForm extends React.Component {
@@ -31,19 +99,16 @@ class ContactForm extends React.Component {
     // Send AJAX request if all fields are valid.
     if (allFieldsValid) {
 
-      axios.post('https://formspree.io/testyouremail@mailinator.com', {
+      const formData = {
         name: this.props.name,
-        email: this.props.email,
-        _subject: this.props.subject,
-        _gotcha: this.props.gotcha,
-        message: this.props.message
-      })
-      .then((response) => {
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+         email: this.props.email,
+         _subject: this.props.subject,
+         _gotcha: this.props.gotcha,
+         message: this.props.message
+      }
+
+      sendAjaxRequest(formData)
+
 
     }
 
