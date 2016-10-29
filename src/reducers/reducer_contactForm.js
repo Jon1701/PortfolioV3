@@ -2,8 +2,8 @@
 const defaultForm = {
   name: '',     // Name.
   email: '',    // Email.
-  _subject: '', // Subject.
-  _gotcha: '',  // Gotcha.
+  subject: '', // Subject.
+  gotcha: '',  // Gotcha.
   message: '',  // Message.
 
   nameIsValid: null,    // Name field validity.
@@ -55,10 +55,10 @@ const contactForm = (state=defaultForm, action) => {
 
     case 'UPDATE_SUBJECT_FIELD':
       let subject = action.payload.trim();
-      return Object.assign({}, state, {_subject: subject, subjectIsValid: REGEX_VALID_SUBJECT.test(subject)})
+      return Object.assign({}, state, {subject: subject, subjectIsValid: REGEX_VALID_SUBJECT.test(subject)})
 
     case 'UPDATE_GOTCHA_FIELD':
-      return Object.assign({}, state, {_gotcha: action.payload, gotchaIsValid: true})
+      return Object.assign({}, state, {gotcha: action.payload, gotchaIsValid: true})
 
     case 'UPDATE_MESSAGE_FIELD':
       let message = action.payload.trim();

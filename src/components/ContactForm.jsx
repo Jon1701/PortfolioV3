@@ -30,7 +30,7 @@ class ContactForm extends React.Component {
     // Send AJAX request if all fields are valid.
     if (allFieldsValid) {
 
-      
+
 
     }
 
@@ -156,8 +156,8 @@ const mapStateToProps = (state) => {
   return {
     name: state.contactForm.name,
     email: state.contactForm.email,
-    subject: state.contactForm._subject,
-    gotcha: state.contactForm._gotcha,
+    subject: state.contactForm.subject,
+    gotcha: state.contactForm.gotcha,
     message: state.contactForm.message,
 
     nameIsValid: state.contactForm.nameIsValid,
