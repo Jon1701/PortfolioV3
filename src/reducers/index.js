@@ -5,6 +5,7 @@ import { combineReducers } from 'redux';
 import projectData from './reducer_projectData';
 import activePopoverId from './reducer_activePopoverId';
 import showOnlyFeaturedProjects from './reducer_featuredProjects';
+import contactForm from './reducer_contactForm';
 
 // Combine all reducers together into one state object.
 const reducers = combineReducers({
@@ -15,6 +16,8 @@ const reducers = combineReducers({
 
   showOnlyFeaturedProjects: showOnlyFeaturedProjects, // Toggle to show only featured
                                                       // projects or all projects.
+
+  contactForm: contactForm,  // Contact form field contents.                        
 })
 
 // Export the reducers.
