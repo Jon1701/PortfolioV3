@@ -11,6 +11,8 @@ const defaultForm = {
   subjectIsValid: null, // Subject field validity.
   gotchaIsValid: true,  // Gotcha field validity.
   messageIsValid: null, // Message field validity.
+
+  allFieldsValid: null, // Indicates if all fields valid.
 }
 
 // Regular expressions for testing field validity.
@@ -23,6 +25,12 @@ const REGEX_VALID_MESSAGE = /.{5,1000}/;
 const contactForm = (state=defaultForm, action) => {
 
   switch(action.type) {
+
+    // Updates value which indicates whether or not all form fields are valid.
+    //
+    // This action is called from the view, not from the reducer.
+    case 'UPDATE_ALL_FIELDS_VALID_FLAG':
+      return Object.assign({}, state, {allFieldsValid: action.payload})
 
     /*
      *  In each case, the contents of the input field have their leading and
