@@ -9,21 +9,26 @@ export default class SectionContactMe extends React.Component {
   // Component render.
   render() {
     return (
-      <div id="section-contactme" className="section height-min-100vh text-center">
 
-        <h1 className="text-center text-uppercase">Contact Me</h1>
+      <div className="force-table height-minmax-100vh">
+        <div className="force-table-row">
 
-        <div className="row">
+          <div id="section-contactme" className="section text-center">
+            <div className="section-main-heading text-uppercase">Contact Me</div>
 
-          <div className="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
+            <div className="row">
 
-            <ContactForm/>
+              <div className="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
+
+                <ContactForm/>
+
+              </div>
+            </div>
 
           </div>
 
-        </div>
-
       </div>
+    </div>
     )
   } // End Component render.
 

@@ -1,5 +1,12 @@
 #section-contactme {
 
+  // Main section heading.
+  .section-main-heading { font-size: 3em; }
+
+  // Align content in middle of div (horizontally and vertically).
+  display: table-cell;
+  vertical-align: middle;
+
   color: #FFFFFF;
 
   // Background styling.
