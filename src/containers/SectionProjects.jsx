@@ -51,6 +51,8 @@ class SectionProjects extends React.Component {
           { this.generateProjectPanels() }
         </div>
 
+        <p>with more to come in the future!</p>
+
       </div>
     )
   } // End Component render.
