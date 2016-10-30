@@ -13,7 +13,7 @@ const defaultForm = {
   messageIsValid: null, // Message field validity.
 
   formSubmitStatus: null,
-  allFieldsValid: null, // Indicates if all fields valid.
+
 }
 
 // Regular expressions for testing field validity.
@@ -32,12 +32,6 @@ const contactForm = (state=defaultForm, action) => {
 
     case 'RESET_FORM':
       return Object.assign({}, state, defaultForm)
-
-    // Updates value which indicates whether or not all form fields are valid.
-    //
-    // This action is called from the view, not from the reducer.
-    case 'UPDATE_ALL_FIELDS_VALID_FLAG':
-      return Object.assign({}, state, {allFieldsValid: action.payload})
 
     /*
      *  In each case, the contents of the input field have their leading and

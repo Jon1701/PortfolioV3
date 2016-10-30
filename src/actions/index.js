@@ -54,13 +54,6 @@ export const updateMessageField = (text) => {
   }
 }
 
-export const updateAllFieldsValidFlag = (value) => {
-  return {
-    type: 'UPDATE_ALL_FIELDS_VALID_FLAG',
-    payload: value
-  }
-}
-
 export const updateFormSubmitStatus = (status) => {
   return {
     type: 'UPDATE_FORM_SUBMIT_STATUS',

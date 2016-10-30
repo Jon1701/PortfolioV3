@@ -11,7 +11,7 @@ import { bindActionCreators } from 'redux';
 import ContactFormAlertBox from 'components/ContactFormAlertBox'
 
 // Actions.
-import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateAllFieldsValidFlag, updateFormSubmitStatus, resetForm } from 'actions/index.js';
+import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateFormSubmitStatus, resetForm } from 'actions/index.js';
 
 // Component definition.
 class ContactForm extends React.Component {
@@ -199,8 +199,6 @@ const mapStateToProps = (state) => {
     gotchaIsValid: state.contactForm.gotchaIsValid,
     messageIsValid: state.contactForm.messageIsValid,
 
-    allFieldsValid: state.contactForm.allFieldsValid,
-
     formSubmitStatus: state.contactForm.formSubmitStatus,
   }
 }
@@ -215,7 +213,7 @@ const mapDispatchToProps = (dispatch) => {
     updateSubjectField: updateSubjectField,
     updateGotchaField: updateGotchaField,
     updateMessageField: updateMessageField,
-    updateAllFieldsValidFlag: updateAllFieldsValidFlag,
+
     updateFormSubmitStatus: updateFormSubmitStatus,
     resetForm: resetForm,
   }, dispatch)
