@@ -60,3 +60,10 @@ export const updateAllFieldsValidFlag = (value) => {
     payload: value
   }
 }
+
+export const updateFormSubmitStatus = (status) => {
+  return {
+    type: 'UPDATE_FORM_SUBMIT_STATUS',
+    payload: status
+  }
+}

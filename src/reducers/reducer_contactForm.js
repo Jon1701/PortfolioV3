@@ -12,6 +12,7 @@ const defaultForm = {
   gotchaIsValid: true,  // Gotcha field validity.
   messageIsValid: null, // Message field validity.
 
+  formSubmitStatus: null,
   allFieldsValid: null, // Indicates if all fields valid.
 }
 
@@ -25,6 +26,10 @@ const REGEX_VALID_MESSAGE = /.{5,1000}/;
 const contactForm = (state=defaultForm, action) => {
 
   switch(action.type) {
+
+    case 'UPDATE_FORM_SUBMIT_STATUS':
+      return Object.assign({}, state, {formSubmitStatus: action.payload})
+
 
     // Updates value which indicates whether or not all form fields are valid.
     //
