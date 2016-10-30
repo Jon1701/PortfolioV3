@@ -1,6 +1,9 @@
 // Webpack.
 var webpack = require('webpack');
 
+// Module for copying files.
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 // Module for building file paths.
 var path = require('path');
 
@@ -137,6 +140,14 @@ var config = {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
     }),
+
+    // Copy CNAME from source to build folder.
+    new CopyWebpackPlugin([
+      {
+        from: path.join(PATHS.SRC, 'CNAME'),
+        to: path.join(PATHS.DEST)
+      }
+    ]),
 
     new webpack.NoErrorsPlugin()
 
