@@ -1,10 +1,10 @@
 // Default form values.
 const defaultForm = {
-  name: '',     // Name.
-  email: '',    // Email.
-  subject: '', // Subject.
-  gotcha: '',  // Gotcha.
-  message: '',  // Message.
+  name: '',     // Name field contents.
+  email: '',    // Email field contents.
+  subject: '',  // Subject field contents.
+  gotcha: '',   // Gotcha field contents.
+  message: '',  // Message field contents.
 
   nameIsValid: null,    // Name field validity.
   emailIsValid: null,   // Email field validity.
@@ -12,7 +12,7 @@ const defaultForm = {
   gotchaIsValid: true,  // Gotcha field validity.
   messageIsValid: null, // Message field validity.
 
-  formSubmitStatus: null,
+  formSubmissionStatus: null, // Form submit status.
 
   statusSubmitButton: true,
 
@@ -35,8 +35,17 @@ const contactForm = (state=defaultForm, action) => {
     case 'DISABLE_SUBMIT_BUTTON':
       return Object.assign({}, state, {statusSubmitButton: false});
 
-    case 'UPDATE_FORM_SUBMIT_STATUS':
-      return Object.assign({}, state, {formSubmitStatus: action.payload})
+    case 'RESET_FORM_SUBMISSION_STATUS':
+      return Object.assign({}, state, {formSubmissionStatus: null});
+
+    case 'SET_FORM_SUBMISSION_STATUS_SUCCESS':
+      return Object.assign({}, state, {formSubmissionStatus: 'SUCCESS'});
+
+    case 'SET_FORM_SUBMISSION_STATUS_FAILURE':
+      return Object.assign({}, state, {formSubmissionStatus: 'FAILURE'});
+
+    case 'SET_FORM_SUBMISSION_STATUS_INCOMPLETE':
+      return Object.assign({}, state, {formSubmissionStatus: 'INCOMPLETE'});
 
     case 'RESET_FORM':
       return Object.assign({}, state, defaultForm)

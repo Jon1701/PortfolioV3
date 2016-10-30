@@ -11,7 +11,7 @@ import { bindActionCreators } from 'redux';
 import ContactFormAlertBox from 'components/ContactFormAlertBox'
 
 // Actions.
-import { enableSubmitButton, disableSubmitButton, updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateFormSubmitStatus, resetForm } from 'actions/index.js';
+import { resetFormSubmissionStatus, setFormSubmissionStatusToSuccess, setFormSubmissionStatusToFailure, setFormSubmissionStatusToIncomplete, enableSubmitButton, disableSubmitButton, updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, resetForm } from 'actions/index.js';
 
 // Component definition.
 class ContactForm extends React.Component {
@@ -20,7 +20,7 @@ class ContactForm extends React.Component {
   handleSubmit(e) {
 
     // Reset form submit status.
-    this.props.updateFormSubmitStatus(null);
+    this.props.resetFormSubmissionStatus();
 
     // Prevent any default actions.
     e.preventDefault();
@@ -46,7 +46,7 @@ class ContactForm extends React.Component {
       }).then((res) => {
 
         // Update form submit status to success.
-        this.props.updateFormSubmitStatus('success');
+        this.props.setFormSubmissionStatusToSuccess();
 
         // Reset form after 5 seconds.
         setTimeout(this.props.resetForm, 5000);
@@ -60,14 +60,14 @@ class ContactForm extends React.Component {
         this.props.enableSubmitButton();
 
         // Update form status to show indicator to user.
-        this.props.updateFormSubmitStatus('failure');
+        this.props.setFormSubmissionStatusToFailure();
 
       })
 
     } else {
 
       // Update form submit status to incomplete.
-      this.props.updateFormSubmitStatus('incomplete');
+      this.props.setFormSubmissionStatusToIncomplete();
 
     }
 
@@ -111,7 +111,7 @@ class ContactForm extends React.Component {
     return (
       <div>
 
-        <ContactFormAlertBox formSubmitStatus={this.props.formSubmitStatus}/>
+        <ContactFormAlertBox formSubmissionStatus={this.props.formSubmissionStatus}/>
 
         <form onSubmit={this.handleSubmit.bind(this)}>
 
@@ -205,7 +205,7 @@ const mapStateToProps = (state) => {
 
     statusSubmitButton: state.contactForm.statusSubmitButton,
 
-    formSubmitStatus: state.contactForm.formSubmitStatus,
+    formSubmissionStatus: state.contactForm.formSubmissionStatus,
   }
 }
 
@@ -220,11 +220,16 @@ const mapDispatchToProps = (dispatch) => {
     updateGotchaField: updateGotchaField,
     updateMessageField: updateMessageField,
 
-    updateFormSubmitStatus: updateFormSubmitStatus,
     resetForm: resetForm,
 
     enableSubmitButton: enableSubmitButton,
-    disableSubmitButton: disableSubmitButton
+    disableSubmitButton: disableSubmitButton,
+
+    resetFormSubmissionStatus: resetFormSubmissionStatus,
+    setFormSubmissionStatusToSuccess: setFormSubmissionStatusToSuccess,
+    setFormSubmissionStatusToFailure: setFormSubmissionStatusToFailure,
+    setFormSubmissionStatusToIncomplete: setFormSubmissionStatusToIncomplete,
+
   }, dispatch)
 }
 

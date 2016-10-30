@@ -54,13 +54,6 @@ export const updateMessageField = (text) => {
   }
 }
 
-export const updateFormSubmitStatus = (status) => {
-  return {
-    type: 'UPDATE_FORM_SUBMIT_STATUS',
-    payload: status
-  }
-}
-
 export const resetForm = () => {
   return {
     type: 'RESET_FORM'
@@ -75,6 +68,30 @@ export const enableSubmitButton = () => {
 
 export const disableSubmitButton = () => {
   return {
-    type: 'DISABLE_SUBMIT_BUTTON'
+      type: 'DISABLE_SUBMIT_BUTTON'
+  }
+}
+
+export const setFormSubmissionStatusToSuccess = () => {
+  return {
+    type: 'SET_FORM_SUBMISSION_STATUS_SUCCESS'
+  }
+}
+
+export const setFormSubmissionStatusToFailure = () => {
+  return {
+    type: 'SET_FORM_SUBMISSION_STATUS_FAILURE'
+  }
+}
+
+export const setFormSubmissionStatusToIncomplete = () => {
+  return {
+    type: 'SET_FORM_SUBMISSION_STATUS_INCOMPLETE'
+  }
+}
+
+export const resetFormSubmissionStatus = () => {
+  return {
+    type: 'RESET_FORM_SUBMISSION_STATUS'
   }
 }

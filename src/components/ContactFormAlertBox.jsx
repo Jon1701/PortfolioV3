@@ -9,11 +9,11 @@ export default class ContactFormAlertBox extends React.Component {
   render() {
 
     const myClasses = classNames({
-      'alertbox-invisible noselect': this.props.formSubmitStatus == null,
+      'alertbox-invisible noselect': this.props.formSubmissionStatus == null,
       'alertbox': true,
-      'alertbox-failure': this.props.formSubmitStatus == 'failure',
-      'alertbox-success': this.props.formSubmitStatus == 'success',
-      'alertbox-incomplete': this.props.formSubmitStatus == 'incomplete'
+      'alertbox-failure': this.props.formSubmissionStatus == 'FAILURE',
+      'alertbox-success': this.props.formSubmissionStatus == 'SUCCESS',
+      'alertbox-incomplete': this.props.formSubmissionStatus == 'INCOMPLETE'
     })
 
     return (
