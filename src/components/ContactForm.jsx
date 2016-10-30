@@ -1,7 +1,6 @@
 // React dependencies.
 import React from 'react';
 import classNames from 'classnames';
-import axios from 'axios';
 
 // Redux dependencies.
 import { connect } from 'react-redux';
@@ -11,7 +10,13 @@ import { bindActionCreators } from 'redux';
 import ContactFormAlertBox from 'components/ContactFormAlertBox'
 
 // Actions.
-import { resetFormSubmissionStatus, setFormSubmissionStatusToSuccess, setFormSubmissionStatusToFailure, setFormSubmissionStatusToIncomplete, enableSubmitButton, disableSubmitButton, updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, resetForm } from 'actions/index.js';
+import { resetForm } from 'actions/index.js';
+import { resetFormSubmissionStatus, setFormSubmissionStatusToSuccess, setFormSubmissionStatusToFailure, setFormSubmissionStatusToIncomplete } from 'actions/actions_FormSubmissionStatus'
+import { enableSubmitButton, disableSubmitButton } from 'actions/actions_FormSubmitButton';
+import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField } from 'actions/actions_FormFieldUpdates';
+
+// Other libraries.
+import axios from 'axios';  // Requests.
 
 // Component definition.
 class ContactForm extends React.Component {
@@ -31,11 +36,13 @@ class ContactForm extends React.Component {
     // Send AJAX request if all fields are valid.
     if (allFieldsValid) {
 
+      // Disable the submit button.
       this.props.disableSubmitButton();
 
+      // Submit form.
       axios({
         method: 'post',
-        url: '1https://formspree.io/testyouremail@mailinator.com',
+        url: 'https://formspree.io/testyouremail@mailinator.com',
         data: {
           name: this.props.name,
           email: this.props.email,
@@ -53,10 +60,7 @@ class ContactForm extends React.Component {
 
       }).catch((err) => {
 
-        // Some error occurred.
-        // Display error in console.
-        console.log(err);
-
+        // Enable Submit button.
         this.props.enableSubmitButton();
 
         // Update form status to show indicator to user.
@@ -229,7 +233,6 @@ const mapDispatchToProps = (dispatch) => {
     setFormSubmissionStatusToSuccess: setFormSubmissionStatusToSuccess,
     setFormSubmissionStatusToFailure: setFormSubmissionStatusToFailure,
     setFormSubmissionStatusToIncomplete: setFormSubmissionStatusToIncomplete,
-
   }, dispatch)
 }
 
