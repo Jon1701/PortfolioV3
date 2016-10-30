@@ -20,6 +20,8 @@ export default class SectionContactMe extends React.Component {
 
               <div className="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
 
+                <p>Feel free to contact me if you have any inquiries or questions!</p>
+
                 <ContactForm/>
 
               </div>
