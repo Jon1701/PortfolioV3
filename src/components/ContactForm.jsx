@@ -57,7 +57,7 @@ class ContactForm extends React.Component {
         // Display error in console.
         console.log(err);
 
-        this.props.enableSubmitButton()
+        this.props.enableSubmitButton();
 
         // Update form status to show indicator to user.
         this.props.updateFormSubmitStatus('failure');
