@@ -14,8 +14,8 @@ export default class SectionAboutMe extends React.Component {
 
     // Names of the icons to be displayed.
     const iconsUsed = [
-      'html5', 'css3', 'javascript', 'jquery', 'bootstrap',
-      'materialize', 'material-ui', 'react', 'redux', 'mustachejs', 'd3', 'atom',
+      'html5', 'css3', 'javascript', 'react', 'redux', 'jquery', 'bootstrap',
+      'materialize', 'material-ui', 'mustachejs', 'd3', 'atom',
       'git', 'github', 'gulp', 'webpack', 'sass', 'npm', 'nodejs', 'expressjs',
       'debian', 'ubuntu', 'bash', 'mongodb', 'python', 'flask', 'cloud9',
       'heroku'
