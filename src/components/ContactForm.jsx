@@ -11,7 +11,7 @@ import { bindActionCreators } from 'redux';
 import ContactFormAlertBox from 'components/ContactFormAlertBox'
 
 // Actions.
-import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateAllFieldsValidFlag, updateFormSubmitStatus } from 'actions/index.js';
+import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateAllFieldsValidFlag, updateFormSubmitStatus, resetForm } from 'actions/index.js';
 
 // Component definition.
 class ContactForm extends React.Component {
@@ -33,7 +33,7 @@ class ContactForm extends React.Component {
 
       axios({
         method: 'post',
-        url: '1https://formspree.io/testyouremail@mailinator.com',
+        url: 'https://formspree.io/testyouremail@mailinator.com',
         data: {
           name: this.props.name,
           email: this.props.email,
@@ -45,6 +45,9 @@ class ContactForm extends React.Component {
 
         // Update form submit status to success.
         this.props.updateFormSubmitStatus('success');
+
+        // Reset form after 5 seconds.
+        setTimeout(this.props.resetForm, 5000);
 
       }).catch((err) => {
 
@@ -213,7 +216,8 @@ const mapDispatchToProps = (dispatch) => {
     updateGotchaField: updateGotchaField,
     updateMessageField: updateMessageField,
     updateAllFieldsValidFlag: updateAllFieldsValidFlag,
-    updateFormSubmitStatus: updateFormSubmitStatus
+    updateFormSubmitStatus: updateFormSubmitStatus,
+    resetForm: resetForm,
   }, dispatch)
 }
 
