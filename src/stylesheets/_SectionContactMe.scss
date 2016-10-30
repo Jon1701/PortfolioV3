@@ -83,6 +83,12 @@
     font-size: 1.25em;
   }
 
+  .alertbox-invisible {
+    visibility: hidden;
+    color: rgba(0,0,0,0);
+    &:after { content: "I am invisible"; };
+  }
+
   .alertbox-success {
     background-color: #5CB85C;
     color: #FFFFFF;
