@@ -23,7 +23,6 @@ var config = {
   // Output directory and filename for bundled JavaScript.
   output: {
     path: PATHS.DEST,
-    publicPath: '/dist',
     filename: 'js/app.js'
   },
 
@@ -129,7 +128,7 @@ var config = {
       title: 'Jon Balon | Full Stack Developer', // <title/> tag
       appMountId: 'react-target', // Adds mount point for React apps: <div id="react-target"/>.
       template: require('html-webpack-template'),   // Module to control .html file injection.
-      filename: path.join(PATHS.DEST, '/index.html'), // Path and filename.
+      filename: 'index.html', // Filename.
     }),
 
     // Switch React to Production Mode.
