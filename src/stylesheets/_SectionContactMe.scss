@@ -76,6 +76,9 @@
       transition: all 0.5s ease;
     }; // End hover effect.
 
+    &:disabled {
+      opacity: 0.2
+    }
   }
 
   .alertbox {

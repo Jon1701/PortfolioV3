@@ -11,7 +11,7 @@ import { bindActionCreators } from 'redux';
 import ContactFormAlertBox from 'components/ContactFormAlertBox'
 
 // Actions.
-import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateFormSubmitStatus, resetForm } from 'actions/index.js';
+import { enableSubmitButton, disableSubmitButton, updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateFormSubmitStatus, resetForm } from 'actions/index.js';
 
 // Component definition.
 class ContactForm extends React.Component {
@@ -31,9 +31,11 @@ class ContactForm extends React.Component {
     // Send AJAX request if all fields are valid.
     if (allFieldsValid) {
 
+      this.props.disableSubmitButton();
+
       axios({
         method: 'post',
-        url: 'https://formspree.io/testyouremail@mailinator.com',
+        url: '1https://formspree.io/testyouremail@mailinator.com',
         data: {
           name: this.props.name,
           email: this.props.email,
@@ -54,6 +56,8 @@ class ContactForm extends React.Component {
         // Some error occurred.
         // Display error in console.
         console.log(err);
+
+        this.props.enableSubmitButton()
 
         // Update form status to show indicator to user.
         this.props.updateFormSubmitStatus('failure');
@@ -166,7 +170,7 @@ class ContactForm extends React.Component {
           </div>
 
           <div className="form-submit-container">
-            <button type="submit">
+            <button type="submit" disabled={!this.props.statusSubmitButton}>
               <span className="icon icon-paperplane"/> Send Message
             </button>
           </div>
@@ -199,6 +203,8 @@ const mapStateToProps = (state) => {
     gotchaIsValid: state.contactForm.gotchaIsValid,
     messageIsValid: state.contactForm.messageIsValid,
 
+    statusSubmitButton: state.contactForm.statusSubmitButton,
+
     formSubmitStatus: state.contactForm.formSubmitStatus,
   }
 }
@@ -216,6 +222,9 @@ const mapDispatchToProps = (dispatch) => {
 
     updateFormSubmitStatus: updateFormSubmitStatus,
     resetForm: resetForm,
+
+    enableSubmitButton: enableSubmitButton,
+    disableSubmitButton: disableSubmitButton
   }, dispatch)
 }
 
