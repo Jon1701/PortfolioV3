@@ -1,6 +1,7 @@
 // React dependencies.
 import React from 'react';
 import classNames from 'classnames';
+import axios from 'axios';
 
 // Redux dependencies.
 import { connect } from 'react-redux';
@@ -10,76 +11,7 @@ import { bindActionCreators } from 'redux';
 import ContactFormAlertBox from 'components/ContactFormAlertBox'
 
 // Actions.
-import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateAllFieldsValidFlag } from 'actions/index.js';
-
-
-
-
-
-const sendAjaxRequest = (formData) => {
-
-  // Create AJAX request.
-  var xhr = new XMLHttpRequest();
-
-  // Server URLs.
-  //
-  // Base64 decode of formspree.
-  var url = 'https://formspree.io/testyouremail@mailinator.com';
-
-  // POST request to email server.
-  xhr.open('POST', url, true);
-
-  // Send request data as type application/json.
-  xhr.setRequestHeader('Content-Type', 'application/json');
-
-  // Send data to server.
-  xhr.send(JSON.stringify(formData));
-
-  // Handle response from the server.
-  xhr.onreadystatechange = function() {
-
-    // Status codes.
-    var DONE = 4;  // Request done.
-    var OK = 200;  // Success.
-
-    // Check if the POST request is done.
-    if (xhr.readyState === DONE) {
-
-      // Check if the request was a success, and no errors occurred.
-      if (xhr.status === OK) {
-
-        console.log(xhr.status)
-
-        // Reset all fields, and validity states by setting this.state
-        // back to default.
-
-        // After 3 seconds, hide the status window.
-        //setTimeout(resetState, 3000);
-
-      } else {
-
-        // Error occurred.
-        console.log('error: ' + xhr.status);
-
-      }; // End xhr status check.
-
-    }; // End xhr ready state check.
-
-  }; // End xhr onreadystatechange.
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { updateNameField, updateEmailField, updateSubjectField, updateGotchaField, updateMessageField, updateAllFieldsValidFlag, updateFormSubmitStatus } from 'actions/index.js';
 
 // Component definition.
 class ContactForm extends React.Component {
@@ -87,27 +19,48 @@ class ContactForm extends React.Component {
   // Handles form submission.
   handleSubmit(e) {
 
+    // Reset form submit status.
+    this.props.updateFormSubmitStatus(null);
+
     // Prevent any default actions.
     e.preventDefault();
 
     // Check if all fields are valid.
     const allFieldsValid = this.props.nameIsValid && this.props.emailIsValid && this.props.subjectIsValid && this.props.gotchaIsValid && this.props.messageIsValid;
 
-    // Update allFieldsValid in state.
-    this.props.updateAllFieldsValidFlag(allFieldsValid);
-
     // Send AJAX request if all fields are valid.
     if (allFieldsValid) {
 
-      const formData = {
-        name: this.props.name,
-         email: this.props.email,
-         _subject: this.props.subject,
-         _gotcha: this.props.gotcha,
-         message: this.props.message
-      }
+      axios({
+        method: 'post',
+        url: '1https://formspree.io/testyouremail@mailinator.com',
+        data: {
+          name: this.props.name,
+          email: this.props.email,
+          _subject: this.props.subject,
+          _gotcha: this.props.gotcha,
+          message: this.props.message
+        }
+      }).then((res) => {
 
-      sendAjaxRequest(formData)
+        // Update form submit status to success.
+        this.props.updateFormSubmitStatus('success');
+
+      }).catch((err) => {
+
+        // Some error occurred.
+        // Display error in console.
+        console.log(err);
+
+        // Update form status to show indicator to user.
+        this.props.updateFormSubmitStatus('failure');
+
+      })
+
+    } else {
+
+      // Update form submit status to incomplete.
+      this.props.updateFormSubmitStatus('incomplete');
 
     }
 
@@ -151,7 +104,7 @@ class ContactForm extends React.Component {
     return (
       <div>
 
-        <ContactFormAlertBox flag={this.props.allFieldsValid}/>
+        <ContactFormAlertBox formSubmitStatus={this.props.formSubmitStatus}/>
 
         <form onSubmit={this.handleSubmit.bind(this)}>
 
@@ -243,7 +196,9 @@ const mapStateToProps = (state) => {
     gotchaIsValid: state.contactForm.gotchaIsValid,
     messageIsValid: state.contactForm.messageIsValid,
 
-    allFieldsValid: state.contactForm.allFieldsValid
+    allFieldsValid: state.contactForm.allFieldsValid,
+
+    formSubmitStatus: state.contactForm.formSubmitStatus,
   }
 }
 
@@ -257,7 +212,8 @@ const mapDispatchToProps = (dispatch) => {
     updateSubjectField: updateSubjectField,
     updateGotchaField: updateGotchaField,
     updateMessageField: updateMessageField,
-    updateAllFieldsValidFlag: updateAllFieldsValidFlag
+    updateAllFieldsValidFlag: updateAllFieldsValidFlag,
+    updateFormSubmitStatus: updateFormSubmitStatus
   }, dispatch)
 }
 

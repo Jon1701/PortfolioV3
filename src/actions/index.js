@@ -67,3 +67,9 @@ export const updateFormSubmitStatus = (status) => {
     payload: status
   }
 }
+
+export const resetForm = () => {
+  return {
+    type: 'RESET_FORM'
+  }
+}

@@ -30,6 +30,8 @@ const contactForm = (state=defaultForm, action) => {
     case 'UPDATE_FORM_SUBMIT_STATUS':
       return Object.assign({}, state, {formSubmitStatus: action.payload})
 
+    case 'RESET_FORM':
+      return Object.assign({}, state, defaultForm)
 
     // Updates value which indicates whether or not all form fields are valid.
     //
