@@ -89,10 +89,16 @@
     &:after { content: "Message sent!"; };
   }
 
+  .alertbox-incomplete {
+    background-color: #DC143C;
+    color: #FFFFFF;
+    &:after { content: "Please fill out all fields!"; };
+  }
+
   .alertbox-failure {
     background-color: #DC143C;
     color: #FFFFFF;
-    &:after { content: "Message not sent!"; };
+    &:after { content: "Server error. Message not sent!"; };
   }
 
 
