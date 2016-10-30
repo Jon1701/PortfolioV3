@@ -66,3 +66,15 @@ export const resetForm = () => {
     type: 'RESET_FORM'
   }
 }
+
+export const enableSubmitButton = () => {
+  return {
+    type: 'ENABLE_SUBMIT_BUTTON'
+  }
+}
+
+export const disableSubmitButton = () => {
+  return {
+    type: 'DISABLE_SUBMIT_BUTTON'
+  }
+}

@@ -14,6 +14,8 @@ const defaultForm = {
 
   formSubmitStatus: null,
 
+  statusSubmitButton: true,
+
 }
 
 // Regular expressions for testing field validity.
@@ -26,6 +28,12 @@ const REGEX_VALID_MESSAGE = /.{5,1000}/;
 const contactForm = (state=defaultForm, action) => {
 
   switch(action.type) {
+
+    case 'ENABLE_SUBMIT_BUTTON':
+      return Object.assign({}, state, {statusSubmitButton: true});
+
+    case 'DISABLE_SUBMIT_BUTTON':
+      return Object.assign({}, state, {statusSubmitButton: false});
 
     case 'UPDATE_FORM_SUBMIT_STATUS':
       return Object.assign({}, state, {formSubmitStatus: action.payload})
