@@ -1,3 +1,6 @@
+// String constants.
+const constants = require('json/constants.json');
+
 // Default form values.
 const defaultForm = {
   name: '',     // Name field contents.
@@ -39,13 +42,13 @@ const contactForm = (state=defaultForm, action) => {
       return Object.assign({}, state, {formSubmissionStatus: null});
 
     case 'SET_FORM_SUBMISSION_STATUS_SUCCESS':
-      return Object.assign({}, state, {formSubmissionStatus: 'SUCCESS'});
+      return Object.assign({}, state, {formSubmissionStatus: constants.SUCCESS});
 
     case 'SET_FORM_SUBMISSION_STATUS_FAILURE':
-      return Object.assign({}, state, {formSubmissionStatus: 'FAILURE'});
+      return Object.assign({}, state, {formSubmissionStatus: constants.FAILURE});
 
     case 'SET_FORM_SUBMISSION_STATUS_INCOMPLETE':
-      return Object.assign({}, state, {formSubmissionStatus: 'INCOMPLETE'});
+      return Object.assign({}, state, {formSubmissionStatus: constants.INCOMPLETE});
 
     case 'RESET_FORM':
       return Object.assign({}, state, defaultForm)

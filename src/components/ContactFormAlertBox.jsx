@@ -2,13 +2,16 @@
 import React from 'react';
 import classNames from 'classnames';
 
+// String constants.
+const constants = require('json/constants.json');
+
 // Component definition.
 export default class ContactFormAlertBox extends React.Component {
 
   getAlertBox(status) {
 
     switch (status) {
-      case 'FAILURE':
+      case constants.FAILURE:
 
         return (
           <div className="alertbox alertbox-failure">
@@ -16,14 +19,14 @@ export default class ContactFormAlertBox extends React.Component {
           </div>
         )
 
-      case 'SUCCESS':
+      case constants.SUCCESS:
         return (
           <div className="alertbox alertbox-success">
             Message sent!
           </div>
         )
 
-      case 'INCOMPLETE':
+      case constants.INCOMPLETE:
         return (
           <div className="alertbox alertbox-incomplete">
             Please fill out all fields.
