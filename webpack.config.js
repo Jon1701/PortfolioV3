@@ -141,14 +141,6 @@ var config = {
       }
     }),
 
-    // Copy CNAME from source to build folder.
-    new CopyWebpackPlugin([
-      {
-        from: path.join(PATHS.SRC, 'CNAME'),
-        to: path.join(PATHS.DEST)
-      }
-    ]),
-
     new webpack.NoErrorsPlugin()
 
   ]
@@ -163,6 +155,14 @@ if (process.env.NODE_ENV === 'production') {
       compress: { warnings: false },
       output: { comments: false }
     }),
+
+    // Copy CNAME from source to build folder.
+    new CopyWebpackPlugin([
+      {
+        from: path.join(PATHS.SRC, 'CNAME'),
+        to: path.join(PATHS.DEST)
+      }
+    ]),
 
     // Search for equal or similar files and deduplicate them in the
     // output.
