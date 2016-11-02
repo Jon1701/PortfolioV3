@@ -89,29 +89,9 @@
     font-size: 1.25em;
   }
 
-  .alertbox-invisible {
-    visibility: hidden;
-    color: rgba(0,0,0,0);
-    &:after { content: "I am invisible"; };
-  }
-
-  .alertbox-success {
-    background-color: #5CB85C;
-    color: #FFFFFF;
-    &:after { content: "Message sent!"; };
-  }
-
-  .alertbox-incomplete {
-    background-color: #DC143C;
-    color: #FFFFFF;
-    &:after { content: "Please fill out all fields!"; };
-  }
-
-  .alertbox-failure {
-    background-color: #DC143C;
-    color: #FFFFFF;
-    &:after { content: "Server error. Message not sent!"; };
-  }
-
+  .alertbox-invisible { visibility: hidden; }
+  .alertbox-success { background-color: #5CB85C; }
+  .alertbox-incomplete { background-color: #DC143C; }
+  .alertbox-failure { background-color: #DC143C; }
 
 }
