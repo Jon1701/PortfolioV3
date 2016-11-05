@@ -140,7 +140,7 @@
       "demo": "http://www.jonbalon.io/PumpkindoroTimer/",
       "github": "https://github.com/Jon1701/PumpkindoroTimer"
     },
-    "featured": true
+    "featured": false
   },
   {
     "title": "Life is Strange Quote Generator",
@@ -152,5 +152,16 @@
       "github": "https://github.com/Jon1701/LifeIsStrangeQuoteGenerator"
     },
     "featured": false
+  },
+  {
+    "title": "Portfolio Website",
+    "image": "Website.png",
+    "description": "Press F5",
+    "technologies": ["html5", "css3", "javascript", "react", "redux"],
+    "links": {
+      "demo": "http://www.jonbalon.io/",
+      "github": "https://github.com/Jon1701/WebsiteV3"
+    },
+    "featured": true
   }
 ]
