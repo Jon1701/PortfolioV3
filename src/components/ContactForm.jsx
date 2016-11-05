@@ -146,7 +146,7 @@ class ContactForm extends React.Component {
             <input
               className={subjectFieldClasses}
               value={this.props.subject}
-              name="_subject"
+              name="subject"
               type="text"
               placeholder="Subject"
               onChange={ (e) => {this.props.updateSubjectField(e.target.value)} }
