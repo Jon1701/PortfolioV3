@@ -107,6 +107,10 @@
      "icon":"icon-react",
      "name":"React"
   },
+  "react-router":{
+     "icon":"icon-react-router",
+     "name":"React Router"
+  },
   "redux":{
     "icon":"icon-redux",
     "name":"Redux"
