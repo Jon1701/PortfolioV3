@@ -1,5 +1,16 @@
 [
   {
+    "title": "Voteify",
+    "image": "Voteify.png",
+    "description": "Voteify is a web-based application which enables you to create custom polls with live results.",
+    "technologies": ["html5", "css3", "javascript", "react", "react-router", "mongodb", "nodejs", "heroku"],
+    "links": {
+      "demo": "https://voteify-jon1701.herokuapp.com/",
+      "github": "https://github.com/Jon1701/Voteify"
+    },
+    "featured": true
+  },
+  {
     "title": "EXIF Data Viewer",
     "image": "ExifViewer.png",
     "description": "Application which reads and displays EXIF data from .jpg files.",
@@ -63,7 +74,7 @@
       "demo": "http://www.jonbalon.io/RecipeBox/",
       "github": "https://github.com/Jon1701/RecipeBox"
     },
-    "featured": true
+    "featured": false
   },
   {
     "title": "Dungeon Crawler",
