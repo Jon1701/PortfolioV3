@@ -11,6 +11,42 @@ body {
   margin: 0;
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
+// Constrains the viewport height to 100vh.
+.viewport-maxheight {
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100vh;
+}
+
+// Page container.
+.page-container {
+  width: 100%;
+}
+
+// Page content.
+.page-content {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+
+// Page title.
+.page-heading {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 // Set minimum and maximum viewport heights.
 .height-minmax-100vh { min-height: 100vh; max-height: 100vh; }
 .height-min-100vh { min-height: 100vh; }
