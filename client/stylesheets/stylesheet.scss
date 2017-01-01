@@ -117,3 +117,10 @@ a { color: inherit; text-decoration: none;}
 @import '_SectionProjects';
 @import '_SectionContactMe';
 @import '_ResponsiveFontSizes';
+
+// Project Panel bottom row style.
+.custom-row {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
