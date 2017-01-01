@@ -7,21 +7,24 @@ export default class Icon extends React.Component {
 
   // Component render.
   render() {
+    // Deconstruct props.
+    const { iconName, containerClasses, link, iconClass } = this.props;
 
     // Classes to control visibility of the label.
     const iconLabelClasses = classNames({
       'icon-label': true,
-      'hidden': !this.props.iconName
+      hidden: !iconName,
     })
 
     return (
-      <div className={"container-button " + this.props.containerClasses} onClick={this.props.onClick}>
-        <a href={this.props.link} target="_blank">
-          <div className={"icon " + this.props.iconClass}></div>
-          <div className={iconLabelClasses}>{this.props.iconName}</div>
+      <div className={`container-button ${containerClasses}`} onClick={this.props.onClick}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <div className={`icon ${iconClass}`} />
+          <div className={iconLabelClasses}>
+            {iconName}
+          </div>
         </a>
       </div>
-    )
+    );
   }
-  
 }
