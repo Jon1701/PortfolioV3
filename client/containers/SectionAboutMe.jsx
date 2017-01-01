@@ -5,57 +5,28 @@ import React from 'react';
 const iconData = require('json/icons.json');
 
 import Icon from 'components/Icon';
+import IconMatrix from 'components/IconMatrix';
 
 // Component definition.
 export default class SectionAboutMe extends React.Component {
 
-  // Builds a grid of technologies used.
-  generateIcons() {
-
-    // Names of the icons to be displayed.
-    const iconsUsed = [
-      'html5', 'css3', 'javascript', 'react', 'react-router', 'redux', 'jquery', 'bootstrap',
-      'materialize', 'material-ui', 'mustachejs', 'd3', 'atom',
-      'git', 'github', 'gulp', 'webpack', 'sass', 'npm', 'nodejs', 'expressjs',
-      'debian', 'ubuntu', 'bash', 'mongodb', 'python', 'flask', 'cloud9',
-      'heroku'
-    ];
-
-    // Using the array of icon names, look up the corresponding icon class name,
-    // and icon name, generate an array of <div> containing the icon and name.
-    return iconsUsed.map((val, idx, arr) => {
-
-      const iconClass = iconData[val]['icon'];
-      const iconName = iconData[val]['name'];
-
-      return (
-        <Icon
-          key={ "icon-aboutme-" + idx }
-          iconClass={ iconClass }
-          iconName={ iconName }
-          containerClasses={ "col-xs-4 col-sm-3 col-lg-2 " + iconClass + "-hover"}
-          />
-      )
-
-    });
-
-  }
-
   // Component render.
   render() {
     return (
-      <div id="section-aboutme" className="section height-min-100vh text-center">
+      <div id="section-aboutme" className="page-container text-center">
+        <div className="page-content">
 
-        <div className="text-uppercase section-main-heading">About Me</div>
+          <div className="page-heading">About Me</div>
 
-        <p>Hi! My name is Jon and I'm a Full Stack Developer based in Toronto.</p>
+          <p>Hi! My name is Jon and I'm a Full Stack Developer based in Toronto.</p>
 
-        <p>Here are some of the technologies I have used:</p>
+          <p>Here are some of the technologies I have used:</p>
 
-        <div className="row cursor-arrow">
-          {this.generateIcons()}
+          <div className="row cursor-arrow">
+            <IconMatrix/>
+          </div>
+
         </div>
-
       </div>
     )
   } // End Component render.
