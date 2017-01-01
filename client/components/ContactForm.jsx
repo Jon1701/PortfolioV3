@@ -246,7 +246,7 @@ ContactForm.propTypes = {
   subject: React.PropTypes.string,
   gotcha: React.PropTypes.string,
   message: React.PropTypes.string,
-  formSubmissionStatus: React.PropTypes.bool,
+  //formSubmissionStatus: React.PropTypes.bool,
   updateNameField: React.PropTypes.func,
   updateEmailField: React.PropTypes.func,
   updateSubjectField: React.PropTypes.func,
@@ -259,5 +259,5 @@ ContactForm.propTypes = {
   setFormSubmissionStatusToSuccess: React.PropTypes.func,
   setFormSubmissionStatusToFailure: React.PropTypes.func,
   setFormSubmissionStatusToIncomplete: React.PropTypes.func,
-  statusSubmitButton: React.PropTypes.func,
+  //statusSubmitButton: React.PropTypes.func,
 };
