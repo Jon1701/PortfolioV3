@@ -29,7 +29,7 @@
   },
   "expressjs":{
      "icon":"icon-nodejs",
-     "name":"Express.js"
+     "name":"Express"
   },
   "flask":{
      "icon":"icon-flask",
@@ -93,7 +93,7 @@
   },
   "nodejs":{
      "icon":"icon-nodejs",
-     "name":"NodeJS"
+     "name":"Node.js"
   },
   "npm":{
      "icon":"icon-npm",
