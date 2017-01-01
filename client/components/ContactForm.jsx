@@ -119,73 +119,69 @@ class ContactForm extends React.Component {
     });
 
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <ContactFormAlertBox formSubmissionStatus={this.props.formSubmissionStatus} />
+        <div className="form-field">
+          <input
+            className={nameFieldClasses}
+            value={name}
+            name="name"
+            type="text"
+            placeholder="Name"
+            onChange={(e) => { this.props.updateNameField(e.target.value); }}
+          />
+        </div>
 
-        <form onSubmit={this.handleSubmit}>
+        <div className="form-field">
+          <input
+            className={emailFieldClasses}
+            value={email}
+            name="email"
+            type="text"
+            placeholder="E-mail address"
+            onChange={(e) => { this.props.updateEmailField(e.target.value); }}
+          />
+        </div>
 
-          <div className="form-field">
-            <input
-              className={nameFieldClasses}
-              value={name}
-              name="name"
-              type="text"
-              placeholder="Name"
-              onChange={(e) => { this.props.updateNameField(e.target.value); }}
-            />
-          </div>
+        <div className="form-field">
+          <input
+            className={subjectFieldClasses}
+            value={subject}
+            name="subject"
+            type="text"
+            placeholder="Subject"
+            onChange={(e) => { this.props.updateSubjectField(e.target.value); }}
+          />
+        </div>
 
-          <div className="form-field">
-            <input
-              className={emailFieldClasses}
-              value={email}
-              name="email"
-              type="text"
-              placeholder="E-mail address"
-              onChange={(e) => { this.props.updateEmailField(e.target.value); }}
-            />
-          </div>
+        <div className="form-field hidden">
+          <input
+            value={gotcha}
+            name="_gotcha"
+            type="text"
+            placeholder="Gotcha"
+            onChange={(e) => { this.props.updateGotchaField(e.target.value); }}
+          />
+        </div>
 
-          <div className="form-field">
-            <input
-              className={subjectFieldClasses}
-              value={subject}
-              name="subject"
-              type="text"
-              placeholder="Subject"
-              onChange={(e) => { this.props.updateSubjectField(e.target.value); }}
-            />
-          </div>
+        <div className="form-field">
+          <textarea
+            className={messageFieldClasses}
+            value={message}
+            name="message"
+            type="text"
+            placeholder="Message"
+            onChange={(e) => { this.props.updateMessageField(e.target.value); }}
+          />
+        </div>
 
-          <div className="form-field hidden">
-            <input
-              value={gotcha}
-              name="_gotcha"
-              type="text"
-              placeholder="Gotcha"
-              onChange={(e) => { this.props.updateGotchaField(e.target.value); }}
-            />
-          </div>
+        <div className="form-submit-container">
+          <button type="submit" disabled={!this.props.statusSubmitButton}>
+            <span className="icon icon-paperplane" /> Send Message
+          </button>
+        </div>
 
-          <div className="form-field">
-            <textarea
-              className={messageFieldClasses}
-              value={message}
-              name="message"
-              type="text"
-              placeholder="Message"
-              onChange={(e) => { this.props.updateMessageField(e.target.value); }}
-            />
-          </div>
-
-          <div className="form-submit-container">
-            <button type="submit" disabled={!this.props.statusSubmitButton}>
-              <span className="icon icon-paperplane" /> Send Message
-            </button>
-          </div>
-
-        </form>
-      </div>
+      </form>
     );
   }
 

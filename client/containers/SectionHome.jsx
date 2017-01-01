@@ -10,8 +10,8 @@ import Icon from 'components/Icon';
  *
  */
 const SectionHome = () => (
-  <div id="section-home" className="viewport-fullpagemax page-container text-center">
-    <div className="page-content">
+  <div id="section-home" className="viewport-fullpagemax page-container">
+    <div className="page-content text-center">
 
       <div className="name">Jon Balon</div>
 

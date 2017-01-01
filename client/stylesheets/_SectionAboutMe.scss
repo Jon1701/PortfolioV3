@@ -1,5 +1,9 @@
 #section-aboutme {
 
+  // Center.
+  display: flex;
+  justify-content: center;
+
   // Background styling.
   background-image: url("../media/images/backgrounds/white_brick_wall.png");
   background-repeat: repeat;

@@ -1,12 +1,11 @@
 $opacity: 0.3;
 
-// Force a table layout just for <SectionHome/>.
-// Want to keep contents vertically and horizontally aligned, and
-// maintain flow of the page.
-.force-table { display: table; width: 100%;}
-.force-table-row { display: table-row; width: 100%;}
-
 #section-home {
+
+  // Vertical align.
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   // Font sizing.
   .name { font-size: 5em; }
@@ -24,10 +23,6 @@ $opacity: 0.3;
 
   // Text colour.
   color: #FFFFFF;
-
-  // Align content in middle of div (horizontally and vertically).
-  display: table-cell;
-  vertical-align: middle;
 
   // Background styling.
   background-image: linear-gradient(rgba(0,0,0,$opacity), rgba(0,0,0,$opacity)),

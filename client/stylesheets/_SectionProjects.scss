@@ -1,5 +1,9 @@
 #section-projects {
 
+  // Center.
+  display: flex;
+  justify-content: center;
+
   // Background styling.
   background-image: url("../media/images/backgrounds/cubes.png");
   background-repeat: repeat;
