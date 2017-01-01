@@ -9,7 +9,7 @@ var path = require('path');
 
 // Folder paths
 var PATHS = {
-  SRC: path.join(__dirname, 'src/'),
+  SRC: path.join(__dirname, 'client/'),
   DEST: path.join(__dirname, 'dist/'),
   MODULES: path.join(__dirname, 'node_modules/')
 }
@@ -26,7 +26,7 @@ var config = {
   // Output directory and filename for bundled JavaScript.
   output: {
     path: PATHS.DEST,
-    filename: 'js/app.js'
+    filename: '/js/app.js'
   },
 
   // Resolve paths to files and folders which can be used by Webpack.
@@ -43,7 +43,7 @@ var config = {
     // Renames module paths.
     alias: {
 
-      // Can easily access React components in the ./src/components directory.
+      // Can easily access React components in the ./client/components directory.
       // Instead of import HelloWorld from './components/HelloWorld.jsx'
       // Use:       import HelloWorld from 'components/HelloWorld.jsx'
       'containers': path.join(PATHS.SRC, 'containers/'),
