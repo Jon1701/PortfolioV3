@@ -14,7 +14,7 @@ const iconData = require('json/icons.json'); // Icon data.
  *
  */
 const SectionAboutMe = () => (
-  <div id="section-aboutme" className="page-container text-center">
+  <div id="section-aboutme" className="viewport-fullpage page-container text-center">
     <div className="page-content">
 
       <div className="page-heading">

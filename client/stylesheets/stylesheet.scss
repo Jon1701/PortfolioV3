@@ -14,22 +14,27 @@ body {
 ////////////////////////////////////////////////////////////////////////////////
 
 // Constrains the viewport height to 100vh.
-.viewport-maxheight {
+.viewport-fullpagemax {
   min-height: 100vh;
   max-height: 100vh;
   height: 100vh;
+  width: 100vw;
+}
+
+.viewport-fullpage {
+  min-height: 100vh;
+  width: 100vw;
 }
 
 // Page container.
 .page-container {
-  width: 100%;
+
 }
 
 // Page content.
 .page-content {
   max-width: 1920px;
-  margin: 0 auto;
-  padding: 20px 0 20px 0;
+  padding: 35px 0 35px 0;
 }
 
 // Page title.
