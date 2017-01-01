@@ -17,26 +17,15 @@ class ProjectPanel extends React.Component {
 
   // Component render.
   render() {
-
-    // Shorthand access to data props.
-    const project = this.props.data;
-
     // Access ID of this project.
     const projectId = this.props.projectId;
 
-    // Project metadata.
-    const title = project['title'];
-    const imageUrl = require('images/portfolio/' + project['image']);
-    const description = project['description'];
-    const technologies = project['technologies'];
-    const featured = project['featured'];
-
-    // Project links.
-    const linkGithub = project['links']['github'];
-    const linkDemo = project['links']['demo'];
+    // Get Project data.
+    const { title, description, technologies } = this.props.data;
+    const { github, demo } = this.props.data.links;
+    const imageUrl = require('images/portfolio/' + this.props.data.image);
 
     return (
-
       <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4" key={title}>
 
         <div className="project-panel">
@@ -45,35 +34,61 @@ class ProjectPanel extends React.Component {
           </div>
 
           <div className="project-image-container noselect">
-            <a href={linkDemo} target="_blank">
-              <img src={imageUrl} className="project-image img-responsive"/>
+            <a href={demo} target="_blank" rel="noopener noreferrer">
+              <img src={imageUrl} alt={description} className="project-image img-responsive" />
             </a>
           </div>
 
           <div className="project-buttons custom-row cursor-hand noselect">
-            <Icon iconClass={"icon icon-demo"} iconName={"Demo"} link={linkDemo} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"}/>
-            <Icon iconClass={"icon icon-moreinfo"} iconName={"More Info"} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"} onClick={() => this.props.togglePopover(this.props.projectId)}/>
-            <Icon iconClass={"icon icon-github"} iconName={"GitHub"} link={linkGithub} containerClasses={"icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4"}/>
+            <Icon
+              iconClass={'icon icon-demo'}
+              iconName={'Demo'}
+              ink={demo}
+              containerClasses={'icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4'}
+            />
+            <Icon
+              iconClass={'icon icon-moreinfo'}
+              iconName={'More Info'}
+              containerClasses={'icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4'}
+              onClick={() => this.props.togglePopover(this.props.projectId)}
+            />
+            <Icon
+              iconClass={'icon icon-github'}
+              iconName={'GitHub'}
+              link={github}
+              containerClasses={'icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4'}
+            />
           </div>
 
-          <MoreInfoPopover description={description} tech={technologies} projectId={projectId}/>
-
+          <MoreInfoPopover description={description} tech={technologies} projectId={projectId} />
         </div>
 
       </div>
-
-    )
+    );
   }
 }
 
-// Function to allow access of dispatch actions as props.
-//
-// this.props.togglePopover().
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    togglePopover: togglePopover
-  }, dispatch)
-}
+// Bind actions to props.
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ togglePopover }, dispatch)
+);
 
-// Allows this component to access the Redux store.
+// Prop validation.
+ProjectPanel.propTypes = {
+  data: React.PropTypes.shape({
+    title: React.PropTypes.string,
+    image: React.PropTypes.string,
+    description: React.PropTypes.string,
+    technologies: React.PropTypes.arrayOf(React.PropTypes.string),
+    links: React.PropTypes.shape({
+      demo: React.PropTypes.string,
+      github: React.PropTypes.string,
+    }),
+    featured: React.PropTypes.bool,
+  }),
+  projectId: React.PropTypes.number,
+  togglePopover: React.PropTypes.func,
+};
+
+// Allow access to Redux store.
 export default connect(null, mapDispatchToProps)(ProjectPanel);
