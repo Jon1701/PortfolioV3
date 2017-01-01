@@ -4,34 +4,27 @@ import React from 'react';
 import ContactForm from 'components/ContactForm';
 
 // Component definition.
-export default class SectionContactMe extends React.Component {
+const SectionContactMe = () => (
+  <div id="section-contactme" className="viewport-fullpagemax page-container text-center">
+    <div className="page-content">
 
-  // Component render.
-  render() {
-    return (
+      <div className="page-heading">Contact Me</div>
 
-      <div className="force-table height-minmax-100vh">
-        <div className="force-table-row">
+      <div className="row">
+        <div className="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
 
-          <div id="section-contactme" className="section text-center">
-            <div className="section-main-heading text-uppercase">Contact Me</div>
+          <p>
+            Feel free to contact me if you have any inquiries or questions!
+          </p>
 
-            <div className="row">
+          <ContactForm />
 
-              <div className="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
-
-                <p>Feel free to contact me if you have any inquiries or questions!</p>
-
-                <ContactForm/>
-
-              </div>
-            </div>
-
-          </div>
-
+        </div>
       </div>
-    </div>
-    )
-  } // End Component render.
 
-}
+    </div>
+  </div>
+);
+
+// Component export;
+export default SectionContactMe;
