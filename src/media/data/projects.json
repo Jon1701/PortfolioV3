@@ -1,5 +1,16 @@
 [
   {
+    "title": "Nightlife",
+    "image": "Nightlife.png",
+    "description": "Nightlife is a web-based application which allows users to search for nearby bars/pubs and indicate if they will be going there.",
+    "technologies": ["html5", "css3", "javascript", "react", "react-router", "mongodb", "nodejs", "heroku"],
+    "links": {
+      "demo": "https://nightlife-jon1701.herokuapp.com/",
+      "github": "https://github.com/Jon1701/Nightlife"
+    },
+    "featured": true
+  },
+  {
     "title": "Voteify",
     "image": "Voteify.png",
     "description": "Voteify is a web-based application which enables you to create custom polls with live results.",
@@ -41,7 +52,7 @@
       "demo": "https://ms-urlshortener-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MS-URLShortener"
     },
-    "featured": true
+    "featured": false
   },
   {
     "title": "UNIX Timestamp Generator",
