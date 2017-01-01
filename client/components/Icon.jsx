@@ -14,7 +14,7 @@ export default class Icon extends React.Component {
     const iconLabelClasses = classNames({
       'icon-label': true,
       hidden: !iconName,
-    })
+    });
 
     return (
       <div className={`container-button ${containerClasses}`} onClick={this.props.onClick}>
@@ -28,3 +28,8 @@ export default class Icon extends React.Component {
     );
   }
 }
+
+// Prop validation.
+Icon.propTypes = {
+  onClick: React.PropTypes.func,
+};
