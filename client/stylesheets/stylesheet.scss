@@ -4,6 +4,7 @@
   src: url("../media/fonts/Oswald-Regular.ttf");
 }
 
+// Site body.
 body {
   font-family: "Oswald";
   color: #333333;
@@ -11,26 +12,68 @@ body {
   margin: 0;
 }
 
-////////////////////////////////////////////////////////////////////////////////
+// Prevent hyperlinks from using browser defaults.
+a { color: inherit; text-decoration: none;}
 
-// Constrains the viewport height to 100vh.
-.viewport-fullpagemax {
-  min-height: 100vh;
-  max-height: 100vh;
-  height: 100vh;
-  width: 100vw;
+// White background colour.
+.bg-white { background-color: #FFFFFF; }
+
+// Cursor: hand.
+.cursor-hand { cursor: pointer; }
+
+// Cursor: arrow.
+.cursor-arrow { cursor: default; }
+
+// Hides elements.
+.hidden { display: none; }
+
+// Icon hover: heavenly glow.
+.icon-hover-heavenlyglow {
+  &:hover {
+    text-shadow: 1px 1px 50px #FFFFFF;
+    transition: all 0.5s ease;
+  }
 }
 
-// Viewport is at least 100vh.
-.viewport-fullpage {
-  min-height: 100vh;
-  width: 100vw;
+// Icon hover: crimson.
+.icon-hover-crimson {
+  &:hover {
+    color: #DC143C;
+    transition: all 0.5s ease;
+  }
+}
+
+// Responsive images.
+.img-responsive {
+  max-width: 100%;
+  display: block;
+}
+
+// Makes elements invisible.
+.invisible { visibility: hidden; }
+
+// Field validation: default.
+.field-validation-default { border-color: #FFFFFF; }
+
+// Field validation: failure.
+.field-validation-fail { border-color: #DC143C; }
+
+// Field validation: success.
+.field-validation-success { border-color: #5CB85C; }
+
+// Disable selection.
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
 
 // Page container.
-.page-container {
-
-}
+.page-container {}
 
 // Page content.
 .page-content {
@@ -45,100 +88,28 @@ body {
   font-size: 3em;
 }
 
-////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-// Set minimum and maximum viewport heights.
-.height-minmax-100vh { min-height: 100vh; max-height: 100vh; }
-.height-min-100vh { min-height: 100vh; }
-
 // Centres text horizontally.
 .text-center { text-align: center; }
 
-// Prevent hyperlinks from using browser defaults.
-a { color: inherit; text-decoration: none;}
-
-// Adds a heavenly glow when hovering.
-.icon-hover-heavenlyglow {
-  &:hover {
-    text-shadow: 1px 1px 50px #FFFFFF;
-    transition: all 0.5s ease;
-  }
+// Viewport is at least 100vh.
+.viewport-fullpage {
+  min-height: 100vh;
+  width: 100vw;
 }
 
-.icon-hover-crimson {
-  &:hover {
-    color: #DC143C;
-    transition: all 0.5s ease;
-  }
+// Constrains the viewport height to 100vh.
+.viewport-fullpagemax {
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
-
-// Responsive images.
-.img-responsive {
-  max-width: 100%;
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.bg-white {
-  background-color: #FFFFFF;
-}
-
-.cursor-hand {
-  cursor: pointer;
-}
-
-.cursor-arrow {
-  cursor: default;
-}
-
-.custom-row {
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently
-                                  not supported by any browser */
-}
-
-.section {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.field-validation-default { border-color: #FFFFFF; }
-.field-validation-fail { border-color: #DC143C; }
-.field-validation-success { border-color: #5CB85C; }
 
 // Icon fonts.
 @import '_GlyphterIcons';
 
 // Responsive grid.
 @import '_BootstrapGrid';
-
-.invisible {visibility: hidden;}
 
 // Partials.
 @import '_SectionHome';
