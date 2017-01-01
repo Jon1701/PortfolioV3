@@ -7,40 +7,54 @@ import { connect } from 'react-redux';
 // Component definition.
 export default class ToggleFeaturedProjectsButton extends React.Component {
 
-  // Function to display the correct toggle button.
-  displayCorrectButton() {
-
-    if (this.props.featured) {
-
-      // If we are displaying only featured projects, button should display
-      // "Show All"
-      return (
-        <div onClick={this.props.onClick}>
-          <span className="icon icon-chevron-circle-down"></span> Show All Projects
-        </div>
-      )
-
-    } else {
-
-      // If we are displaying all projects, button should display
-      // "Only Featured".
-      return (
-        <div onClick={this.props.onClick}>
-          <span className="icon icon-chevron-circle-up"></span> Show Only Featured Projects
-        </div>
-      )
-
-    }
-
-  }
-
   // Component render.
   render() {
+    // Deconstruct props.
+    const { featured, onClick } = this.props;
+
     return (
       <div className="btn-toggle-featured-projects noselect icon-hover-crimson cursor-hand">
-        { this.displayCorrectButton() }
+        {featured
+          ? <OnlyFeaturedProjects handleClick={onClick} />
+          : <AllProjects handleClick={onClick} />}
       </div>
-    )
+    );
   }
 
 }
+
+// Prop validation.
+ToggleFeaturedProjectsButton.propTypes = {
+  featured: React.PropTypes.bool,
+  onClick: React.PropTypes.func,
+};
+
+/*
+ *
+ *  Presentational components.
+ *
+ */
+
+// Display all projects.
+const AllProjects = ({ handleClick }) => (
+  <div onClick={handleClick}>
+    <span className="icon icon-chevron-circle-up" /> Show Only Featured Projects
+  </div>
+);
+
+// Prop validation.
+AllProjects.propTypes = {
+  handleClick: React.PropTypes.func,
+};
+
+// Display only featured projects.
+const OnlyFeaturedProjects = ({ handleClick }) => (
+  <div onClick={handleClick}>
+    <span className="icon icon-chevron-circle-down" /> Show All Projects
+  </div>
+);
+
+// Prop validation.
+OnlyFeaturedProjects.propTypes = {
+  handleClick: React.PropTypes.func,
+};
