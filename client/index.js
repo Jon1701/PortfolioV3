@@ -7,10 +7,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 // Container containing website UI elements.
-import WebsiteUI from 'containers/WebsiteUI'
+import WebsiteUI from 'containers/WebsiteUI';
 
 // Redux reducers and store..
-import reducers from 'reducers/index.js'
-let store = createStore(reducers);
+import reducers from 'reducers/index.js';
+const store = createStore(reducers);
 
 ReactDOM.render(<Provider store={store}><WebsiteUI/></Provider>, document.getElementById('react-target'));
