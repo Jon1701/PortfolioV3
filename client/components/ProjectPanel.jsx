@@ -43,7 +43,7 @@ class ProjectPanel extends React.Component {
             <Icon
               iconClass={'icon icon-demo'}
               iconName={'Demo'}
-              ink={demo}
+              link={demo}
               containerClasses={'icon-hover-crimson col-xs-4 col-sm-4 col-md-4 col-lg-4'}
             />
             <Icon
