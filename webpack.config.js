@@ -1,175 +1,100 @@
-// Webpack.
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-// Module for copying files.
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const PATHS = {
+  SRC: path.resolve(__dirname, 'client/'),
+  DEST: path.resolve(__dirname, 'dist/'),
+};
 
-// Module for building file paths.
-var path = require('path');
+const config = {
+  entry: [
+    path.resolve(PATHS.SRC, 'index.js'),
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080',
+  ],
 
-// Folder paths
-var PATHS = {
-  SRC: path.join(__dirname, 'client/'),
-  DEST: path.join(__dirname, 'dist/'),
-  MODULES: path.join(__dirname, 'node_modules/')
-}
-
-// Plugin for generating .html files.
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// Webpack config.
-var config = {
-
-  // Starting point for JavaScript modules to be bundled together.
-  entry: path.join(PATHS.SRC, 'index.js'),
-
-  // Output directory and filename for bundled JavaScript.
   output: {
     path: PATHS.DEST,
-    filename: '/js/app.js'
+    publicPath: '/',
+    filename: 'app.js',
   },
 
-  // Resolve paths to files and folders which can be used by Webpack.
   resolve: {
-
-    // Set folders which Webpack can consider to be the application root folder.
-    // (Where to find modules).
-    root: [PATHS.SRC, PATHS.MODULES],
-
-    // Automatically resolve module extensions for JavScript files.
-    // Can assume imported files are JS or JSX.
     extensions: ['', '.js', '.jsx'],
-
-    // Renames module paths.
     alias: {
-
-      // Can easily access React components in the ./client/components directory.
-      // Instead of import HelloWorld from './components/HelloWorld.jsx'
-      // Use:       import HelloWorld from 'components/HelloWorld.jsx'
-      'containers': path.join(PATHS.SRC, 'containers/'),
-      'components': path.join(PATHS.SRC, 'components/'),
-      'stylesheets': path.join(PATHS.SRC, 'stylesheets/'),
-      'json': path.join(PATHS.SRC, 'media/data/'),
-      'images': path.join(PATHS.SRC, 'media/images/'),
-
-      'reducers': path.join(PATHS.SRC, 'reducers/'),
-      'actions': path.join(PATHS.SRC, 'actions/')
-
-    }
+      actions: path.join(PATHS.SRC, 'actions/'),
+      reducers: path.join(PATHS.SRC, 'reducers/'),
+      components: path.join(PATHS.SRC, 'components/'),
+      containers: path.join(PATHS.SRC, 'containers/'),
+      stylesheets: path.join(PATHS.SRC, 'stylesheets/'),
+      json: path.join(PATHS.SRC, 'media/data/'),
+      images: path.join(PATHS.SRC, 'media/images/'),
+      config: path.join(PATHS.SRC, 'config/'),
+      common: path.join(PATHS.SRC, 'common/'),
+    },
   },
 
   module: {
-
-    // File preprocessing.
     loaders: [
-
-      //////////////////////////////////////////////////////////////////////////
-      // Transpile ES6 to ES5, allow JSX syntax.
-      //////////////////////////////////////////////////////////////////////////
+      // Transpile JSX, ES6, and ES7 to ES5.
       {
-        test: /\.(js|jsx)$/,      // Apply transformations to .js and .jsx files.
-        exclude: /node_modules/,  // Do not apply transformations to npm modules.
+        test: /\.(js|jsx)$/i,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015'],
-          cacheDirectory: true
-        }
+          presets: ['react', 'es2015', 'es2016', 'es2017'],
+        },
       },
-      //////////////////////////////////////////////////////////////////////////
 
-      //////////////////////////////////////////////////////////////////////////
-      // Stylesheets
-      //////////////////////////////////////////////////////////////////////////
+      // Load stylesheets.
       {
-        test: /\.scss$/i,      // Apply transformations to .js and .jsx files.
-        exclude: /node_modules/,  // Do not apply transformations to npm modules.
-        loaders: ['style', 'css', 'sass']
+        test: /\.(scss|css)$/i,
+        loaders: ['style', 'css', 'sass'],
       },
-      //////////////////////////////////////////////////////////////////////////
 
-      //////////////////////////////////////////////////////////////////////////
-      // Images
-      //////////////////////////////////////////////////////////////////////////
+      // Images.
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        exclude: /node_modules/,
-        loader: 'file-loader?name=/media/images/[hash].[ext]'
+        test: /\.(jpe?g|gif|png)$/i,
+        loader: 'file-loader?name=media/images/[name].[ext]',
       },
-      //////////////////////////////////////////////////////////////////////////
 
-      //////////////////////////////////////////////////////////////////////////
       // JSON files.
-      //////////////////////////////////////////////////////////////////////////
       {
         test: /\.json$/i,
-        exclude: /node_modules/,
-        loader: 'json-loader'
-        //loader: 'json-loader?name=/media/data/[name].[ext]'
+        loader: 'json-loader?name=media/data/[name].[ext]',
       },
-      //////////////////////////////////////////////////////////////////////////
 
-      //////////////////////////////////////////////////////////////////////////
       // Fonts.
-      //////////////////////////////////////////////////////////////////////////
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'url-loader?limit=100000'
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'url-loader?limit=50000',
       },
-      //////////////////////////////////////////////////////////////////////////
-
-    ]
+    ],
   },
 
-  // Plugins used by Webpack.
+  devServer: {
+    contentBase: PATHS.DEST,
+    compress: true,
+    port: 8080,
+  },
+
   plugins: [
-
-    // Generate index.html file.
-    new HtmlWebpackPlugin({
-      mobile: true,   // Responsive viewport.
-      inject: false,  // Controls asset addition to the template.
-                      // html-webpack-template will control injection.
-      title: 'Jon Balon | Full Stack Developer', // <title/> tag
-      appMountId: 'react-target', // Adds mount point for React apps: <div id="react-target"/>.
-      template: require('html-webpack-template'),   // Module to control .html file injection.
-      filename: 'index.html', // Filename.
-    }),
-
-    // Switch React to Production Mode.
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }
-    }),
-
-    new webpack.NoErrorsPlugin()
-
-  ]
-};
-
-// Add these plugings if in a production environment.
-if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(
-
-    // Compress and minify all JavaScript.
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      output: { comments: false }
-    }),
-
-    // Copy CNAME from source to build folder.
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
-      {
-        from: path.join(PATHS.SRC, 'CNAME'),
-        to: path.join(PATHS.DEST)
-      }
+      { from: 'client' }
     ]),
-
-    // Search for equal or similar files and deduplicate them in the
-    // output.
-    new webpack.optimize.DedupePlugin()
-
-  );
+    //new webpack.NoErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      mobile: true,
+      inject: false,
+      title: 'Jon Balon | React/Node.js Developer',
+      appMountId: 'react-target',
+      template: require('html-webpack-template'),
+      filename: 'index.html',
+    }),
+  ],
 };
 
-// Export the configuration.
 module.exports = config;
