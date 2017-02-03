@@ -7,8 +7,8 @@
     "webpack": "./bin/webpack"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack -p",
-    "client": "cross-env NODE_ENV=development webpack && webpack-dev-server --quiet --hot --progress --inline"
+    "build": "webpack -p",
+    "client": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
