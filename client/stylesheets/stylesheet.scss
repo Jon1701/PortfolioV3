@@ -15,9 +15,6 @@ body {
 // Prevent hyperlinks from using browser defaults.
 a { color: inherit; text-decoration: none;}
 
-// White background colour.
-.bg-white { background-color: #FFFFFF; }
-
 // Cursor: hand.
 .cursor-hand { cursor: pointer; }
 
@@ -72,20 +69,6 @@ a { color: inherit; text-decoration: none;}
                                   not supported by any browser */
 }
 
-// Page container.
-.page-container {}
-
-// Page content.
-.page-content {
-  padding: 35px 15px 35px 15px;
-}
-
-// Page title.
-.page-heading {
-  text-transform: uppercase;
-  font-size: 3em;
-}
-
 // Centres text horizontally.
 .text-center { text-align: center; }
 
@@ -101,6 +84,10 @@ a { color: inherit; text-decoration: none;}
   width: 100%;
 }
 
+.container-section-content {
+  max-width: 1000px;
+}
+
 // Icon fonts.
 @import '_GlyphterIcons';
 
@@ -113,10 +100,3 @@ a { color: inherit; text-decoration: none;}
 @import '_SectionProjects';
 @import '_SectionContactMe';
 @import '_ResponsiveFontSizes';
-
-// Project Panel bottom row style.
-.custom-row {
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
-}
