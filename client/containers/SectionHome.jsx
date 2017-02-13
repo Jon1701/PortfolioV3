@@ -1,17 +1,14 @@
 // React.
 import React from 'react';
-
-// Components.
-import Icon from 'components/Icon';
-
+import Icon from 'components/Icon2';
 /*
  *
  *  Component Definition.
  *
  */
 const SectionHome = () => (
-  <div id="section-home" className="viewport-fullpagemax page-container">
-    <div className="page-content text-center">
+  <div id="section-home" className="viewport-fullpagemax">
+    <div className="container-section-content text-center">
 
       <div className="name">Jon Balon</div>
 
@@ -24,29 +21,16 @@ const SectionHome = () => (
         Statistics, Analytics, and Data Science.
       </div>
 
-      <div className="hr" />
-
-      <div className="iconArray">
-        <Icon
-          iconClass={'icon-github'}
-          link={'https://github.com/Jon1701'}
-          containerClasses={'icon-hover-heavenlyglow'}
-        />
-        <Icon
-          iconClass={'icon-linkedin'}
-          link={'https://ca.linkedin.com/in/jonbalon'}
-          containerClasses={'icon-hover-heavenlyglow'}
-        />
-        <Icon
-          iconClass={'icon-twitter'}
-          link={'https://twitter.com/Jon1764'}
-          containerClasses={'icon-hover-heavenlyglow'}
-        />
-
+      <div className="container-icons">
+        <Icon link="https://github.com/Jon1701" iconClass="icon-github" />
+        <Icon link="https://ca.linkedin.com/in/jonbalon" iconClass="icon-linkedin" />
+        <Icon link="https://twitter.com/Jon1764" iconClass="icon-twitter" />
       </div>
+
     </div>
   </div>
 );
+
 
 // Component export.
 export default SectionHome;

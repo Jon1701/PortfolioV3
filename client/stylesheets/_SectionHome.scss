@@ -1,42 +1,38 @@
 $opacity: 0.3;
 
 #section-home {
-
-  // Vertical align.
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // Font sizing.
-  .name { font-size: 5em; }
-  .position { font-size: 2.5em; }
-  .tagline { font-size: 1.5em; margin: 15px;}
-  .iconarray { font-size: 5em; }
-
-  // Horizontal rule.
-  .hr {
-    background-color: #FFFFFF;
-    height: 5px;
-    width: 35%;
-    margin: 0 auto;
-  }
-
-  // Text colour.
-  color: #FFFFFF;
-
   // Background styling.
   background-image: linear-gradient(rgba(0,0,0,$opacity), rgba(0,0,0,$opacity)),
                     url("../media/images/backgrounds/W1YL4ZANPU.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
 
+  // Font colours.
+  color: #FFFFFF;
 
-  .iconArray {
+  // Layout.
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 
+  // Container of Icons.
+  .container-icons {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
 
-    .container-button { margin: 5px; font-size: 5em;}
+    // Individual icon.
+    .container-icon {
+      // Entire container clickable.
+      a { display: block; }
+      // Middle icon spacing.
+      &:nth-child(2) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
   }
 }
