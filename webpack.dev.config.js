@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
   SRC: path.resolve(__dirname, 'client/'),
@@ -9,15 +8,16 @@ const PATHS = {
 };
 
 const config = {
+  devtool: 'source-map',
+
   entry: [
-    path.resolve(PATHS.SRC, 'index.js'),
+    path.resolve(PATHS.SRC, 'index.jsx'),
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:8080',
   ],
 
   output: {
     path: PATHS.DEST,
-    publicPath: '/',
     filename: 'app.js',
   },
 
@@ -42,27 +42,29 @@ const config = {
       {
         test: /\.(js|jsx)$/i,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         query: {
           presets: ['react', 'es2015', 'es2016', 'es2017'],
+          cacheDirectory: true,
         },
       },
 
       // Load stylesheets.
       {
         test: /\.(scss|css)$/i,
-        loaders: ['style', 'css', 'sass'],
+        loaders: ['style', 'css', 'postcss', 'sass'],
       },
 
       // Images.
       {
         test: /\.(jpe?g|gif|png)$/i,
-        loader: 'file-loader?name=media/images/[name].[ext]',
+        loader: 'file-loader?name=/media/images/[hash].[ext]',
       },
 
       // JSON files.
       {
         test: /\.json$/i,
-        loader: 'json-loader?name=media/data/[name].[ext]',
+        loader: 'json-loader?name=/media/data/[hash].[ext]',
       },
 
       // Fonts.
@@ -77,15 +79,14 @@ const config = {
     contentBase: PATHS.DEST,
     compress: true,
     port: 8080,
+    historyApiFallback: {
+      index: 'dist/index.html',
+    },
   },
 
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([
-      { from: 'client' }
-    ]),
-    //new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       mobile: true,
       inject: false,
