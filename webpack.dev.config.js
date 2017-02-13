@@ -8,8 +8,6 @@ const PATHS = {
 };
 
 const config = {
-  devtool: 'source-map',
-
   entry: [
     path.resolve(PATHS.SRC, 'index.jsx'),
     'webpack/hot/dev-server',
