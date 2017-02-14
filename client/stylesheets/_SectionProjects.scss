@@ -1,78 +1,8 @@
 #section-projects {
 
-  // Center.
-  display: flex;
-  justify-content: center;
-
   // Background styling.
   background-image: url("../media/images/backgrounds/cubes.png");
   background-repeat: repeat;
   background-attachment: fixed;
-
-  // Main section heading.
-  .section-main-heading { font-size: 3em; }
-
-  // Section content sizing.
-  p { font-size: 1.75em; }
-
-  .btn-toggle-featured-projects {
-    background-color: #FFFFFF;
-    border: solid 1px #CCCCCC;
-    padding: 10px 0 10px 0;
-    font-size: 1.25em;
-  }
-
-  .project-panel {
-    position: relative;
-    background-color: #FFFFFF;
-    margin-top: 1.25%;
-    margin-bottom: 1.25%;
-  }
-
-  .project-title {
-    border: solid 1px #CCCCCC;
-    padding: 10px 0 10px 0;
-    font-size: 1.5em;
-  }
-
-  .project-image-container {
-    border: solid 1px #CCCCCC;
-    border-top: none;
-    border-bottom: none;
-  }
-
-  .project-buttons {
-    border: solid 1px #CCCCCC;
-
-    .icon {font-size: 2em}
-    .icon-label {font-size: 1.5em; margin-top: -10px;}
-  }
-
-  .project-popover {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 105%;
-    border: solid 1px #CCCCCC;
-    padding: 10px;
-
-    .project-description {
-      font-size: 1.15em;
-    }
-
-    .project-tech {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-
-      padding-top: 10px;
-
-      .icon { font-size: 2em;}
-      .icon-label {margin-top: -5px}
-    }
-
-  }
 
 }
