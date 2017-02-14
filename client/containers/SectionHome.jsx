@@ -1,6 +1,6 @@
 // React.
 import React from 'react';
-import Icon from 'components/Icon2';
+import Icon from 'components/Icon';
 /*
  *
  *  Component Definition.

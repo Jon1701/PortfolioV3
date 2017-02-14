@@ -2,7 +2,7 @@
 import React from 'react';
 
 // React Components.
-import {default as Icon} from 'components/Icon2';
+import Icon from 'components/Icon';
 
 const responsiveColumns = 'col-xs-4 col-sm-3 col-md-2 col-lg-1';
 
