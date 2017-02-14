@@ -1,10 +1,37 @@
-// React.
+// Dependencies.
 import React from 'react';
-
-// React Components.
 import Icon from 'components/Icon';
 
-const responsiveColumns = 'col-xs-4 col-sm-3 col-md-2 col-lg-1';
+/*
+ *  Helper function to generate an array of icons consisting of a
+ *  technology icon and name.
+ */
+const generateIcons = () => {
+  // Icon database with icon class names and labels.
+  const iconData = require('json/icons.json');
+
+  // Array of technology names.
+  const techNames = [
+    'html5', 'css3', 'javascript', 'react', 'redux', 'react-router',
+    'jquery', 'bootstrap', 'd3', 'atom', 'git', 'github', 'gulp',
+    'webpack', 'sass', 'npm', 'node', 'express', 'debian', 'ubuntu',
+    'bash', 'mongodb', 'python', 'flask', 'heroku',
+  ];
+
+  // Return an array of <Icon/>.
+  return techNames.map((name) => {
+    const key = `aboutme-tech-${name}`;
+    const iconClass = iconData[name].icon;  // Icon class name.
+    const iconLabel = iconData[name].label; // Icon label.
+    const iconHoverClass = `${iconData[name].icon}-hover`;  // Icon hover class name.
+    const className = `col-xs-4 col-sm-3 col-md-2 col-lg-1 cursor-hand ${iconHoverClass}`;  // Classes.
+
+    // Return an <Icon/>.
+    return (
+      <Icon key={key} iconClass={iconClass} label={iconLabel} className={className} />
+    );
+  });
+};
 
 /*
  *
@@ -28,31 +55,7 @@ const SectionAboutMe = () => (
       </p>
 
       <div className="container-icons row">
-        <Icon iconClass="icon-html5" label="HTML" className={responsiveColumns} />
-        <Icon iconClass="icon-css3" label="CSS" className={responsiveColumns} />
-        <Icon iconClass="icon-javascript" label="JavaScript" className={responsiveColumns} />
-        <Icon iconClass="icon-react" label="React" className={responsiveColumns} />
-        <Icon iconClass="icon-redux" label="Redux" className={responsiveColumns} />
-        <Icon iconClass="icon-react-router" label="React Router" className={responsiveColumns} />
-        <Icon iconClass="icon-jquery" label="jQuery" className={responsiveColumns} />
-        <Icon iconClass="icon-bootstrap" label="Bootstrap" className={responsiveColumns} />
-        <Icon iconClass="icon-d3" label="D3" className={responsiveColumns} />
-        <Icon iconClass="icon-atom" label="Atom" className={responsiveColumns} />
-        <Icon iconClass="icon-git" label="Git" className={responsiveColumns} />
-        <Icon iconClass="icon-github" label="GitHub" className={responsiveColumns} />
-        <Icon iconClass="icon-gulp" label="Gulp" className={responsiveColumns} />
-        <Icon iconClass="icon-webpack" label="Webpack" className={responsiveColumns} />
-        <Icon iconClass="icon-sass" label="Sass" className={responsiveColumns} />
-        <Icon iconClass="icon-npm" label="npm" className={responsiveColumns} />
-        <Icon iconClass="icon-nodejs" label="Node.js" className={responsiveColumns} />
-        <Icon iconClass="icon-nodejs" label="Express.js" className={responsiveColumns} />
-        <Icon iconClass="icon-debian" label="Debian" className={responsiveColumns} />
-        <Icon iconClass="icon-ubuntu" label="Ubuntu" className={responsiveColumns} />
-        <Icon iconClass="icon-bash" label="Bash" className={responsiveColumns} />
-        <Icon iconClass="icon-mongodb" label="MongoDB" className={responsiveColumns} />
-        <Icon iconClass="icon-python" label="Python" className={responsiveColumns} />
-        <Icon iconClass="icon-flask" label="Flask" className={responsiveColumns} />
-        <Icon iconClass="icon-heroku" label="Heroku" className={responsiveColumns} />
+        {generateIcons()}
       </div>
 
     </div>
