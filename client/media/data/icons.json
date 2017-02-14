@@ -1,130 +1,130 @@
 {
   "atom":{
      "icon":"icon-atom",
-     "name":"Atom"
+     "label":"Atom"
   },
   "bash":{
      "icon":"icon-bash",
-     "name":"Bash"
+     "label":"Bash"
   },
   "bootstrap":{
      "icon":"icon-bootstrap",
-     "name":"Bootstrap"
+     "label":"Bootstrap"
   },
   "cloud9":{
      "icon":"icon-cloud9",
-     "name":"Cloud9 IDE"
+     "label":"Cloud9 IDE"
   },
   "css3":{
      "icon":"icon-css3",
-     "name":"CSS3"
+     "label":"CSS3"
   },
   "d3":{
      "icon":"icon-d3",
-     "name":"D3.js"
+     "label":"D3.js"
   },
   "debian":{
      "icon":"icon-debian",
-     "name":"Debian"
+     "label":"Debian"
   },
-  "expressjs":{
+  "express":{
      "icon":"icon-nodejs",
-     "name":"Express"
+     "label":"Express"
   },
   "flask":{
      "icon":"icon-flask",
-     "name":"Flask"
+     "label":"Flask"
   },
   "freecodecamp":{
      "icon":"icon-freecodecamp",
-     "name":"FreeCodeCamp"
+     "label":"FreeCodeCamp"
   },
   "git":{
      "icon":"icon-git",
-     "name":"Git"
+     "label":"Git"
   },
   "github":{
      "icon":"icon-github",
-     "name":"GitHub"
+     "label":"GitHub"
   },
   "gulp":{
      "icon":"icon-gulp",
-     "name":"Gulp"
+     "label":"Gulp"
   },
   "heroku":{
      "icon":"icon-heroku",
-     "name":"Heroku"
+     "label":"Heroku"
   },
   "html5":{
      "icon":"icon-html5",
-     "name":"HTML5"
+     "label":"HTML5"
   },
   "javascript":{
      "icon":"icon-javascript",
-     "name":"JavaScript"
+     "label":"JavaScript"
   },
   "jsx":{
      "icon":"icon-javascript",
-     "name":"JSX"
+     "label":"JSX"
   },
   "jquery":{
      "icon":"icon-jquery",
-     "name":"jQuery"
+     "label":"jQuery"
   },
   "linkedin":{
      "icon":"icon-linkedin",
-     "name":"LinkedIn"
+     "label":"LinkedIn"
   },
   "materialize":{
      "icon":"icon-materialize",
-     "name":"Materialize"
+     "label":"Materialize"
   },
   "material-ui":{
      "icon":"icon-material-ui",
-     "name":"Material-UI"
+     "label":"Material-UI"
   },
   "mongodb":{
      "icon":"icon-mongodb",
-     "name":"MongoDB"
+     "label":"MongoDB"
   },
   "mustachejs":{
      "icon":"icon-mustachejs",
-     "name":"mustache.js"
+     "label":"mustache.js"
   },
-  "nodejs":{
+  "node":{
      "icon":"icon-nodejs",
-     "name":"Node.js"
+     "label":"Node.js"
   },
   "npm":{
      "icon":"icon-npm",
-     "name":"npm"
+     "label":"npm"
   },
   "python":{
      "icon":"icon-python",
-     "name":"Python"
+     "label":"Python"
   },
   "react":{
      "icon":"icon-react",
-     "name":"React"
+     "label":"React"
   },
   "react-router":{
      "icon":"icon-react-router",
-     "name":"React Router"
+     "label":"React Router"
   },
   "redux":{
     "icon":"icon-redux",
-    "name":"Redux"
+    "label":"Redux"
   },
   "sass":{
      "icon":"icon-sass",
-     "name":"Sass"
+     "label":"Sass"
   },
   "ubuntu":{
      "icon":"icon-ubuntu",
-     "name":"Ubuntu"
+     "label":"Ubuntu"
   },
   "webpack":{
      "icon":"icon-webpack",
-     "name":"Webpack"
+     "label":"Webpack"
   }
 }
