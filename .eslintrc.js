@@ -6,6 +6,6 @@ module.exports = {
         "import"
     ],
     rules: {
-      "linebreak-style": ["error", process.env.NODE_ENV === 'prod' ? "unix" : "windows"]
+      "linebreak-style": ["error", "unix"]
     }
 };
