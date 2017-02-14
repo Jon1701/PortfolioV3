@@ -15,7 +15,7 @@ const SectionAboutMe = () => (
   <div id="section-aboutme" className="viewport-fullpage">
     <div className="container-section-content text-center">
 
-      <div className="page-heading">
+      <div>
         About Me
       </div>
 

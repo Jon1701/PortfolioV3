@@ -10,13 +10,13 @@ const SectionHome = () => (
   <div id="section-home" className="viewport-fullpagemax">
     <div className="container-section-content text-center">
 
-      <div className="name">Jon Balon</div>
+      <div>Jon Balon</div>
 
-      <div className="position">
+      <div>
         Full Stack Developer
       </div>
 
-      <div className="tagline">
+      <div>
         I'm a Full Stack Developer with a background in Computer Science,
         Statistics, Analytics, and Data Science.
       </div>

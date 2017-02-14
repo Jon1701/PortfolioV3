@@ -9,7 +9,7 @@ const SectionProjects = () => (
   <div id="section-projects" className="page-container text-center viewport-fullpage">
     <div className="page-content">
 
-      <div className="page-heading">
+      <div>
         Portfolio
       </div>
 
