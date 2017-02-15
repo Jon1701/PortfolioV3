@@ -1,96 +1,10 @@
 #section-contactme {
 
-  // Vertical align.
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // Main section heading.
-  .section-main-heading { font-size: 3em; }
-
-  // Section content sizing.
-  p { font-size: 1.75em; }
-
-  color: #FFFFFF;
-
   // Background styling.
   background-image: url("../media/images/backgrounds/footer_lodyas.png");
   background-repeat: repeat;
   background-attachment: fixed;
 
-  input[type="text"], textarea  {
-
-    // Spacing around a field.
-    margin: 5px 0 5px 0;
-    padding-left: 15px;
-
-    // Dimensions.
-    width: 100%;
-
-    // Colours.
-    background-color: rgba(33,33,33,0.35);
-    color: white;
-
-    // Border style.
-    border-style: solid;
-    border-width: 2px;
-    outline: none;
-
-    font-size: 1.25em;
-
-    // Hover effect.
-    &:focus { background-color: rgba(255,255,255,0.15); };
-
-  }
-
-  .form-field {
-
-    input[type="text"] { height: 45px; }
-
-    textarea {
-      min-width: 100%;
-      max-width: 100%;
-      min-height: 200px;
-      max-height: 300px;
-
-      padding-top: 15px;
-    }
-
-  }
-
-  button[type="submit"] {
-    width: 100%;
-    height: 60px;
-
-    border: solid 2px white;
-    outline: none;
-
-    background-color: rgba(33,33,33,0.35);
-    color: white;
-
-    font-family: Oswald;
-    font-size: 1.5em;
-
-    // Hover effect.
-    &:hover {
-      background-color: white;
-      color: #000000;
-      transition: all 0.5s ease;
-    }; // End hover effect.
-
-    &:disabled {
-      opacity: 0.2
-    }
-  }
-
-  .alertbox {
-    padding: 5px 0 5px 0;
-    font-size: 1.25em;
-  }
-
-  .alertbox-invisible { visibility: hidden; }
-  .alertbox-success { background-color: #5CB85C; }
-  .alertbox-incomplete { background-color: #DC143C; }
-  .alertbox-failure { background-color: #DC143C; }
+  color: #FFFFFF;
 
 }
