@@ -14,48 +14,50 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-aboutme:before{content:'\0041';}
-.icon-atom:before{content:'\0042';}
-.icon-bash:before{content:'\0043';}
-.icon-bootstrap:before{content:'\0044';}
-.icon-chevron-circle-down:before{content:'\0045';}
-.icon-chevron-circle-up:before{content:'\0046';}
-.icon-cloud9:before{content:'\0047';}
-.icon-codepen:before{content:'\0048';}
-.icon-css3:before{content:'\0049';}
-.icon-d3:before{content:'\004a';}
-.icon-database:before{content:'\004b';}
-.icon-debian:before{content:'\004c';}
-.icon-demo:before{content:'\004d';}
-.icon-flask:before{content:'\004e';}
-.icon-freecodecamp:before{content:'\004f';}
-.icon-git:before{content:'\0050';}
-.icon-github:before{content:'\0051';}
-.icon-gulp:before{content:'\0052';}
-.icon-heroku:before{content:'\0053';}
-.icon-home:before{content:'\0054';}
-.icon-html5:before{content:'\0055';}
-.icon-javascript:before{content:'\0056';}
-.icon-jquery:before{content:'\0057';}
-.icon-linkedin:before{content:'\0058';}
-.icon-mail:before{content:'\0059';}
-.icon-material-ui:before{content:'\005a';}
-.icon-materialize:before{content:'\0061';}
-.icon-mongodb:before{content:'\0062';}
-.icon-moreinfo:before{content:'\0063';}
-.icon-mustachejs:before{content:'\0064';}
-.icon-nodejs:before{content:'\0065';}
-.icon-npm:before{content:'\0066';}
-.icon-paperplane:before{content:'\0067';}
-.icon-python:before{content:'\0068';}
-.icon-react-router:before{content:'\0069';}
-.icon-react:before{content:'\006a';}
-.icon-redux:before{content:'\006b';}
-.icon-sass:before{content:'\006c';}
-.icon-twitter:before{content:'\006d';}
-.icon-ubuntu:before{content:'\006e';}
-.icon-webpack:before{content:'\006f';}
-.icon-xcircle:before{content:'\0070';}
+.icon-freecodecamp:before{content:'\0041';}
+.icon-git:before{content:'\0042';}
+.icon-github:before{content:'\0043';}
+.icon-flask:before{content:'\0044';}
+.icon-gulp:before{content:'\0045';}
+.icon-heroku:before{content:'\0046';}
+.icon-home:before{content:'\0047';}
+.icon-html5:before{content:'\0048';}
+.icon-java:before{content:'\0049';}
+.icon-javascript:before{content:'\004a';}
+.icon-jquery:before{content:'\004b';}
+.icon-linkedin:before{content:'\004c';}
+.icon-mail:before{content:'\004d';}
+.icon-materialize:before{content:'\004e';}
+.icon-material-ui:before{content:'\004f';}
+.icon-mongodb:before{content:'\0050';}
+.icon-moreinfo:before{content:'\0051';}
+.icon-mustachejs:before{content:'\0052';}
+.icon-nodejs:before{content:'\0053';}
+.icon-npm:before{content:'\0054';}
+.icon-paperplane:before{content:'\0055';}
+.icon-postcss:before{content:'\0056';}
+.icon-python:before{content:'\0057';}
+.icon-react:before{content:'\0058';}
+.icon-react-router:before{content:'\0059';}
+.icon-redux:before{content:'\005a';}
+.icon-sass:before{content:'\0061';}
+.icon-twitter:before{content:'\0062';}
+.icon-ubuntu:before{content:'\0063';}
+.icon-webpack:before{content:'\0064';}
+.icon-xcircle:before{content:'\0065';}
+.icon-aboutme:before{content:'\0066';}
+.icon-atom:before{content:'\0067';}
+.icon-bash:before{content:'\0068';}
+.icon-bootstrap:before{content:'\0069';}
+.icon-chevron-circle-down:before{content:'\006a';}
+.icon-chevron-circle-up:before{content:'\006b';}
+.icon-cloud9:before{content:'\006c';}
+.icon-codepen:before{content:'\006d';}
+.icon-css3:before{content:'\006e';}
+.icon-d3:before{content:'\006f';}
+.icon-database:before{content:'\0070';}
+.icon-debian:before{content:'\0071';}
+.icon-demo:before{content:'\0072';}
 
 @mixin icon-hover($colour) {
   &:hover {
@@ -80,6 +82,7 @@
 .icon-gulp-hover { @include icon-hover(#CF4646); };
 .icon-heroku-hover { @include icon-hover(#69619A); };
 .icon-html5-hover { @include icon-hover(#F1662B); };
+.icon-java-hover { @include icon-hover(#E00024); };
 .icon-javascript-hover { @include icon-hover(#F2BF22); };
 .icon-jquery-hover { @include icon-hover(#0769AD); };
 .icon-materialize-hover { @include icon-hover(#EE6E73); };
@@ -88,6 +91,7 @@
 .icon-mustachejs-hover { @include icon-hover(#C0C0C0); };
 .icon-nodejs-hover { @include icon-hover(#75BB59); };
 .icon-npm-hover { @include icon-hover(#CC3838); };
+.icon-postcss-hover { @include icon-hover(#DD3A0A); };
 .icon-python-hover { @include icon-hover(#3D83BE); };
 .icon-react-hover { @include icon-hover(#61DAFB); };
 .icon-react-router-hover { @include icon-hover(#61DAFB); };
