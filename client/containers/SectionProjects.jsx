@@ -1,23 +1,18 @@
 // React.
 import React from 'react';
 
-// Redux dependencies.
-import { connect } from 'react-redux';
-
 // Component definition.
 const SectionProjects = () => (
-  <div id="section-projects" className="page-container text-center viewport-fullpage">
-    <div className="page-content">
+  <div id="section-projects" className="viewport-fullpage">
+    <div className="container-section-content text-center">
 
-      <div>
+      <div className="heading">
         Portfolio
       </div>
 
       <p>
         Here's some of my work:
       </p>
-
-
 
       <p>
         with more to come in the future!
