@@ -24,9 +24,9 @@ const SectionHome = () => (
       </div>
 
       <div className="container-icons">
-        <Icon link="https://github.com/Jon1701" iconClass="icon-github" />
-        <Icon link="https://ca.linkedin.com/in/jonbalon" iconClass="icon-linkedin" />
-        <Icon link="https://twitter.com/Jon1764" iconClass="icon-twitter" />
+        <Icon link="https://github.com/Jon1701" iconClass="icon-github hover-heavenlyglow" />
+        <Icon link="https://ca.linkedin.com/in/jonbalon" iconClass="icon-linkedin hover-heavenlyglow" />
+        <Icon link="https://twitter.com/Jon1764" iconClass="icon-twitter hover-heavenlyglow" />
       </div>
 
     </div>
