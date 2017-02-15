@@ -1,22 +1,18 @@
 // React.
 import React from 'react';
 
-import ContactForm from 'components/ContactForm';
-
 // Component definition.
 const SectionContactMe = () => (
-  <div id="section-contactme" className="viewport-fullpagemax page-container">
-    <div className="page-content text-center">
+  <div id="section-contactme" className="viewport-fullpage">
+    <div className="container-section-content text-center">
 
-      <div className="page-heading">Contact Me</div>
+      <div className="heading">
+        Contact Me
+      </div>
 
       <p>
-        Feel free to contact me if you have any inquiries or questions!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-
-      <div className="container row">
-        <ContactForm />
-      </div>
 
     </div>
   </div>
