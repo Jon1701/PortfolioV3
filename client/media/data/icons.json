@@ -59,6 +59,10 @@
      "icon":"icon-html5",
      "label":"HTML5"
   },
+  "java":{
+    "icon":"icon-java",
+    "label":"Java"
+  },
   "javascript":{
      "icon":"icon-javascript",
      "label":"JavaScript"
@@ -98,6 +102,10 @@
   "npm":{
      "icon":"icon-npm",
      "label":"npm"
+  },
+  "postcss":{
+    "icon":"icon-postcss",
+    "label":"PostCSS"
   },
   "python":{
      "icon":"icon-python",
