@@ -89,7 +89,7 @@ const config = {
     new HtmlWebpackPlugin({
       mobile: true,
       inject: false,
-      title: '<Not set in webpack.prod.config.json>',
+      title: 'Jon Balon | React & Node.js Developer',
       appMountId: 'react-target',
       template: require('html-webpack-template'),
       filename: 'index.html',
