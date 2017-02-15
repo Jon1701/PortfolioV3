@@ -5,4 +5,26 @@
   background-repeat: repeat;
   background-attachment: fixed;
 
+  // Container for list of projects.
+  .container-projects {
+
+    // Container for one project: handles responsive grid and margins.
+    .responsive-container {
+      margin: 0;
+      padding: 0;
+    }
+
+    // Container for one project: project layout.
+    .container-project {
+      background-color: #FFFFFF;
+      box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+
+      margin: 5px;
+
+      font-size: 1.25rem;
+    }
+
+  }
+
 }
