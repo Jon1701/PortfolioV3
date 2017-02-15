@@ -24,7 +24,7 @@ const generateIcons = () => {
     const iconClass = iconData[name].icon;  // Icon class name.
     const iconLabel = iconData[name].label; // Icon label.
     const iconHoverClass = `${iconData[name].icon}-hover`;  // Icon hover class name.
-    const className = `col-xs-4 col-sm-3 col-md-2 col-lg-1 cursor-hand ${iconHoverClass}`;  // Classes.
+    const className = `col-xs-4 col-sm-3 col-md-2 col-lg-2 cursor-hand ${iconHoverClass}`;  // Classes.
 
     // Return an <Icon/>.
     return (
@@ -42,7 +42,7 @@ const SectionAboutMe = () => (
   <div id="section-aboutme" className="viewport-fullpage">
     <div className="container-section-content text-center">
 
-      <div>
+      <div className="heading">
         About Me
       </div>
 
