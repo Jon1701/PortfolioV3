@@ -14,8 +14,8 @@ const generateIcons = () => {
   const techNames = [
     'html5', 'css3', 'javascript', 'react', 'redux', 'react-router',
     'jquery', 'bootstrap', 'd3', 'atom', 'git', 'github', 'gulp',
-    'webpack', 'sass', 'npm', 'node', 'express', 'debian', 'ubuntu',
-    'bash', 'mongodb', 'python', 'flask', 'heroku',
+    'webpack', 'sass', 'postcss', 'npm', 'node', 'express', 'debian', 'ubuntu',
+    'bash', 'mongodb', 'python', 'flask', 'java', 'heroku',
   ];
 
   // Return an array of <Icon/>.
