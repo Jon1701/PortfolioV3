@@ -9,9 +9,6 @@ $opacity: 0.3;
   background-attachment: fixed;
   background-position: center;
 
-  // Font colours.
-  color: #FFFFFF;
-
   // Layout.
   display: flex;
   flex-flow: column nowrap;
@@ -35,4 +32,18 @@ $opacity: 0.3;
       }
     }
   }
+
+  // Font sizes.
+  .name { font-size: 4rem; }
+  .title { font-size: 2rem; }
+  .tagline { font-size: 1.25rem; }
+  .container-icons { font-size: 4rem; }
+
+  // Font colours.
+  color: #FFFFFF;
+
+  // Content margins.
+  .name { margin-bottom: 15px; }
+  .title { margin-bottom: 15px; }
+  .tagline { margin-bottom: 15px; }
 }
