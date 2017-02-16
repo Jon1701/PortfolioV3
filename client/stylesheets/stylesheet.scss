@@ -1,20 +1,11 @@
 // Font imports.
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Nunito|Nunito+Sans|Open+Sans|Oxygen|Quicksand|Roboto|Roboto+Condensed|Ubuntu|Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Site body.
 body {
   color: #333333;
   text-rendering: optimizeLegibility;
-  font-family: Segoe UI, sans-serif;
-  //font-family: 'Nunito', sans-serif;
-  //font-family: 'Nunito Sans', sans-serif;
-  //font-family: 'Roboto', sans-serif;
-  //font-family: 'Roboto Condensed', sans-serif;
-  //font-family: 'Varela Round', sans-serif;
-  //font-family: 'Quicksand', sans-serif;
-  //font-family: 'Maven Pro', sans-serif;
-  //font-family: 'Oxygen', sans-serif;
-  //font-family: 'Ubuntu', sans-serif;
+  font-family: 'Segoe UI', 'Nunito', sans-serif;
   font-size: 100%;
   margin: 0;
 }
