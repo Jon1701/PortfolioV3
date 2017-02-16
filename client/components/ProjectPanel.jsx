@@ -1,15 +1,19 @@
 // React dependencies.
 import React, { PropTypes } from 'react';
 
+// React components.
 import Icon from 'components/Icon';
 
+/*
+ *  Given a list of icon names, generate <Icon /> elements.
+ */
 const generateTechnologyIcons = (technologies) => {
   // Load icon data.
   const iconData = require('json/icons.json');
 
   // Generate <Icon/> components showing icon name and label.
   const techIcons = technologies.map((iconName) => {
-    // Extract icon class name and icon label.
+    // Extract icon class name and icon label from icons.json.
     const iconClass = iconData[iconName].icon;
     const label = iconData[iconName].label;
 
