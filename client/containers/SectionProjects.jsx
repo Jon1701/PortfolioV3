@@ -65,7 +65,7 @@ class SectionProjects extends React.Component {
           </div>
 
           <p>
-            Here's some of my work:
+            Click on a project to see more information.
           </p>
 
           <div className="container-projects row">
@@ -73,7 +73,7 @@ class SectionProjects extends React.Component {
           </div>
 
           <p>
-            with more to come in the future!
+            More to come in the future!
           </p>
         </div>
       </div>
