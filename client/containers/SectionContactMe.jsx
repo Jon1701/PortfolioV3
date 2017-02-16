@@ -1,6 +1,8 @@
 // React.
 import React from 'react';
 
+import Icon from 'components/Icon';
+
 // Component definition.
 const SectionContactMe = () => (
   <div id="section-contactme" className="viewport-fullpage">
@@ -11,8 +13,31 @@ const SectionContactMe = () => (
       </div>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        I can be contacted via LinkedIn.
       </p>
+
+      <div className="container-btn-linkedin">
+        <Icon
+          link={'https://ca.linkedin.com/in/jonbalon'}
+          iconClass={'icon-linkedin'}
+          label={'LinkedIn'}
+          className="btn-contactme btn-linkedin effect-hover-transition"
+        />
+
+        <Icon
+          link={'https://twitter.com/Jon1764'}
+          iconClass={'icon-twitter'}
+          label={'Twitter'}
+          className="btn-contactme btn-twitter effect-hover-transition"
+        />
+
+        <Icon
+          link={'https://github.com/Jon1701'}
+          iconClass={'icon-github'}
+          label={'GitHub'}
+          className="btn-contactme btn-github effect-hover-transition"
+        />
+      </div>
 
     </div>
   </div>

@@ -7,4 +7,33 @@
 
   color: #FFFFFF;
 
+  // Layout.
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  .btn-contactme {
+    padding: 20px 0 15px 0;
+
+    .icon {
+      line-height: 0;
+      font-size: 3rem;
+    }
+  }
+
+  .btn-linkedin:hover {
+    background-color: #0077B5;
+    border-color: #0077B5;
+  }
+
+  .btn-twitter:hover {
+    background-color: #0084B4;
+    border-color: #0084B4;
+  }
+
+  .btn-github:hover {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #333333;
+  }
 }
