@@ -1,5 +1,6 @@
 // React dependencies.
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
 // React components.
 import Icon from 'components/Icon';
@@ -32,16 +33,22 @@ const generateTechnologyIcons = (technologies) => {
 const ProjectPanel = (props) => {
   // Destructure props.projectData.
   const { title, image, description, technologies, links, featured } = props.projectData;
+  const { projectID, activeProjectID } = props;
 
   // Image URI.
   const imageURI = require(`images/portfolio/${image}`);
+
+  const myClasses = classNames({
+    'container-project-info': true,
+    hidden: projectID !== activeProjectID,
+  });
 
   // Template.
   return (
     <div className="responsive-container col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <div className="container-project">
-        <img src={imageURI} className="img-responsive" alt={`${title} - ${description}`} />
-        <div className="container-project-info">
+        <img src={imageURI} onClick={(e) => {props.handleClick(null, projectID)}} className="img-responsive" alt={`${title} - ${description}`} />
+        <div className={myClasses}>
           <div className="title">{title}</div>
           <div className="description">{description}</div>
           <div className="technologies">{generateTechnologyIcons(technologies)}</div>
