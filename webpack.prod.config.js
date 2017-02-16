@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
   SRC: path.resolve(__dirname, 'client/'),
@@ -74,15 +75,19 @@ const config = {
   },
 
   plugins: [
+    new CopyWebpackPlugin([{
+      from: path.join(PATHS.SRC, 'CNAME'),
+      to: path.join(PATHS.DEST),
+    }]),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
+        NODE_ENV: JSON.stringify('production'),
+      },
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-          warnings: false,
+        warnings: false,
       },
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
