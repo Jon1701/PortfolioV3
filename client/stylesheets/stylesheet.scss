@@ -32,11 +32,13 @@ a { color: inherit; text-decoration: none;}
 .hidden { display: none; }
 
 // Icon hover: heavenly glow.
-.hover-heavenlyglow {
-  &:hover {
-    text-shadow: 1px 1px 50px #FFFFFF;
-    transition: all 0.5s ease;
-  }
+.hover-heavenlyglow:hover {
+  text-shadow: 1px 1px 50px #FFFFFF;
+}
+
+// Hover transition effect.
+.effect-transition-easeinout {
+  transition: 0.5s ease-in-out;
 }
 
 // Responsive images.
@@ -61,11 +63,6 @@ a { color: inherit; text-decoration: none;}
 
 // Centres text horizontally.
 .text-center { text-align: center; }
-
-// Hover transition effect.
-.effect-hover-transition {
-  transition: 0.5s ease-in-out;
-}
 
 // Viewport is at least 100vh.
 .viewport-fullpage {

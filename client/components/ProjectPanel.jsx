@@ -19,7 +19,7 @@ const generateTechnologyIcons = (technologies) => {
     const label = iconData[iconName].label;
 
     // Return one icon.
-    return <Icon iconClass={iconClass} label={label} className={`${iconClass}-hover`} key={`${label}`} />;
+    return <Icon iconClass={iconClass} label={label} className={`${iconClass}-hover effect-transition-easeinout`} key={`${label}`} />;
   });
 
   return (
@@ -54,10 +54,10 @@ const ProjectPanel = (props) => {
           <div className="description">{description}</div>
           <div className="technologies">{generateTechnologyIcons(technologies)}</div>
           <div className="container-buttons">
-            <a href={links.demo} target="_blank" rel="noopener noreferrer">
+            <a href={links.demo} target="_blank" rel="noopener noreferrer" className="effect-transition-easeinout">
               View Demo
             </a>
-            <a href={links.github} target="_blank" rel="noopener noreferrer">
+            <a href={links.github} target="_blank" rel="noopener noreferrer" className="effect-transition-easeinout">
               View Github Repository
             </a>
           </div>

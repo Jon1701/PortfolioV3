@@ -21,21 +21,21 @@ const SectionContactMe = () => (
           link={'https://ca.linkedin.com/in/jonbalon'}
           iconClass={'icon-linkedin'}
           label={'LinkedIn'}
-          className="btn-contactme btn-linkedin effect-hover-transition"
+          className="btn-contactme btn-linkedin effect-transition-easeinout"
         />
 
         <Icon
           link={'https://twitter.com/Jon1764'}
           iconClass={'icon-twitter'}
           label={'Twitter'}
-          className="btn-contactme btn-twitter effect-hover-transition"
+          className="btn-contactme btn-twitter effect-transition-easeinout"
         />
 
         <Icon
           link={'https://github.com/Jon1701'}
           iconClass={'icon-github'}
           label={'GitHub'}
-          className="btn-contactme btn-github effect-hover-transition"
+          className="btn-contactme btn-github effect-transition-easeinout"
         />
       </div>
 
