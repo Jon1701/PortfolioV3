@@ -47,8 +47,9 @@ const ProjectPanel = (props) => {
   return (
     <div className="responsive-container col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <div className="container-project">
-        <img src={imageURI} onClick={(e) => {props.handleClick(null, projectID)}} className="img-responsive" alt={`${title} - ${description}`} />
+        <img src={imageURI} onClick={() => { props.handleClick(null, projectID); }} className="img-responsive cursor-hand" alt={`${title} - ${description}`} />
         <div className={myClasses}>
+          <span className="btn-close cursor-hand" onClick={() => { props.handleClick(null, projectID); }}>&times;</span>
           <div className="title">{title}</div>
           <div className="description">{description}</div>
           <div className="technologies">{generateTechnologyIcons(technologies)}</div>

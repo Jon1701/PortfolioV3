@@ -26,7 +26,16 @@
 
     // Container for one project: project info.
     .container-project-info {
+      position: relative;
       padding: 10px;
+
+      // Close button.
+      .btn-close {
+        position: absolute;
+        font-size: 2rem;
+        top: -5px;
+        right: 5px;
+      }
 
       .title {
         padding: 5px 0 5px 0;
@@ -69,6 +78,11 @@
             transition: all 0.5s ease;
           }
         }
+      }
+
+      // Hide Project Details container.
+      .container-hide-details {
+        padding: 15px 0 15px 0;
       }
     }
 
