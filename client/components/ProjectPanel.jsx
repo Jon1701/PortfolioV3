@@ -58,7 +58,7 @@ const ProjectPanel = (props) => {
               View Demo
             </a>
             <a href={links.github} target="_blank" rel="noopener noreferrer" className="effect-transition-easeinout">
-              View Github Repository
+              View GitHub Repository
             </a>
           </div>
         </div>
