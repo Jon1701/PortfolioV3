@@ -178,7 +178,7 @@
   {
     "title": "Portfolio Website",
     "image": "Website.png",
-    "description": "Press F5",
+    "description": "My Portfolio website",
     "technologies": ["react"],
     "links": {
       "demo": "http://www.jonbalon.io/",
