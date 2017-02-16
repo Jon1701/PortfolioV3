@@ -21,8 +21,49 @@
       box-sizing: border-box;
 
       margin: 5px;
-
       font-size: 1.25rem;
+    }
+
+    // Container for one project: project info.
+    .container-project-info {
+      padding: 10px;
+
+      .title {
+        padding: 5px 0 5px 0;
+        font-weight: bold;
+      }
+
+      .description {
+        padding: 5px 0 5px 0;
+      }
+
+      // Technology icons.
+      .container-icons {
+        padding: 5px 0 5px 0;
+        // Center icons.
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        // Icon spacing.
+        .container-icon {
+          margin: 5px;
+          .icon { font-size: 2rem; }
+        }
+      }
+
+      // Demo and GitHub buttons.
+      .container-buttons {
+        padding: 5px 0 5px 0;
+        display: flex;
+        flex-flow: column nowrap;
+        a {
+          border: solid 1px #000000;
+          border-radius: 3px;
+          padding: 5px;
+          &:last-child { margin-top: 5px; }
+        }
+      }
     }
 
   }
