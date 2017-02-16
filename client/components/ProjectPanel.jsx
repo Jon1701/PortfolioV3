@@ -14,7 +14,7 @@ const generateTechnologyIcons = (technologies) => {
     const label = iconData[iconName].label;
 
     // Return one icon.
-    return <Icon iconClass={`${iconClass} ${iconClass}-hover`} label={label} key={`${label}`} />;
+    return <Icon iconClass={iconClass} label={label} className={`${iconClass}-hover`} key={`${label}`} />;
   });
 
   return (
