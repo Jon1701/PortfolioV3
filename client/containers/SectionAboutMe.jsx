@@ -47,7 +47,7 @@ const SectionAboutMe = () => (
       </div>
 
       <p>
-        Hi! My name is Jon and I'm a Full Stack Developer based in Toronto.
+        Hi! My name is Jon and I'm a React & Node.js Developer based in Toronto.
       </p>
 
       <p>
