@@ -3,7 +3,7 @@
     "title": "My Recipe Box",
     "image": "MyRecipeBox.png",
     "description": "A web-based application which allows users to create and share recipes.",
-    "technologies": ["react", "react-router", "mongodb", "node", "heroku"],
+    "technologies": ["react", "redux", "mongodb", "node", "react-router", "heroku"],
     "links": {
       "demo": "https://myrecipebox-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/MyRecipeBox"
@@ -13,8 +13,8 @@
   {
     "title": "Nightlife",
     "image": "Nightlife.png",
-    "description": "Nightlife is a web-based application which allows users to search for nearby bars/pubs and indicate if they will be going there.",
-    "technologies": ["react", "react-router", "mongodb", "node", "heroku"],
+    "description": "Nightlife is a web-based application which allows users to search for nearby bars/pubs and RSVP to indicate attendance.",
+    "technologies": ["react", "redux", "mongodb", "node", "react-router", "heroku"],
     "links": {
       "demo": "https://nightlife-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/Nightlife"
@@ -25,7 +25,7 @@
     "title": "Voteify",
     "image": "Voteify.png",
     "description": "Voteify is a web-based application which enables you to create custom polls with live results.",
-    "technologies": ["react", "react-router", "mongodb", "node", "heroku"],
+    "technologies": ["react", "redux", "mongodb", "node", "react-router", "heroku"],
     "links": {
       "demo": "https://voteify-jon1701.herokuapp.com/",
       "github": "https://github.com/Jon1701/Voteify"
@@ -57,7 +57,7 @@
   {
     "title": "URL Shortener Service",
     "image": "UrlShortener.png",
-    "description": "A URL shortening microservice which does the exact opposite! Not my fault, I blame Heroku.",
+    "description": "A URL shortening microservice.",
     "technologies": ["jquery", "node", "mongodb", "materialize"],
     "links": {
       "demo": "https://ms-urlshortener-jon1701.herokuapp.com/",
@@ -68,7 +68,7 @@
   {
     "title": "UNIX Timestamp Generator",
     "image": "TimestampGenerator.png",
-    "description": "Simple Node.js/Express.js application to convert between Natural Dates and Unix Epoch Dates",
+    "description": "Simple Node.js/Express.js application to convert between Natural Dates and Unix Timestamps",
     "technologies": ["react", "node"],
     "links": {
       "demo": "https://ms-timestamp-jon1701.herokuapp.com/",
@@ -179,7 +179,7 @@
     "title": "Portfolio Website",
     "image": "Website.png",
     "description": "Press F5",
-    "technologies": ["react", "redux"],
+    "technologies": ["react"],
     "links": {
       "demo": "http://www.jonbalon.io/",
       "github": "https://github.com/Jon1701/WebsiteV3"
